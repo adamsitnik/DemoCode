@@ -1,0 +1,2164 @@
+Target competition: EnumeratorsBenchmarks
+// ***** Competition: Start   *****
+// Found benchmarks:
+//   EnumeratorsBenchmarks_DedicatedClassEnumeratorCalledViaInterface_Throughput_X64_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_DedicatedStructEnumeratorCalledDirectly_Throughput_X64_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleClassEnumeratorCalledDirectly_Throughput_X64_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleClassEnumeratorCalledViaInterface_Throughput_X64_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleStructEnumeratorCalledDirectly_Throughput_X64_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleStructEnumeratorCalledViaInterface_Throughput_X64_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_DedicatedClassEnumeratorCalledViaInterface_Throughput_X64_RyuJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_DedicatedStructEnumeratorCalledDirectly_Throughput_X64_RyuJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleClassEnumeratorCalledDirectly_Throughput_X64_RyuJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleClassEnumeratorCalledViaInterface_Throughput_X64_RyuJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleStructEnumeratorCalledDirectly_Throughput_X64_RyuJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleStructEnumeratorCalledViaInterface_Throughput_X64_RyuJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_DedicatedClassEnumeratorCalledViaInterface_Throughput_X86_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_DedicatedStructEnumeratorCalledDirectly_Throughput_X86_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleClassEnumeratorCalledDirectly_Throughput_X86_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleClassEnumeratorCalledViaInterface_Throughput_X86_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleStructEnumeratorCalledDirectly_Throughput_X86_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleStructEnumeratorCalledViaInterface_Throughput_X86_LegacyJit_NET-HostFramework -w=5 -t=10
+
+// **************************
+// Benchmark: EnumeratorsBenchmarks_DedicatedClassEnumeratorCalledViaInterface (Throughput_X64_LegacyJit_NET-HostFramework) [-w=5 -t=10]
+// Generated project: C:\Projects\DemoCode\Performance\Benchmarks\bin\Release\EnumeratorsBenchmarks_DedicatedClassEnumeratorCalledViaInterface_Throughput_X64_LegacyJit_NET-HostFramework
+
+// Build:
+// OverallResult = Success
+
+// Run, Process: 1 / 3
+// Method=DedicatedClassEnumeratorCalledViaInterface Platform=X64 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit 
+// Pre-Warmup: 1 op, 0 ms, 29508.3 ns, 69 ticks, 29508.2514 ns/op, 33888.8 op/s
+// Pre-Warmup: 1000 op, 13.9 ms, 13901380 ns, 32506 ticks, 13901.38 ns/op, 71935.3 op/s
+// Pre-Warmup: 72000 op, 498 ms, 498024016.3 ns, 1164544 ticks, 6917.0002 ns/op, 144571.3 op/s
+// Pre-Warmup: 216000 op, 1367.6 ms, 1367639455.4 ns, 3197991 ticks, 6331.6641 ns/op, 157936.4 op/s
+// Warmup (idle): 216000 op, 0.6 ms, 635068.9 ns, 1485 ticks, 2.9401 ns/op, 340120581.8 op/s
+// Warmup (idle): 216000 op, 0.6 ms, 638062.5 ns, 1492 ticks, 2.954 ns/op, 338524841.8 op/s
+// Warmup (idle): 216000 op, 0.6 ms, 631647.6 ns, 1477 ticks, 2.9243 ns/op, 341962805.7 op/s
+// IterationCount = 216000
+// Target (idle): 216000 op, 0.6 ms, 631647.6 ns, 1477 ticks, 2.9243 ns/op, 341962805.7 op/s
+// Target (idle): 216000 op, 0.6 ms, 638917.8 ns, 1494 ticks, 2.958 ns/op, 338071662.7 op/s
+// Target (idle): 216000 op, 0.6 ms, 643622 ns, 1505 ticks, 2.9797 ns/op, 335600707 op/s
+// Target (idle): 216000 op, 0.6 ms, 631647.6 ns, 1477 ticks, 2.9243 ns/op, 341962805.7 op/s
+// Target (idle): 216000 op, 0.6 ms, 631647.6 ns, 1477 ticks, 2.9243 ns/op, 341962805.7 op/s
+// Warmup 1: 216000 op, 1366.4 ms, 1366379581.3 ns, 3195045 ticks, 6325.8314 ns/op, 158082 op/s
+// Warmup 2: 216000 op, 1362.9 ms, 1362944649.8 ns, 3187013 ticks, 6309.9289 ns/op, 158480.4 op/s
+// Warmup 3: 216000 op, 1365.2 ms, 1365168887.7 ns, 3192214 ticks, 6320.2263 ns/op, 158222.2 op/s
+Target competition: EnumeratorsBenchmarks
+// ***** Competition: Start   *****
+// Found benchmarks:
+//   EnumeratorsBenchmarks_DedicatedClassEnumeratorCalledViaInterface_Throughput_X64_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_DedicatedStructEnumeratorCalledDirectly_Throughput_X64_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleClassEnumeratorCalledDirectly_Throughput_X64_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleClassEnumeratorCalledViaInterface_Throughput_X64_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleStructEnumeratorCalledDirectly_Throughput_X64_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleStructEnumeratorCalledViaInterface_Throughput_X64_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_DedicatedClassEnumeratorCalledViaInterface_Throughput_X64_RyuJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_DedicatedStructEnumeratorCalledDirectly_Throughput_X64_RyuJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleClassEnumeratorCalledDirectly_Throughput_X64_RyuJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleClassEnumeratorCalledViaInterface_Throughput_X64_RyuJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleStructEnumeratorCalledDirectly_Throughput_X64_RyuJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleStructEnumeratorCalledViaInterface_Throughput_X64_RyuJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_DedicatedClassEnumeratorCalledViaInterface_Throughput_X86_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_DedicatedStructEnumeratorCalledDirectly_Throughput_X86_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleClassEnumeratorCalledDirectly_Throughput_X86_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleClassEnumeratorCalledViaInterface_Throughput_X86_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleStructEnumeratorCalledDirectly_Throughput_X86_LegacyJit_NET-HostFramework -w=5 -t=10
+//   EnumeratorsBenchmarks_SingleStructEnumeratorCalledViaInterface_Throughput_X86_LegacyJit_NET-HostFramework -w=5 -t=10
+
+// **************************
+// Benchmark: EnumeratorsBenchmarks_DedicatedClassEnumeratorCalledViaInterface (Throughput_X64_LegacyJit_NET-HostFramework) [-w=5 -t=10]
+// Generated project: C:\Projects\DemoCode\Performance\Benchmarks\bin\Release\EnumeratorsBenchmarks_DedicatedClassEnumeratorCalledViaInterface_Throughput_X64_LegacyJit_NET-HostFramework
+
+// Build:
+// OverallResult = Success
+
+// Run, Process: 1 / 3
+// Method=DedicatedClassEnumeratorCalledViaInterface Platform=X64 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit 
+// Pre-Warmup: 1 op, 0 ms, 9836.1 ns, 23 ticks, 9836.0838 ns/op, 101666.5 op/s
+// Pre-Warmup: 1000 op, 4.6 ms, 4635789.1 ns, 10840 ticks, 4635.7891 ns/op, 215713 op/s
+// Pre-Warmup: 216000 op, 974.6 ms, 974563459.6 ns, 2278850 ticks, 4511.8679 ns/op, 221637.7 op/s
+// Pre-Warmup: 432000 op, 1945.6 ms, 1945607311.9 ns, 4549470 ticks, 4503.7206 ns/op, 222038.6 op/s
+// Warmup (idle): 432000 op, 1 ms, 967357.5 ns, 2262 ticks, 2.2393 ns/op, 446577421.8 op/s
+// Warmup (idle): 432000 op, 0.9 ms, 925874.8 ns, 2165 ticks, 2.1432 ns/op, 466585740.4 op/s
+// Warmup (idle): 432000 op, 1.1 ms, 1075554.4 ns, 2515 ticks, 2.4897 ns/op, 401653331.2 op/s
+// IterationCount = 432000
+// Target (idle): 432000 op, 1 ms, 967785.1 ns, 2263 ticks, 2.2402 ns/op, 446380083.1 op/s
+// Target (idle): 432000 op, 0.9 ms, 930151.4 ns, 2175 ticks, 2.1531 ns/op, 464440518.6 op/s
+// Target (idle): 432000 op, 0.9 ms, 948112.9 ns, 2217 ticks, 2.1947 ns/op, 455641916.1 op/s
+// Target (idle): 432000 op, 0.9 ms, 946830 ns, 2214 ticks, 2.1917 ns/op, 456259317.1 op/s
+// Target (idle): 432000 op, 0.9 ms, 913472.8 ns, 2136 ticks, 2.1145 ns/op, 472920471.9 op/s
+// Warmup 1: 432000 op, 1944.3 ms, 1944312797.7 ns, 4546443 ticks, 4500.7241 ns/op, 222186.5 op/s
+// Warmup 2: 432000 op, 1944.5 ms, 1944545014.8 ns, 4546986 ticks, 4501.2616 ns/op, 222159.9 op/s
+// Warmup 3: 432000 op, 1943.7 ms, 1943711941.3 ns, 4545038 ticks, 4499.3332 ns/op, 222255.2 op/s
+// Warmup 4: 432000 op, 1941.2 ms, 1941180218.9 ns, 4539118 ticks, 4493.4727 ns/op, 222545 op/s
+// Warmup 5: 432000 op, 1993.2 ms, 1993227642.5 ns, 4660822 ticks, 4613.9529 ns/op, 216733.9 op/s
+Target 1: 432000 op, 2104.6 ms, 2104564841 ns, 4921165 ticks, 4871.6779 ns/op, 205268.1 op/s
+Target 2: 432000 op, 2011.4 ms, 2011352123.7 ns, 4703203 ticks, 4655.9077 ns/op, 214780.9 op/s
+Target 3: 432000 op, 1939.3 ms, 1939294684.4 ns, 4534709 ticks, 4489.1081 ns/op, 222761.4 op/s
+Target 4: 432000 op, 1951.3 ms, 1951292568.3 ns, 4562764 ticks, 4516.8809 ns/op, 221391.7 op/s
+Target 5: 432000 op, 1945.8 ms, 1945772814.7 ns, 4549857 ticks, 4504.1037 ns/op, 222019.8 op/s
+Target 6: 432000 op, 1938.4 ms, 1938405160.3 ns, 4532629 ticks, 4487.049 ns/op, 222863.6 op/s
+Target 7: 432000 op, 1936.6 ms, 1936588906 ns, 4528382 ticks, 4482.8447 ns/op, 223072.6 op/s
+Target 8: 432000 op, 1938.4 ms, 1938351703.3 ns, 4532504 ticks, 4486.9252 ns/op, 222869.8 op/s
+Target 9: 432000 op, 1939.7 ms, 1939691549 ns, 4535637 ticks, 4490.0267 ns/op, 222715.8 op/s
+Target 10: 432000 op, 1939.2 ms, 1939156551.5 ns, 4534386 ticks, 4488.7883 ns/op, 222777.3 op/s
+// Benchmark finished
+// Run, Process: 2 / 3
+// Method=DedicatedClassEnumeratorCalledViaInterface Platform=X64 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit 
+// Pre-Warmup: 1 op, 0 ms, 9836.1 ns, 23 ticks, 9836.0838 ns/op, 101666.5 op/s
+// Pre-Warmup: 1000 op, 4.5 ms, 4494235 ns, 10509 ticks, 4494.235 ns/op, 222507.3 op/s
+// Pre-Warmup: 223000 op, 1000.2 ms, 1000168496.4 ns, 2338723 ticks, 4485.0605 ns/op, 222962.4 op/s
+// Warmup (idle): 223000 op, 0.5 ms, 462295.9 ns, 1081 ticks, 2.0731 ns/op, 482374992.6 op/s
+// Warmup (idle): 223000 op, 0.5 ms, 504206.2 ns, 1179 ticks, 2.261 ns/op, 442279361.3 op/s
+// Warmup (idle): 223000 op, 0.5 ms, 505061.5 ns, 1181 ticks, 2.2648 ns/op, 441530370 op/s
+// IterationCount = 223000
+// Target (idle): 223000 op, 0.6 ms, 561084.4 ns, 1312 ticks, 2.5161 ns/op, 397444639.5 op/s
+// Target (idle): 223000 op, 0.5 ms, 496508.4 ns, 1161 ticks, 2.2265 ns/op, 449136405.7 op/s
+// Target (idle): 223000 op, 0.5 ms, 480685.1 ns, 1124 ticks, 2.1555 ns/op, 463921145 op/s
+// Target (idle): 223000 op, 0.5 ms, 495653.1 ns, 1159 ticks, 2.2227 ns/op, 449911446.9 op/s
+// Target (idle): 223000 op, 0.5 ms, 496080.7 ns, 1160 ticks, 2.2246 ns/op, 449523592.2 op/s
+// Warmup 1: 223000 op, 1001.1 ms, 1001062297.1 ns, 2340813 ticks, 4489.0686 ns/op, 222763.4 op/s
+// Warmup 2: 223000 op, 1003 ms, 1003024381.9 ns, 2345401 ticks, 4497.8672 ns/op, 222327.6 op/s
+// Warmup 3: 223000 op, 999.6 ms, 999624090.5 ns, 2337450 ticks, 4482.6192 ns/op, 223083.9 op/s
+// Warmup 4: 223000 op, 998.3 ms, 998292370.3 ns, 2334336 ticks, 4476.6474 ns/op, 223381.5 op/s
+// Warmup 5: 223000 op, 1076.2 ms, 1076221524 ns, 2516560 ticks, 4826.1055 ns/op, 207206.4 op/s
+Target 1: 223000 op, 1019.3 ms, 1019338596.1 ns, 2383549 ticks, 4571.0251 ns/op, 218769.3 op/s
+Target 2: 223000 op, 1061.6 ms, 1061610235.3 ns, 2482394 ticks, 4760.584 ns/op, 210058.3 op/s
+Target 3: 223000 op, 1013.3 ms, 1013297530 ns, 2369423 ticks, 4543.9351 ns/op, 220073.6 op/s
+Target 4: 223000 op, 1032.9 ms, 1032937195.7 ns, 2415347 ticks, 4632.0054 ns/op, 215889.2 op/s
+Target 5: 223000 op, 1021.5 ms, 1021458058.3 ns, 2388505 ticks, 4580.5294 ns/op, 218315.4 op/s
+Target 6: 223000 op, 1001.3 ms, 1001306488.5 ns, 2341384 ticks, 4490.1636 ns/op, 222709 op/s
+Target 7: 223000 op, 998.6 ms, 998639199.2 ns, 2335147 ticks, 4478.2027 ns/op, 223303.9 op/s
+Target 8: 223000 op, 999.1 ms, 999080967.6 ns, 2336180 ticks, 4480.1837 ns/op, 223205.1 op/s
+Target 9: 223000 op, 998.3 ms, 998291942.7 ns, 2334335 ticks, 4476.6455 ns/op, 223381.5 op/s
+Target 10: 223000 op, 999.3 ms, 999294795.6 ns, 2336680 ticks, 4481.1426 ns/op, 223157.4 op/s
+// Benchmark finished
+// Run, Process: 3 / 3
+// Method=DedicatedClassEnumeratorCalledViaInterface Platform=X64 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit 
+// Pre-Warmup: 1 op, 0 ms, 9408.4 ns, 22 ticks, 9408.428 ns/op, 106287.7 op/s
+// Pre-Warmup: 1000 op, 4.5 ms, 4507920 ns, 10541 ticks, 4507.92 ns/op, 221831.8 op/s
+// Pre-Warmup: 222000 op, 996.1 ms, 996089942.9 ns, 2329186 ticks, 4486.8916 ns/op, 222871.4 op/s
+// Pre-Warmup: 444000 op, 1990.2 ms, 1990228919.9 ns, 4653810 ticks, 4482.4976 ns/op, 223089.9 op/s
+// Warmup (idle): 444000 op, 0.9 ms, 919460 ns, 2150 ticks, 2.0709 ns/op, 482892128.4 op/s
+// Warmup (idle): 444000 op, 1 ms, 961370.3 ns, 2248 ticks, 2.1652 ns/op, 461840781.1 op/s
+// Warmup (idle): 444000 op, 1 ms, 960942.6 ns, 2247 ticks, 2.1643 ns/op, 462046317.8 op/s
+// IterationCount = 444000
+// Target (idle): 444000 op, 1 ms, 1028939.9 ns, 2406 ticks, 2.3174 ns/op, 431512084.8 op/s
+// Target (idle): 444000 op, 1 ms, 961370.3 ns, 2248 ticks, 2.1652 ns/op, 461840781.1 op/s
+// Target (idle): 444000 op, 1 ms, 971206.4 ns, 2271 ticks, 2.1874 ns/op, 457163397.6 op/s
+// Target (idle): 444000 op, 1 ms, 971634 ns, 2272 ticks, 2.1884 ns/op, 456962181.3 op/s
+// Target (idle): 444000 op, 1 ms, 971634 ns, 2272 ticks, 2.1884 ns/op, 456962181.3 op/s
+// Warmup 1: 444000 op, 1990.1 ms, 1990056574.6 ns, 4653407 ticks, 4482.1094 ns/op, 223109.2 op/s
+// Warmup 2: 444000 op, 1990.1 ms, 1990110886.9 ns, 4653534 ticks, 4482.2317 ns/op, 223103.1 op/s
+// Warmup 3: 444000 op, 1988.9 ms, 1988850157.5 ns, 4650586 ticks, 4479.3922 ns/op, 223244.6 op/s
+// Warmup 4: 444000 op, 1987.8 ms, 1987805394.4 ns, 4648143 ticks, 4477.0392 ns/op, 223361.9 op/s
+// Warmup 5: 444000 op, 1987.9 ms, 1987920006.1 ns, 4648411 ticks, 4477.2973 ns/op, 223349 op/s
+Target 1: 444000 op, 1988.3 ms, 1988262558.4 ns, 4649212 ticks, 4478.0688 ns/op, 223310.5 op/s
+Target 2: 444000 op, 1988.2 ms, 1988195844.1 ns, 4649056 ticks, 4477.9186 ns/op, 223318 op/s
+Target 3: 444000 op, 1988.4 ms, 1988362629.9 ns, 4649446 ticks, 4478.2942 ns/op, 223299.3 op/s
+Target 4: 444000 op, 1988 ms, 1988004682 ns, 4648609 ticks, 4477.488 ns/op, 223339.5 op/s
+Target 5: 444000 op, 1987.4 ms, 1987435899.7 ns, 4647279 ticks, 4476.207 ns/op, 223403.4 op/s
+Target 6: 444000 op, 1988.8 ms, 1988767620 ns, 4650393 ticks, 4479.2064 ns/op, 223253.8 op/s
+Target 7: 444000 op, 1992.3 ms, 1992347954.5 ns, 4658765 ticks, 4487.2702 ns/op, 222852.6 op/s
+Target 8: 444000 op, 1991.3 ms, 1991301908.3 ns, 4656319 ticks, 4484.9142 ns/op, 222969.7 op/s
+Target 9: 444000 op, 2003.2 ms, 2003182614.6 ns, 4684100 ticks, 4511.6726 ns/op, 221647.3 op/s
+Target 10: 444000 op, 1988.5 ms, 1988518296.6 ns, 4649810 ticks, 4478.6448 ns/op, 223281.8 op/s
+// Benchmark finished
+
+AverageTime (ns/op): Avr=4526.58046857522 +- 33.0329394944586
+OperationsPerSecond: Avr=221001.993166223 +- 1537.57321850214
+
+// **************************
+// Benchmark: EnumeratorsBenchmarks_DedicatedStructEnumeratorCalledDirectly (Throughput_X64_LegacyJit_NET-HostFramework) [-w=5 -t=10]
+// Generated project: C:\Projects\DemoCode\Performance\Benchmarks\bin\Release\EnumeratorsBenchmarks_DedicatedStructEnumeratorCalledDirectly_Throughput_X64_LegacyJit_NET-HostFramework
+
+// Build:
+// OverallResult = Success
+
+// Run, Process: 1 / 3
+// Method=DedicatedStructEnumeratorCalledDirectly Platform=X64 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit 
+// Pre-Warmup: 1 op, 0 ms, 4276.6 ns, 10 ticks, 4276.5582 ns/op, 233832.9 op/s
+// Pre-Warmup: 1000 op, 2.1 ms, 2077552 ns, 4858 ticks, 2077.552 ns/op, 481335.7 op/s
+// Pre-Warmup: 482000 op, 1037 ms, 1036968707.1 ns, 2424774 ticks, 2151.3874 ns/op, 464816.3 op/s
+// Warmup (idle): 482000 op, 1 ms, 1007129.5 ns, 2355 ticks, 2.0895 ns/op, 478587931.2 op/s
+// Warmup (idle): 482000 op, 1 ms, 1028939.9 ns, 2406 ticks, 2.1347 ns/op, 468443299.3 op/s
+// Warmup (idle): 482000 op, 1 ms, 1029367.6 ns, 2407 ticks, 2.1356 ns/op, 468248682.2 op/s
+// IterationCount = 482000
+// Target (idle): 482000 op, 1.1 ms, 1147828.2 ns, 2684 ticks, 2.3814 ns/op, 419923464.2 op/s
+// Target (idle): 482000 op, 1 ms, 1028939.9 ns, 2406 ticks, 2.1347 ns/op, 468443299.3 op/s
+// Target (idle): 482000 op, 1 ms, 1028939.9 ns, 2406 ticks, 2.1347 ns/op, 468443299.3 op/s
+// Target (idle): 482000 op, 1 ms, 1038348.3 ns, 2428 ticks, 2.1542 ns/op, 464198755.4 op/s
+// Target (idle): 482000 op, 1 ms, 1038348.3 ns, 2428 ticks, 2.1542 ns/op, 464198755.4 op/s
+// Warmup 1: 482000 op, 1034 ms, 1034023013.9 ns, 2417886 ticks, 2145.276 ns/op, 466140.5 op/s
+// Warmup 2: 482000 op, 1034.1 ms, 1034102557.9 ns, 2418072 ticks, 2145.441 ns/op, 466104.6 op/s
+// Warmup 3: 482000 op, 1033 ms, 1032961144.5 ns, 2415403 ticks, 2143.0729 ns/op, 466619.7 op/s
+// Warmup 4: 482000 op, 1034.6 ms, 1034632851.1 ns, 2419312 ticks, 2146.5412 ns/op, 465865.7 op/s
+// Warmup 5: 482000 op, 1026.5 ms, 1026479165.3 ns, 2400246 ticks, 2129.6248 ns/op, 469566.3 op/s
+Target 1: 482000 op, 1039.1 ms, 1039107413.9 ns, 2429775 ticks, 2155.8245 ns/op, 463859.6 op/s
+Target 2: 482000 op, 1038.6 ms, 1038613899.1 ns, 2428621 ticks, 2154.8006 ns/op, 464080.1 op/s
+Target 3: 482000 op, 1032.2 ms, 1032204621.3 ns, 2413634 ticks, 2141.5034 ns/op, 466961.7 op/s
+Target 4: 482000 op, 1031.3 ms, 1031290293.2 ns, 2411496 ticks, 2139.6064 ns/op, 467375.7 op/s
+Target 5: 482000 op, 1034.3 ms, 1034282601 ns, 2418493 ticks, 2145.8145 ns/op, 466023.5 op/s
+Target 6: 482000 op, 1033.3 ms, 1033263069.5 ns, 2416109 ticks, 2143.6993 ns/op, 466483.3 op/s
+Target 7: 482000 op, 1032.6 ms, 1032613460.3 ns, 2414590 ticks, 2142.3516 ns/op, 466776.8 op/s
+Target 8: 482000 op, 1029.7 ms, 1029720796.3 ns, 2407826 ticks, 2136.3502 ns/op, 468088.1 op/s
+Target 9: 482000 op, 1028.7 ms, 1028690573.5 ns, 2405417 ticks, 2134.2128 ns/op, 468556.8 op/s
+Target 10: 482000 op, 1035.6 ms, 1035636986.9 ns, 2421660 ticks, 2148.6245 ns/op, 465414 op/s
+// Benchmark finished
+// Run, Process: 2 / 3
+// Method=DedicatedStructEnumeratorCalledDirectly Platform=X64 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit 
+// Pre-Warmup: 1 op, 0 ms, 4276.6 ns, 10 ticks, 4276.5582 ns/op, 233832.9 op/s
+// Pre-Warmup: 1000 op, 2.1 ms, 2074986 ns, 4852 ticks, 2074.986 ns/op, 481931 op/s
+// Pre-Warmup: 482000 op, 1042.6 ms, 1042557741 ns, 2437843 ticks, 2162.9829 ns/op, 462324.5 op/s
+// Warmup (idle): 482000 op, 1 ms, 1007129.5 ns, 2355 ticks, 2.0895 ns/op, 478587931.2 op/s
+// Warmup (idle): 482000 op, 1 ms, 1031078.2 ns, 2411 ticks, 2.1392 ns/op, 467471828.3 op/s
+// Warmup (idle): 482000 op, 1 ms, 1028939.9 ns, 2406 ticks, 2.1347 ns/op, 468443299.3 op/s
+// IterationCount = 482000
+// Target (idle): 482000 op, 1.1 ms, 1142696.3 ns, 2672 ticks, 2.3707 ns/op, 421809348.1 op/s
+// Target (idle): 482000 op, 1 ms, 1028939.9 ns, 2406 ticks, 2.1347 ns/op, 468443299.3 op/s
+// Target (idle): 482000 op, 1.1 ms, 1087528.7 ns, 2543 ticks, 2.2563 ns/op, 443206676.4 op/s
+// Target (idle): 482000 op, 1 ms, 1028512.2 ns, 2405 ticks, 2.1338 ns/op, 468638078.2 op/s
+// Target (idle): 482000 op, 1 ms, 1040914.3 ns, 2434 ticks, 2.1596 ns/op, 463054469.2 op/s
+// Warmup 1: 482000 op, 1036.9 ms, 1036931073.4 ns, 2424686 ticks, 2151.3093 ns/op, 464833.2 op/s
+// Warmup 2: 482000 op, 1042.8 ms, 1042836572.6 ns, 2438495 ticks, 2163.5614 ns/op, 462200.9 op/s
+// Warmup 3: 482000 op, 1061.3 ms, 1061334825 ns, 2481750 ticks, 2201.9395 ns/op, 454145.1 op/s
+// Warmup 4: 482000 op, 1042.7 ms, 1042651825.3 ns, 2438063 ticks, 2163.1781 ns/op, 462282.8 op/s
+// Warmup 5: 482000 op, 1042.9 ms, 1042887036 ns, 2438613 ticks, 2163.666 ns/op, 462178.5 op/s
+Target 1: 482000 op, 1037.5 ms, 1037465643.2 ns, 2425936 ticks, 2152.4183 ns/op, 464593.7 op/s
+Target 2: 482000 op, 1042.6 ms, 1042584255.7 ns, 2437905 ticks, 2163.0379 ns/op, 462312.8 op/s
+Target 3: 482000 op, 1039.1 ms, 1039107841.5 ns, 2429776 ticks, 2155.8254 ns/op, 463859.5 op/s
+Target 4: 482000 op, 1031.5 ms, 1031534484.7 ns, 2412067 ticks, 2140.113 ns/op, 467265 op/s
+Target 5: 482000 op, 1039.7 ms, 1039661655.8 ns, 2431071 ticks, 2156.9744 ns/op, 463612.4 op/s
+Target 6: 482000 op, 1026.1 ms, 1026071181.6 ns, 2399292 ticks, 2128.7784 ns/op, 469753 op/s
+Target 7: 482000 op, 1028.7 ms, 1028723503 ns, 2405494 ticks, 2134.2811 ns/op, 468541.8 op/s
+Target 8: 482000 op, 1044.4 ms, 1044430873.5 ns, 2442223 ticks, 2166.869 ns/op, 461495.4 op/s
+Target 9: 482000 op, 1047.7 ms, 1047707572.4 ns, 2449885 ticks, 2173.6672 ns/op, 460052 op/s
+Target 10: 482000 op, 1090.1 ms, 1090084842.6 ns, 2548977 ticks, 2261.5868 ns/op, 442167.4 op/s
+// Benchmark finished
+// Run, Process: 3 / 3
+// Method=DedicatedStructEnumeratorCalledDirectly Platform=X64 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit 
+// Pre-Warmup: 1 op, 0 ms, 4276.6 ns, 10 ticks, 4276.5582 ns/op, 233832.9 op/s
+// Pre-Warmup: 1000 op, 2.1 ms, 2116041 ns, 4948 ticks, 2116.041 ns/op, 472580.6 op/s
+// Pre-Warmup: 473000 op, 1017.8 ms, 1017796469.2 ns, 2379943 ticks, 2151.7896 ns/op, 464729.5 op/s
+// Warmup (idle): 473000 op, 1.1 ms, 1121313.6 ns, 2622 ticks, 2.3706 ns/op, 421826703.7 op/s
+// Warmup (idle): 473000 op, 1.1 ms, 1140130.4 ns, 2666 ticks, 2.4104 ns/op, 414864822.6 op/s
+// Warmup (idle): 473000 op, 1.3 ms, 1276552.6 ns, 2985 ticks, 2.6988 ns/op, 370529184.9 op/s
+// IterationCount = 473000
+// Target (idle): 473000 op, 1 ms, 1037065.4 ns, 2425 ticks, 2.1925 ns/op, 456094687.4 op/s
+// Target (idle): 473000 op, 1 ms, 1005846.5 ns, 2352 ticks, 2.1265 ns/op, 470250687.5 op/s
+// Target (idle): 473000 op, 1 ms, 1005418.8 ns, 2351 ticks, 2.1256 ns/op, 470450709.1 op/s
+// Target (idle): 473000 op, 1 ms, 1005418.8 ns, 2351 ticks, 2.1256 ns/op, 470450709.1 op/s
+// Target (idle): 473000 op, 1 ms, 1006274.1 ns, 2353 ticks, 2.1274 ns/op, 470050836 op/s
+// Warmup 1: 473000 op, 1017.2 ms, 1017171236.4 ns, 2378481 ticks, 2150.4677 ns/op, 465015.1 op/s
+// Warmup 2: 473000 op, 1016.2 ms, 1016170949.4 ns, 2376142 ticks, 2148.353 ns/op, 465472.9 op/s
+// Warmup 3: 473000 op, 1011 ms, 1011039507.3 ns, 2364143 ticks, 2137.5042 ns/op, 467835.3 op/s
+// Warmup 4: 473000 op, 1015.7 ms, 1015712930 ns, 2375071 ticks, 2147.3846 ns/op, 465682.8 op/s
+// Warmup 5: 473000 op, 1016.6 ms, 1016574228.9 ns, 2377085 ticks, 2149.2056 ns/op, 465288.2 op/s
+Target 1: 473000 op, 1019 ms, 1019001175.6 ns, 2382760 ticks, 2154.3365 ns/op, 464180 op/s
+Target 2: 473000 op, 1011.9 ms, 1011851625.7 ns, 2366042 ticks, 2139.2212 ns/op, 467459.8 op/s
+Target 3: 473000 op, 1011 ms, 1010994175.8 ns, 2364037 ticks, 2137.4084 ns/op, 467856.3 op/s
+Target 4: 473000 op, 1017.8 ms, 1017837524.1 ns, 2380039 ticks, 2151.8764 ns/op, 464710.7 op/s
+Target 5: 473000 op, 1013.4 ms, 1013445498.9 ns, 2369769 ticks, 2142.5909 ns/op, 466724.7 op/s
+Target 6: 473000 op, 1013.3 ms, 1013334308.4 ns, 2369509 ticks, 2142.3558 ns/op, 466775.9 op/s
+Target 7: 473000 op, 1027.7 ms, 1027745454.1 ns, 2403207 ticks, 2172.8234 ns/op, 460230.7 op/s
+Target 8: 473000 op, 1017.9 ms, 1017892264.1 ns, 2380167 ticks, 2151.9921 ns/op, 464685.7 op/s
+Target 9: 473000 op, 1015.5 ms, 1015475581.1 ns, 2374516 ticks, 2146.8828 ns/op, 465791.6 op/s
+Target 10: 473000 op, 1022.8 ms, 1022821425 ns, 2391693 ticks, 2162.4132 ns/op, 462446.3 op/s
+// Benchmark finished
+
+AverageTime (ns/op): Avr=2152.60800194553 +- 8.41462456085208
+OperationsPerSecond: Avr=464604.477103831 +- 1752.78223812247
+
+// **************************
+// Benchmark: EnumeratorsBenchmarks_SingleClassEnumeratorCalledDirectly (Throughput_X64_LegacyJit_NET-HostFramework) [-w=5 -t=10]
+// Generated project: C:\Projects\DemoCode\Performance\Benchmarks\bin\Release\EnumeratorsBenchmarks_SingleClassEnumeratorCalledDirectly_Throughput_X64_LegacyJit_NET-HostFramework
+
+// Build:
+// OverallResult = Success
+
+// Run, Process: 1 / 3
+// Method=SingleClassEnumeratorCalledDirectly Platform=X64 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit 
+// Pre-Warmup: 1 op, 0 ms, 3848.9 ns, 9 ticks, 3848.9024 ns/op, 259814.3 op/s
+// Pre-Warmup: 1000 op, 1.8 ms, 1811550 ns, 4236 ticks, 1811.55 ns/op, 552013.5 op/s
+// Pre-Warmup: 553000 op, 1017.6 ms, 1017578364.7 ns, 2379433 ticks, 1840.1055 ns/op, 543447.1 op/s
+// Warmup (idle): 553000 op, 1.2 ms, 1192732.1 ns, 2789 ticks, 2.1568 ns/op, 463641426 op/s
+// Warmup (idle): 553000 op, 1 ms, 1024235.7 ns, 2395 ticks, 1.8521 ns/op, 539914796.2 op/s
+// Warmup (idle): 553000 op, 1 ms, 1022525.1 ns, 2391 ticks, 1.8491 ns/op, 540818041.4 op/s
+// IterationCount = 553000
+// Target (idle): 553000 op, 1.1 ms, 1125590.1 ns, 2632 ticks, 2.0354 ns/op, 491297848.4 op/s
+// Target (idle): 553000 op, 1 ms, 1022525.1 ns, 2391 ticks, 1.8491 ns/op, 540818041.4 op/s
+// Target (idle): 553000 op, 1 ms, 1040914.3 ns, 2434 ticks, 1.8823 ns/op, 531263737.5 op/s
+// Target (idle): 553000 op, 1 ms, 1041341.9 ns, 2435 ticks, 1.8831 ns/op, 531045559.3 op/s
+// Target (idle): 553000 op, 1 ms, 1032788.8 ns, 2415 ticks, 1.8676 ns/op, 535443452.2 op/s
+// Warmup 1: 553000 op, 1017.1 ms, 1017104949.7 ns, 2378326 ticks, 1839.2495 ns/op, 543700 op/s
+// Warmup 2: 553000 op, 1026.8 ms, 1026795202.9 ns, 2400985 ticks, 1856.7725 ns/op, 538568.9 op/s
+// Warmup 3: 553000 op, 1014.2 ms, 1014241366.4 ns, 2371630 ticks, 1834.0712 ns/op, 545235.1 op/s
+// Warmup 4: 553000 op, 1014.4 ms, 1014446213.5 ns, 2372109 ticks, 1834.4416 ns/op, 545125 op/s
+// Warmup 5: 553000 op, 1013.7 ms, 1013747851.6 ns, 2370476 ticks, 1833.1788 ns/op, 545500.5 op/s
+Target 1: 553000 op, 1014.8 ms, 1014802023.2 ns, 2372941 ticks, 1835.085 ns/op, 544933.9 op/s
+Target 2: 553000 op, 1013.1 ms, 1013121335.8 ns, 2369011 ticks, 1832.0458 ns/op, 545837.9 op/s
+Target 3: 553000 op, 1012 ms, 1011965382.1 ns, 2366308 ticks, 1829.9555 ns/op, 546461.4 op/s
+Target 4: 553000 op, 1014.3 ms, 1014344003.8 ns, 2371870 ticks, 1834.2568 ns/op, 545179.9 op/s
+Target 5: 553000 op, 1015.5 ms, 1015527755.1 ns, 2374638 ticks, 1836.3974 ns/op, 544544.4 op/s
+Target 6: 553000 op, 1016.5 ms, 1016480144.6 ns, 2376865 ticks, 1838.1196 ns/op, 544034.2 op/s
+Target 7: 553000 op, 1014.2 ms, 1014231957.9 ns, 2371608 ticks, 1834.0542 ns/op, 545240.2 op/s
+Target 8: 553000 op, 1014.8 ms, 1014815280.5 ns, 2372972 ticks, 1835.109 ns/op, 544926.8 op/s
+Target 9: 553000 op, 1014.9 ms, 1014863605.6 ns, 2373085 ticks, 1835.1964 ns/op, 544900.8 op/s
+Target 10: 553000 op, 1015.6 ms, 1015586343.9 ns, 2374775 ticks, 1836.5033 ns/op, 544513 op/s
+// Benchmark finished
+// Run, Process: 2 / 3
+// Method=SingleClassEnumeratorCalledDirectly Platform=X64 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit 
+// Pre-Warmup: 1 op, 0 ms, 3848.9 ns, 9 ticks, 3848.9024 ns/op, 259814.3 op/s
+// Pre-Warmup: 1000 op, 1.8 ms, 1822241.4 ns, 4261 ticks, 1822.2414 ns/op, 548774.7 op/s
+// Pre-Warmup: 549000 op, 1009.1 ms, 1009125747.5 ns, 2359668 ticks, 1838.1161 ns/op, 544035.3 op/s
+// Warmup (idle): 549000 op, 1.1 ms, 1135426.2 ns, 2655 ticks, 2.0682 ns/op, 483518878 op/s
+// Warmup (idle): 549000 op, 1 ms, 1014827.3 ns, 2373 ticks, 1.8485 ns/op, 540978769.9 op/s
+// Warmup (idle): 549000 op, 1 ms, 1015254.9 ns, 2374 ticks, 1.8493 ns/op, 540750893.4 op/s
+// IterationCount = 549000
+// Target (idle): 549000 op, 1.1 ms, 1095654.2 ns, 2562 ticks, 1.9957 ns/op, 501070500 op/s
+// Target (idle): 549000 op, 1 ms, 1014827.3 ns, 2373 ticks, 1.8485 ns/op, 540978769.9 op/s
+// Target (idle): 549000 op, 1 ms, 1026801.6 ns, 2401 ticks, 1.8703 ns/op, 534669979.6 op/s
+// Target (idle): 549000 op, 1 ms, 1025946.3 ns, 2399 ticks, 1.8688 ns/op, 535115723.6 op/s
+// Target (idle): 549000 op, 1.1 ms, 1073416.1 ns, 2510 ticks, 1.9552 ns/op, 511451243.4 op/s
+// Warmup 1: 549000 op, 1009 ms, 1009031663.2 ns, 2359448 ticks, 1837.9447 ns/op, 544086 op/s
+// Warmup 2: 549000 op, 1006.6 ms, 1006550404.2 ns, 2353646 ticks, 1833.4251 ns/op, 545427.2 op/s
+// Warmup 3: 549000 op, 1006.5 ms, 1006481979.2 ns, 2353486 ticks, 1833.3005 ns/op, 545464.3 op/s
+// Warmup 4: 549000 op, 1008.9 ms, 1008863166.8 ns, 2359054 ticks, 1837.6378 ns/op, 544176.9 op/s
+// Warmup 5: 549000 op, 1007.2 ms, 1007177775.2 ns, 2355113 ticks, 1834.5679 ns/op, 545087.5 op/s
+Target 1: 549000 op, 1007.6 ms, 1007560527.2 ns, 2356008 ticks, 1835.2651 ns/op, 544880.4 op/s
+Target 2: 549000 op, 1007.3 ms, 1007278702 ns, 2355349 ticks, 1834.7517 ns/op, 545032.9 op/s
+Target 3: 549000 op, 1012.5 ms, 1012539296.2 ns, 2367650 ticks, 1844.3339 ns/op, 542201.2 op/s
+Target 4: 549000 op, 1011.5 ms, 1011454333.4 ns, 2365113 ticks, 1842.3576 ns/op, 542782.8 op/s
+Target 5: 549000 op, 1007.5 ms, 1007463021.7 ns, 2355780 ticks, 1835.0875 ns/op, 544933.2 op/s
+Target 6: 549000 op, 1007.1 ms, 1007129877.8 ns, 2355001 ticks, 1834.4807 ns/op, 545113.4 op/s
+Target 7: 549000 op, 1006.2 ms, 1006213839 ns, 2352859 ticks, 1832.8121 ns/op, 545609.7 op/s
+Target 8: 549000 op, 1008.2 ms, 1008162666.6 ns, 2357416 ticks, 1836.3619 ns/op, 544555 op/s
+Target 9: 549000 op, 1007.5 ms, 1007521610.5 ns, 2355917 ticks, 1835.1942 ns/op, 544901.5 op/s
+Target 10: 549000 op, 1020.2 ms, 1020193480 ns, 2385548 ticks, 1858.2759 ns/op, 538133.2 op/s
+// Benchmark finished
+// Run, Process: 3 / 3
+// Method=SingleClassEnumeratorCalledDirectly Platform=X64 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit 
+// Pre-Warmup: 1 op, 0 ms, 3848.9 ns, 9 ticks, 3848.9024 ns/op, 259814.3 op/s
+// Pre-Warmup: 1000 op, 1.8 ms, 1830794.6 ns, 4281 ticks, 1830.7946 ns/op, 546210.9 op/s
+// Pre-Warmup: 547000 op, 1010.5 ms, 1010513063 ns, 2362912 ticks, 1847.3731 ns/op, 541309.2 op/s
+// Warmup (idle): 547000 op, 1.1 ms, 1092233 ns, 2554 ticks, 1.9968 ns/op, 500808912.7 op/s
+// Warmup (idle): 547000 op, 1.1 ms, 1084962.8 ns, 2537 ticks, 1.9835 ns/op, 504164746.9 op/s
+// Warmup (idle): 547000 op, 1.4 ms, 1419817.3 ns, 3320 ticks, 2.5956 ns/op, 385260832.2 op/s
+// IterationCount = 547000
+// Target (idle): 547000 op, 1.4 ms, 1418962 ns, 3318 ticks, 2.5941 ns/op, 385493057 op/s
+// Target (idle): 547000 op, 1.4 ms, 1418962 ns, 3318 ticks, 2.5941 ns/op, 385493057 op/s
+// Target (idle): 547000 op, 1.4 ms, 1421100.3 ns, 3323 ticks, 2.598 ns/op, 384913019.3 op/s
+// Target (idle): 547000 op, 1.4 ms, 1418962 ns, 3318 ticks, 2.5941 ns/op, 385493057 op/s
+// Target (idle): 547000 op, 1.4 ms, 1418534.3 ns, 3317 ticks, 2.5933 ns/op, 385609274.3 op/s
+// Warmup 1: 547000 op, 1030.3 ms, 1030281453.1 ns, 2409137 ticks, 1883.5127 ns/op, 530922.9 op/s
+// Warmup 2: 547000 op, 1019.8 ms, 1019781219.8 ns, 2384584 ticks, 1864.3167 ns/op, 536389.6 op/s
+// Warmup 3: 547000 op, 1020.5 ms, 1020456488.4 ns, 2386163 ticks, 1865.5512 ns/op, 536034.6 op/s
+// Warmup 4: 547000 op, 1004.1 ms, 1004068717.4 ns, 2347843 ticks, 1835.5918 ns/op, 544783.4 op/s
+// Warmup 5: 547000 op, 1002.6 ms, 1002603141 ns, 2344416 ticks, 1832.9125 ns/op, 545579.8 op/s
+Target 1: 547000 op, 1002.6 ms, 1002597581.4 ns, 2344403 ticks, 1832.9023 ns/op, 545582.8 op/s
+Target 2: 547000 op, 1001.7 ms, 1001653745 ns, 2342196 ticks, 1831.1769 ns/op, 546096.9 op/s
+Target 3: 547000 op, 1002.4 ms, 1002449184.9 ns, 2344056 ticks, 1832.6311 ns/op, 545663.6 op/s
+Target 4: 547000 op, 1002.9 ms, 1002943127.3 ns, 2345211 ticks, 1833.5341 ns/op, 545394.8 op/s
+Target 5: 547000 op, 1002.3 ms, 1002323026.4 ns, 2343761 ticks, 1832.4004 ns/op, 545732.2 op/s
+Target 6: 547000 op, 1001.5 ms, 1001492518.8 ns, 2341819 ticks, 1830.8821 ns/op, 546184.8 op/s
+Target 7: 547000 op, 1002.2 ms, 1002188742.5 ns, 2343447 ticks, 1832.1549 ns/op, 545805.4 op/s
+Target 8: 547000 op, 1001.5 ms, 1001473274.3 ns, 2341774 ticks, 1830.8469 ns/op, 546195.3 op/s
+Target 9: 547000 op, 1003.1 ms, 1003134717.1 ns, 2345659 ticks, 1833.8843 ns/op, 545290.7 op/s
+Target 10: 547000 op, 1001.4 ms, 1001402283.4 ns, 2341608 ticks, 1830.7172 ns/op, 546234 op/s
+// Benchmark finished
+
+AverageTime (ns/op): Avr=1835.2257896925 +- 1.91859325410618
+OperationsPerSecond: Avr=544896.539638239 +- 564.950216942198
+
+// **************************
+// Benchmark: EnumeratorsBenchmarks_SingleClassEnumeratorCalledViaInterface (Throughput_X64_LegacyJit_NET-HostFramework) [-w=5 -t=10]
+// Generated project: C:\Projects\DemoCode\Performance\Benchmarks\bin\Release\EnumeratorsBenchmarks_SingleClassEnumeratorCalledViaInterface_Throughput_X64_LegacyJit_NET-HostFramework
+
+// Build:
+// OverallResult = Success
+
+// Run, Process: 1 / 3
+// Method=SingleClassEnumeratorCalledViaInterface Platform=X64 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit 
+// Pre-Warmup: 1 op, 0 ms, 9836.1 ns, 23 ticks, 9836.0838 ns/op, 101666.5 op/s
+// Pre-Warmup: 1000 op, 4.5 ms, 4450186.4 ns, 10406 ticks, 4450.1864 ns/op, 224709.7 op/s
+// Pre-Warmup: 225000 op, 1011.6 ms, 1011609572.5 ns, 2365476 ticks, 4496.0425 ns/op, 222417.8 op/s
+// Warmup (idle): 225000 op, 0.5 ms, 467000.2 ns, 1092 ticks, 2.0756 ns/op, 481798557.7 op/s
+// Warmup (idle): 225000 op, 0.5 ms, 508482.8 ns, 1189 ticks, 2.2599 ns/op, 442492872.2 op/s
+// Warmup (idle): 225000 op, 0.5 ms, 508482.8 ns, 1189 ticks, 2.2599 ns/op, 442492872.2 op/s
+// IterationCount = 225000
+// Target (idle): 225000 op, 0.6 ms, 581611.9 ns, 1360 ticks, 2.5849 ns/op, 386855900.7 op/s
+// Target (idle): 225000 op, 0.5 ms, 511048.7 ns, 1195 ticks, 2.2713 ns/op, 440271150.6 op/s
+// Target (idle): 225000 op, 0.5 ms, 532431.5 ns, 1245 ticks, 2.3664 ns/op, 422589578.3 op/s
+// Target (idle): 225000 op, 0.5 ms, 484961.7 ns, 1134 ticks, 2.1554 ns/op, 463954166.7 op/s
+// Target (idle): 225000 op, 0.6 ms, 552959 ns, 1293 ticks, 2.4576 ns/op, 406901798.1 op/s
+// Warmup 1: 225000 op, 1009.8 ms, 1009809996.8 ns, 2361268 ticks, 4488.0444 ns/op, 222814.2 op/s
+// Warmup 2: 225000 op, 1007.6 ms, 1007622537.3 ns, 2356153 ticks, 4478.3224 ns/op, 223297.9 op/s
+// Warmup 3: 225000 op, 1007.3 ms, 1007347126.9 ns, 2355509 ticks, 4477.0983 ns/op, 223359 op/s
+// Warmup 4: 225000 op, 1007.3 ms, 1007260312.8 ns, 2355306 ticks, 4476.7125 ns/op, 223378.2 op/s
+// Warmup 5: 225000 op, 1007.8 ms, 1007772644.5 ns, 2356504 ticks, 4478.9895 ns/op, 223264.6 op/s
+Target 1: 225000 op, 1008.4 ms, 1008371790.3 ns, 2357905 ticks, 4481.6524 ns/op, 223132 op/s
+Target 2: 225000 op, 1007.3 ms, 1007324461.2 ns, 2355456 ticks, 4476.9976 ns/op, 223364 op/s
+Target 3: 225000 op, 1008 ms, 1008038646.4 ns, 2357126 ticks, 4480.1718 ns/op, 223205.7 op/s
+Target 4: 225000 op, 1018.2 ms, 1018173234 ns, 2380824 ticks, 4525.2144 ns/op, 220984 op/s
+Target 5: 225000 op, 1007.5 ms, 1007544703.9 ns, 2355971 ticks, 4477.9765 ns/op, 223315.2 op/s
+Target 6: 225000 op, 1007.5 ms, 1007475851.3 ns, 2355810 ticks, 4477.6705 ns/op, 223330.4 op/s
+Target 7: 225000 op, 1007.6 ms, 1007617833.1 ns, 2356142 ticks, 4478.3015 ns/op, 223298.9 op/s
+Target 8: 225000 op, 1007.6 ms, 1007554967.7 ns, 2355995 ticks, 4478.0221 ns/op, 223312.9 op/s
+Target 9: 225000 op, 1007.9 ms, 1007852616.1 ns, 2356691 ticks, 4479.345 ns/op, 223246.9 op/s
+Target 10: 225000 op, 1007.5 ms, 1007477562 ns, 2355814 ticks, 4477.6781 ns/op, 223330 op/s
+// Benchmark finished
+// Run, Process: 2 / 3
+// Method=SingleClassEnumeratorCalledViaInterface Platform=X64 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit 
+// Pre-Warmup: 1 op, 0 ms, 9408.4 ns, 22 ticks, 9408.428 ns/op, 106287.7 op/s
+// Pre-Warmup: 1000 op, 4.4 ms, 4449331.1 ns, 10404 ticks, 4449.3311 ns/op, 224752.9 op/s
+// Pre-Warmup: 225000 op, 1010.6 ms, 1010566519.9 ns, 2363037 ticks, 4491.4068 ns/op, 222647.4 op/s
+// Warmup (idle): 225000 op, 0.5 ms, 467000.2 ns, 1092 ticks, 2.0756 ns/op, 481798557.7 op/s
+// Warmup (idle): 225000 op, 0.5 ms, 499074.3 ns, 1167 ticks, 2.2181 ns/op, 450834640.1 op/s
+// Warmup (idle): 225000 op, 0.5 ms, 508482.8 ns, 1189 ticks, 2.2599 ns/op, 442492872.2 op/s
+// IterationCount = 225000
+// Target (idle): 225000 op, 0.6 ms, 582467.2 ns, 1362 ticks, 2.5887 ns/op, 386287830.4 op/s
+// Target (idle): 225000 op, 0.5 ms, 511048.7 ns, 1195 ticks, 2.2713 ns/op, 440271150.6 op/s
+// Target (idle): 225000 op, 0.5 ms, 499929.7 ns, 1169 ticks, 2.2219 ns/op, 450063323.4 op/s
+// Target (idle): 225000 op, 0.5 ms, 547399.4 ns, 1280 ticks, 2.4329 ns/op, 411034394.5 op/s
+// Target (idle): 225000 op, 0.5 ms, 484534 ns, 1133 ticks, 2.1535 ns/op, 464363658.4 op/s
+// Warmup 1: 225000 op, 1009.2 ms, 1009170223.7 ns, 2359772 ticks, 4485.201 ns/op, 222955.4 op/s
+// Warmup 2: 225000 op, 1008.8 ms, 1008750265.7 ns, 2358790 ticks, 4483.3345 ns/op, 223048.3 op/s
+// Warmup 3: 225000 op, 1008.2 ms, 1008205432.2 ns, 2357516 ticks, 4480.913 ns/op, 223168.8 op/s
+// Warmup 4: 225000 op, 1007.9 ms, 1007901796.5 ns, 2356806 ticks, 4479.5635 ns/op, 223236 op/s
+// Warmup 5: 225000 op, 1007.7 ms, 1007734155.5 ns, 2356414 ticks, 4478.8185 ns/op, 223273.2 op/s
+Target 1: 225000 op, 1007.6 ms, 1007621254.3 ns, 2356150 ticks, 4478.3167 ns/op, 223298.2 op/s
+Target 2: 225000 op, 1008.1 ms, 1008066016.4 ns, 2357190 ticks, 4480.2934 ns/op, 223199.7 op/s
+Target 3: 225000 op, 1007.7 ms, 1007732872.5 ns, 2356411 ticks, 4478.8128 ns/op, 223273.5 op/s
+Target 4: 225000 op, 1008.1 ms, 1008055752.6 ns, 2357166 ticks, 4480.2478 ns/op, 223201.9 op/s
+Target 5: 225000 op, 1008.3 ms, 1008337577.8 ns, 2357825 ticks, 4481.5003 ns/op, 223139.6 op/s
+Target 6: 225000 op, 1008.7 ms, 1008690821.5 ns, 2358651 ticks, 4483.0703 ns/op, 223061.4 op/s
+Target 7: 225000 op, 1008 ms, 1008027099.7 ns, 2357099 ticks, 4480.1204 ns/op, 223208.3 op/s
+Target 8: 225000 op, 1009 ms, 1009016267.6 ns, 2359412 ticks, 4484.5167 ns/op, 222989.5 op/s
+Target 9: 225000 op, 1008.7 ms, 1008669438.7 ns, 2358601 ticks, 4482.9753 ns/op, 223066.1 op/s
+Target 10: 225000 op, 1008.3 ms, 1008348696.9 ns, 2357851 ticks, 4481.5498 ns/op, 223137.1 op/s
+// Benchmark finished
+// Run, Process: 3 / 3
+// Method=SingleClassEnumeratorCalledViaInterface Platform=X64 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit 
+// Pre-Warmup: 1 op, 0 ms, 9836.1 ns, 23 ticks, 9836.0838 ns/op, 101666.5 op/s
+// Pre-Warmup: 1000 op, 4.5 ms, 4502788.1 ns, 10529 ticks, 4502.7881 ns/op, 222084.6 op/s
+// Pre-Warmup: 223000 op, 1000.6 ms, 1000557663.2 ns, 2339633 ticks, 4486.8057 ns/op, 222875.7 op/s
+// Warmup (idle): 223000 op, 0.5 ms, 463151.3 ns, 1083 ticks, 2.0769 ns/op, 481484180.1 op/s
+// Warmup (idle): 223000 op, 0.5 ms, 504206.2 ns, 1179 ticks, 2.261 ns/op, 442279361.3 op/s
+// Warmup (idle): 223000 op, 0.5 ms, 504633.9 ns, 1180 ticks, 2.2629 ns/op, 441904548.3 op/s
+// IterationCount = 223000
+// Target (idle): 223000 op, 0.6 ms, 583750.2 ns, 1365 ticks, 2.6177 ns/op, 382012723.1 op/s
+// Target (idle): 223000 op, 0.5 ms, 506772.1 ns, 1185 ticks, 2.2725 ns/op, 440039972.2 op/s
+// Target (idle): 223000 op, 0.5 ms, 496080.7 ns, 1160 ticks, 2.2246 ns/op, 449523592.2 op/s
+// Target (idle): 223000 op, 0.5 ms, 496080.7 ns, 1160 ticks, 2.2246 ns/op, 449523592.2 op/s
+// Target (idle): 223000 op, 0.5 ms, 495653.1 ns, 1159 ticks, 2.2227 ns/op, 449911446.9 op/s
+// Warmup 1: 223000 op, 1000.6 ms, 1000576907.7 ns, 2339678 ticks, 4486.892 ns/op, 222871.4 op/s
+// Warmup 2: 223000 op, 1000.3 ms, 1000310050.5 ns, 2339054 ticks, 4485.6953 ns/op, 222930.9 op/s
+// Warmup 3: 223000 op, 1011.3 ms, 1011251624.6 ns, 2364639 ticks, 4534.7606 ns/op, 220518.8 op/s
+// Warmup 4: 223000 op, 1000.4 ms, 1000394298.7 ns, 2339251 ticks, 4486.0731 ns/op, 222912.1 op/s
+// Warmup 5: 223000 op, 998.3 ms, 998345399.6 ns, 2334460 ticks, 4476.8852 ns/op, 223369.6 op/s
+Target 1: 223000 op, 1000.4 ms, 1000387456.2 ns, 2339235 ticks, 4486.0424 ns/op, 222913.6 op/s
+Target 2: 223000 op, 999.1 ms, 999097646.2 ns, 2336219 ticks, 4480.2585 ns/op, 223201.4 op/s
+Target 3: 223000 op, 998.9 ms, 998885956.6 ns, 2335724 ticks, 4479.3092 ns/op, 223248.7 op/s
+Target 4: 223000 op, 999 ms, 998997574.8 ns, 2335985 ticks, 4479.8098 ns/op, 223223.8 op/s
+Target 5: 223000 op, 1006 ms, 1006035506.6 ns, 2352442 ticks, 4511.37 ns/op, 221662.2 op/s
+Target 6: 223000 op, 1012.4 ms, 1012385340.1 ns, 2367290 ticks, 4539.8446 ns/op, 220271.9 op/s
+Target 7: 223000 op, 1075 ms, 1075006553.8 ns, 2513719 ticks, 4820.6572 ns/op, 207440.6 op/s
+Target 8: 223000 op, 1022.6 ms, 1022585786.7 ns, 2391142 ticks, 4585.5865 ns/op, 218074.6 op/s
+Target 9: 223000 op, 1005.2 ms, 1005189603.3 ns, 2350464 ticks, 4507.5767 ns/op, 221848.7 op/s
+Target 10: 223000 op, 1016.7 ms, 1016710223.4 ns, 2377403 ticks, 4559.2387 ns/op, 219334.9 op/s
+// Benchmark finished
+
+AverageTime (ns/op): Avr=4503.13755535924 +- 23.4846038721072
+OperationsPerSecond: Avr=222110.518638293 +- 1095.77767616699
+
+// **************************
+// Benchmark: EnumeratorsBenchmarks_SingleStructEnumeratorCalledDirectly (Throughput_X64_LegacyJit_NET-HostFramework) [-w=5 -t=10]
+// Generated project: C:\Projects\DemoCode\Performance\Benchmarks\bin\Release\EnumeratorsBenchmarks_SingleStructEnumeratorCalledDirectly_Throughput_X64_LegacyJit_NET-HostFramework
+
+// Build:
+// OverallResult = Success
+
+// Run, Process: 1 / 3
+// Method=SingleStructEnumeratorCalledDirectly Platform=X64 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit 
+// Pre-Warmup: 1 op, 0 ms, 4276.6 ns, 10 ticks, 4276.5582 ns/op, 233832.9 op/s
+// Pre-Warmup: 1000 op, 2.3 ms, 2257167.4 ns, 5278 ticks, 2257.1674 ns/op, 443033.2 op/s
+// Pre-Warmup: 444000 op, 956.8 ms, 956789228.5 ns, 2237288 ticks, 2154.9307 ns/op, 464052 op/s
+// Pre-Warmup: 888000 op, 1914.3 ms, 1914297774.2 ns, 4476258 ticks, 2155.7407 ns/op, 463877.7 op/s
+// Warmup (idle): 888000 op, 1.8 ms, 1845334.9 ns, 4315 ticks, 2.0781 ns/op, 481213476.7 op/s
+// Warmup (idle): 888000 op, 1.9 ms, 1852605 ns, 4332 ticks, 2.0863 ns/op, 479325058.2 op/s
+// Warmup (idle): 888000 op, 1.9 ms, 1866717.6 ns, 4365 ticks, 2.1022 ns/op, 475701294.8 op/s
+// IterationCount = 888000
+// Target (idle): 888000 op, 2 ms, 2038635.3 ns, 4767 ticks, 2.2958 ns/op, 435585515.4 op/s
+// Target (idle): 888000 op, 1.9 ms, 1853032.7 ns, 4333 ticks, 2.0867 ns/op, 479214436.2 op/s
+// Target (idle): 888000 op, 1.9 ms, 1867573 ns, 4367 ticks, 2.1031 ns/op, 475483433 op/s
+// Target (idle): 888000 op, 1.9 ms, 1878264.4 ns, 4392 ticks, 2.1152 ns/op, 472776901.6 op/s
+// Target (idle): 888000 op, 1.9 ms, 1868855.9 ns, 4370 ticks, 2.1046 ns/op, 475157014.2 op/s
+// Warmup 1: 888000 op, 1910.3 ms, 1910294060.4 ns, 4466896 ticks, 2151.2321 ns/op, 464849.9 op/s
+// Warmup 2: 888000 op, 1921.8 ms, 1921791159.4 ns, 4493780 ticks, 2164.1792 ns/op, 462068.9 op/s
+// Warmup 3: 888000 op, 1909.2 ms, 1909163766.1 ns, 4464253 ticks, 2149.9592 ns/op, 465125.1 op/s
+// Warmup 4: 888000 op, 1915.2 ms, 1915178745.2 ns, 4478318 ticks, 2156.7328 ns/op, 463664.3 op/s
+// Warmup 5: 888000 op, 1907.3 ms, 1907313727 ns, 4459927 ticks, 2147.8758 ns/op, 465576.3 op/s
+Target 1: 888000 op, 1904.2 ms, 1904239737 ns, 4452739 ticks, 2144.4141 ns/op, 466327.8 op/s
+Target 2: 888000 op, 1916.2 ms, 1916151234.5 ns, 4480592 ticks, 2157.828 ns/op, 463429 op/s
+Target 3: 888000 op, 1920.1 ms, 1920128005.9 ns, 4489891 ticks, 2162.3063 ns/op, 462469.2 op/s
+Target 4: 888000 op, 1911.7 ms, 1911673678.1 ns, 4470122 ticks, 2152.7857 ns/op, 464514.4 op/s
+Target 5: 888000 op, 1905.2 ms, 1905151926.9 ns, 4454872 ticks, 2145.4414 ns/op, 466104.6 op/s
+Target 6: 888000 op, 1907.7 ms, 1907740527.5 ns, 4460925 ticks, 2148.3564 ns/op, 465472.1 op/s
+Target 7: 888000 op, 1911.2 ms, 1911150227.4 ns, 4468898 ticks, 2152.1962 ns/op, 464641.7 op/s
+Target 8: 888000 op, 1905.1 ms, 1905128833.5 ns, 4454818 ticks, 2145.4154 ns/op, 466110.2 op/s
+Target 9: 888000 op, 1904.3 ms, 1904345795.7 ns, 4452987 ticks, 2144.5336 ns/op, 466301.9 op/s
+Target 10: 888000 op, 1897.4 ms, 1897425041.6 ns, 4436804 ticks, 2136.7399 ns/op, 468002.7 op/s
+// Benchmark finished
+// Run, Process: 2 / 3
+// Method=SingleStructEnumeratorCalledDirectly Platform=X64 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit 
+// Pre-Warmup: 1 op, 0 ms, 4276.6 ns, 10 ticks, 4276.5582 ns/op, 233832.9 op/s
+// Pre-Warmup: 1000 op, 2.1 ms, 2074986 ns, 4852 ticks, 2074.986 ns/op, 481931 op/s
+// Pre-Warmup: 482000 op, 1036.5 ms, 1036514109 ns, 2423711 ticks, 2150.4442 ns/op, 465020.2 op/s
+// Warmup (idle): 482000 op, 1 ms, 1007984.8 ns, 2357 ticks, 2.0913 ns/op, 478181832 op/s
+// Warmup (idle): 482000 op, 1 ms, 1015254.9 ns, 2374 ticks, 2.1063 ns/op, 474757615 op/s
+// Warmup (idle): 482000 op, 1 ms, 1028084.6 ns, 2404 ticks, 2.133 ns/op, 468833019.1 op/s
+// IterationCount = 482000
+// Target (idle): 482000 op, 1.1 ms, 1101213.7 ns, 2575 ticks, 2.2847 ns/op, 437698865.2 op/s
+// Target (idle): 482000 op, 1 ms, 1030222.9 ns, 2409 ticks, 2.1374 ns/op, 467859932.8 op/s
+// Target (idle): 482000 op, 1 ms, 1028512.2 ns, 2405 ticks, 2.1338 ns/op, 468638078.2 op/s
+// Target (idle): 482000 op, 1 ms, 1030650.5 ns, 2410 ticks, 2.1383 ns/op, 467665800 op/s
+// Target (idle): 482000 op, 1 ms, 1038348.3 ns, 2428 ticks, 2.1542 ns/op, 464198755.4 op/s
+// Warmup 1: 482000 op, 1036.6 ms, 1036644116.4 ns, 2424015 ticks, 2150.7139 ns/op, 464961.9 op/s
+// Warmup 2: 482000 op, 1039.5 ms, 1039471349 ns, 2430626 ticks, 2156.5796 ns/op, 463697.2 op/s
+// Warmup 3: 482000 op, 1037.6 ms, 1037572557.2 ns, 2426186 ticks, 2152.6402 ns/op, 464545.8 op/s
+// Warmup 4: 482000 op, 1032.3 ms, 1032304692.8 ns, 2413868 ticks, 2141.711 ns/op, 466916.4 op/s
+// Warmup 5: 482000 op, 1040.6 ms, 1040581971.1 ns, 2433223 ticks, 2158.8838 ns/op, 463202.3 op/s
+Target 1: 482000 op, 1025 ms, 1024990495.3 ns, 2396765 ticks, 2126.5363 ns/op, 470248.3 op/s
+Target 2: 482000 op, 1047 ms, 1046955753.4 ns, 2448127 ticks, 2172.1074 ns/op, 460382.4 op/s
+Target 3: 482000 op, 1073.8 ms, 1073773194.4 ns, 2510835 ticks, 2227.7452 ns/op, 448884.4 op/s
+Target 4: 482000 op, 1085.6 ms, 1085641071 ns, 2538586 ticks, 2252.3674 ns/op, 443977.3 op/s
+Target 5: 482000 op, 1063.8 ms, 1063840888.1 ns, 2487610 ticks, 2207.1388 ns/op, 453075.3 op/s
+Target 6: 482000 op, 1040.9 ms, 1040941629.7 ns, 2434064 ticks, 2159.6299 ns/op, 463042.3 op/s
+Target 7: 482000 op, 1034 ms, 1033963997.4 ns, 2417748 ticks, 2145.1535 ns/op, 466167.1 op/s
+Target 8: 482000 op, 1033.2 ms, 1033180959.6 ns, 2415917 ticks, 2143.529 ns/op, 466520.4 op/s
+Target 9: 482000 op, 1030.4 ms, 1030422579.5 ns, 2409467 ticks, 2137.8062 ns/op, 467769.3 op/s
+Target 10: 482000 op, 1032.3 ms, 1032349169 ns, 2413972 ticks, 2141.8033 ns/op, 466896.3 op/s
+// Benchmark finished
+// Run, Process: 3 / 3
+// Method=SingleStructEnumeratorCalledDirectly Platform=X64 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit 
+// Pre-Warmup: 1 op, 0 ms, 3848.9 ns, 9 ticks, 3848.9024 ns/op, 259814.3 op/s
+// Pre-Warmup: 1000 op, 2.4 ms, 2370496.2 ns, 5543 ticks, 2370.4962 ns/op, 421852.6 op/s
+// Pre-Warmup: 422000 op, 899.8 ms, 899812216.3 ns, 2104057 ticks, 2132.2564 ns/op, 468986.7 op/s
+// Pre-Warmup: 844000 op, 1806 ms, 1805986668.3 ns, 4222991 ticks, 2139.7946 ns/op, 467334.6 op/s
+// Warmup (idle): 844000 op, 1.8 ms, 1807273.5 ns, 4226 ticks, 2.1413 ns/op, 467001816.4 op/s
+// Warmup (idle): 844000 op, 1.8 ms, 1761942 ns, 4120 ticks, 2.0876 ns/op, 479016911.7 op/s
+// Warmup (idle): 844000 op, 1.8 ms, 1775627 ns, 4152 ticks, 2.1038 ns/op, 475325066.5 op/s
+// IterationCount = 844000
+// Target (idle): 844000 op, 1.8 ms, 1848756.1 ns, 4323 ticks, 2.1905 ns/op, 456523172.8 op/s
+// Target (idle): 844000 op, 1.8 ms, 1776054.6 ns, 4153 ticks, 2.1043 ns/op, 475210613.1 op/s
+// Target (idle): 844000 op, 1.8 ms, 1776054.6 ns, 4153 ticks, 2.1043 ns/op, 475210613.1 op/s
+// Target (idle): 844000 op, 1.8 ms, 1785463 ns, 4175 ticks, 2.1155 ns/op, 472706509.2 op/s
+// Target (idle): 844000 op, 1.8 ms, 1832505.2 ns, 4285 ticks, 2.1712 ns/op, 460571686.3 op/s
+// Warmup 1: 844000 op, 1949.6 ms, 1949634119.1 ns, 4558886 ticks, 2309.993 ns/op, 432901.7 op/s
+// Warmup 2: 844000 op, 1922.7 ms, 1922652030.6 ns, 4495793 ticks, 2278.0237 ns/op, 438977 op/s
+// Warmup 3: 844000 op, 1809.5 ms, 1809455812.2 ns, 4231103 ticks, 2143.905 ns/op, 466438.6 op/s
+// Warmup 4: 844000 op, 1811.2 ms, 1811195088.5 ns, 4235170 ticks, 2145.9657 ns/op, 465990.7 op/s
+// Warmup 5: 844000 op, 1839.6 ms, 1839597849.6 ns, 4301585 ticks, 2179.6183 ns/op, 458795.9 op/s
+Target 1: 844000 op, 1832.4 ms, 1832409382.9 ns, 4284776 ticks, 2171.1012 ns/op, 460595.8 op/s
+Target 2: 844000 op, 1845.1 ms, 1845148822.1 ns, 4314565 ticks, 2186.1953 ns/op, 457415.7 op/s
+Target 3: 844000 op, 1822.4 ms, 1822356477.6 ns, 4261269 ticks, 2159.1901 ns/op, 463136.6 op/s
+Target 4: 844000 op, 1806.4 ms, 1806424587.8 ns, 4224015 ticks, 2140.3135 ns/op, 467221.3 op/s
+Target 5: 844000 op, 1810.2 ms, 1810211907.7 ns, 4232871 ticks, 2144.8008 ns/op, 466243.8 op/s
+Target 6: 844000 op, 1815.2 ms, 1815207355.3 ns, 4244552 ticks, 2150.7196 ns/op, 464960.7 op/s
+Target 7: 844000 op, 1808.8 ms, 1808831434.8 ns, 4229643 ticks, 2143.1652 ns/op, 466599.6 op/s
+Target 8: 844000 op, 1810.1 ms, 1810092164.1 ns, 4232591 ticks, 2144.659 ns/op, 466274.6 op/s
+Target 9: 844000 op, 1824.8 ms, 1824756482.1 ns, 4266881 ticks, 2162.0337 ns/op, 462527.5 op/s
+Target 10: 844000 op, 1807.2 ms, 1807165287.7 ns, 4225747 ticks, 2141.1911 ns/op, 467029.8 op/s
+// Benchmark finished
+
+AverageTime (ns/op): Avr=2158.24011119458 +- 9.84048444211678
+OperationsPerSecond: Avr=463411.38674068 +- 2060.46153058067
+
+// **************************
+// Benchmark: EnumeratorsBenchmarks_SingleStructEnumeratorCalledViaInterface (Throughput_X64_LegacyJit_NET-HostFramework) [-w=5 -t=10]
+// Generated project: C:\Projects\DemoCode\Performance\Benchmarks\bin\Release\EnumeratorsBenchmarks_SingleStructEnumeratorCalledViaInterface_Throughput_X64_LegacyJit_NET-HostFramework
+
+// Build:
+// OverallResult = Success
+
+// Run, Process: 1 / 3
+// Method=SingleStructEnumeratorCalledViaInterface Platform=X64 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit 
+// Pre-Warmup: 1 op, 0 ms, 12402 ns, 29 ticks, 12402.0187 ns/op, 80632 op/s
+// Pre-Warmup: 1000 op, 6.7 ms, 6660739.4 ns, 15575 ticks, 6660.7394 ns/op, 150133.5 op/s
+// Pre-Warmup: 151000 op, 998.4 ms, 998381322.7 ns, 2334544 ticks, 6611.7968 ns/op, 151244.8 op/s
+// Pre-Warmup: 302000 op, 1993 ms, 1992958219.3 ns, 4660192 ticks, 6599.1994 ns/op, 151533.5 op/s
+// Warmup (idle): 302000 op, 0.6 ms, 625660.5 ns, 1463 ticks, 2.0717 ns/op, 482689923.4 op/s
+// Warmup (idle): 302000 op, 0.7 ms, 667143.1 ns, 1560 ticks, 2.2091 ns/op, 452676511.5 op/s
+// Warmup (idle): 302000 op, 0.7 ms, 667143.1 ns, 1560 ticks, 2.2091 ns/op, 452676511.5 op/s
+// IterationCount = 302000
+// Target (idle): 302000 op, 0.7 ms, 740272.2 ns, 1731 ticks, 2.4512 ns/op, 407958034.7 op/s
+// Target (idle): 302000 op, 0.7 ms, 667570.7 ns, 1561 ticks, 2.2105 ns/op, 452386520.2 op/s
+// Target (idle): 302000 op, 0.7 ms, 670136.7 ns, 1567 ticks, 2.219 ns/op, 450654344.6 op/s
+// Target (idle): 302000 op, 0.7 ms, 706487.4 ns, 1652 ticks, 2.3394 ns/op, 427466923.7 op/s
+// Target (idle): 302000 op, 0.6 ms, 643622 ns, 1505 ticks, 2.1312 ns/op, 469219507 op/s
+// Warmup 1: 302000 op, 1992.9 ms, 1992947527.9 ns, 4660167 ticks, 6599.164 ns/op, 151534.3 op/s
+// Warmup 2: 302000 op, 1989.6 ms, 1989628063.5 ns, 4652405 ticks, 6588.1724 ns/op, 151787.2 op/s
+// Warmup 3: 302000 op, 1989 ms, 1988963058.7 ns, 4650850 ticks, 6585.9704 ns/op, 151837.9 op/s
+// Warmup 4: 302000 op, 1990.1 ms, 1990059140.5 ns, 4653413 ticks, 6589.5998 ns/op, 151754.3 op/s
+// Warmup 5: 302000 op, 1989.5 ms, 1989549802.4 ns, 4652222 ticks, 6587.9133 ns/op, 151793.1 op/s
+Target 1: 302000 op, 1989.1 ms, 1989080664 ns, 4651125 ticks, 6586.3598 ns/op, 151828.9 op/s
+Target 2: 302000 op, 1988.2 ms, 1988189856.9 ns, 4649042 ticks, 6583.4101 ns/op, 151897 op/s
+Target 3: 302000 op, 1990.3 ms, 1990299055.4 ns, 4653974 ticks, 6590.3942 ns/op, 151736 op/s
+Target 4: 302000 op, 1988.3 ms, 1988254433 ns, 4649193 ticks, 6583.624 ns/op, 151892 op/s
+Target 5: 302000 op, 1990.5 ms, 1990529561.9 ns, 4654513 ticks, 6591.1575 ns/op, 151718.4 op/s
+Target 6: 302000 op, 1990.5 ms, 1990490217.6 ns, 4654421 ticks, 6591.0272 ns/op, 151721.4 op/s
+Target 7: 302000 op, 1990.9 ms, 1990932841.4 ns, 4655456 ticks, 6592.4929 ns/op, 151687.7 op/s
+Target 8: 302000 op, 1990.9 ms, 1990940111.5 ns, 4655473 ticks, 6592.5169 ns/op, 151687.1 op/s
+Target 9: 302000 op, 1992.8 ms, 1992841896.9 ns, 4659920 ticks, 6598.8142 ns/op, 151542.4 op/s
+Target 10: 302000 op, 2000.1 ms, 2000072701.5 ns, 4676828 ticks, 6622.7573 ns/op, 150994.5 op/s
+// Benchmark finished
+// Run, Process: 2 / 3
+// Method=SingleStructEnumeratorCalledViaInterface Platform=X64 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit 
+// Pre-Warmup: 1 op, 0 ms, 12829.7 ns, 30 ticks, 12829.6745 ns/op, 77944.3 op/s
+// Pre-Warmup: 1000 op, 6.7 ms, 6733440.8 ns, 15745 ticks, 6733.4408 ns/op, 148512.5 op/s
+// Pre-Warmup: 149000 op, 985.9 ms, 985944236.2 ns, 2305462 ticks, 6617.0754 ns/op, 151124.2 op/s
+// Pre-Warmup: 298000 op, 1966 ms, 1965996658.3 ns, 4597147 ticks, 6597.3042 ns/op, 151577.1 op/s
+// Warmup (idle): 298000 op, 0.6 ms, 628226.4 ns, 1469 ticks, 2.1081 ns/op, 474351288 op/s
+// Warmup (idle): 298000 op, 0.7 ms, 658590 ns, 1540 ticks, 2.21 ns/op, 452481845.5 op/s
+// Warmup (idle): 298000 op, 0.7 ms, 659017.6 ns, 1541 ticks, 2.2115 ns/op, 452188216.7 op/s
+// IterationCount = 298000
+// Target (idle): 298000 op, 0.7 ms, 725731.9 ns, 1697 ticks, 2.4353 ns/op, 410619942.3 op/s
+// Target (idle): 298000 op, 0.7 ms, 659445.3 ns, 1542 ticks, 2.2129 ns/op, 451894968.9 op/s
+// Target (idle): 298000 op, 0.7 ms, 661583.5 ns, 1547 ticks, 2.2201 ns/op, 450434416.3 op/s
+// Target (idle): 298000 op, 0.7 ms, 650464.5 ns, 1521 ticks, 2.1828 ns/op, 458134149.9 op/s
+// Target (idle): 298000 op, 0.7 ms, 650892.2 ns, 1522 ticks, 2.1842 ns/op, 457833141.9 op/s
+// Warmup 1: 298000 op, 1967.5 ms, 1967450260.4 ns, 4600546 ticks, 6602.1821 ns/op, 151465.1 op/s
+// Warmup 2: 298000 op, 1971.6 ms, 1971607502.6 ns, 4610267 ticks, 6616.1326 ns/op, 151145.7 op/s
+// Warmup 3: 298000 op, 1964.1 ms, 1964120104.6 ns, 4592759 ticks, 6591.0071 ns/op, 151721.9 op/s
+// Warmup 4: 298000 op, 1962 ms, 1961954027.9 ns, 4587694 ticks, 6583.7383 ns/op, 151889.4 op/s
+// Warmup 5: 298000 op, 2019.3 ms, 2019299251.7 ns, 4721786 ticks, 6776.172 ns/op, 147575.9 op/s
+Target 1: 298000 op, 1995.5 ms, 1995452308 ns, 4666024 ticks, 6696.1487 ns/op, 149339.6 op/s
+Target 2: 298000 op, 2008.9 ms, 2008872147.6 ns, 4697404 ticks, 6741.1817 ns/op, 148341.9 op/s
+Target 3: 298000 op, 1963.4 ms, 1963395228 ns, 4591064 ticks, 6588.5746 ns/op, 151777.9 op/s
+Target 4: 298000 op, 1965.3 ms, 1965289743.2 ns, 4595494 ticks, 6594.932 ns/op, 151631.6 op/s
+Target 5: 298000 op, 1974.4 ms, 1974433879.9 ns, 4616876 ticks, 6625.617 ns/op, 150929.3 op/s
+Target 6: 298000 op, 1964.1 ms, 1964100860.1 ns, 4592714 ticks, 6590.9425 ns/op, 151723.4 op/s
+Target 7: 298000 op, 1963.8 ms, 1963783111.8 ns, 4591971 ticks, 6589.8762 ns/op, 151747.9 op/s
+Target 8: 298000 op, 1964 ms, 1964013618.3 ns, 4592510 ticks, 6590.6497 ns/op, 151730.1 op/s
+Target 9: 298000 op, 1972.9 ms, 1972856257.6 ns, 4613187 ticks, 6620.323 ns/op, 151050 op/s
+Target 10: 298000 op, 1965.1 ms, 1965084468.4 ns, 4595014 ticks, 6594.2432 ns/op, 151647.4 op/s
+// Benchmark finished
+// Run, Process: 3 / 3
+// Method=SingleStructEnumeratorCalledViaInterface Platform=X64 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit 
+// Pre-Warmup: 1 op, 0 ms, 12402 ns, 29 ticks, 12402.0187 ns/op, 80632 op/s
+// Pre-Warmup: 1000 op, 6.7 ms, 6700939 ns, 15669 ticks, 6700.939 ns/op, 149232.8 op/s
+// Pre-Warmup: 150000 op, 990.8 ms, 990797274.5 ns, 2316810 ticks, 6605.3152 ns/op, 151393.2 op/s
+// Pre-Warmup: 300000 op, 1977 ms, 1977005802 ns, 4622890 ticks, 6590.0193 ns/op, 151744.6 op/s
+// Warmup (idle): 300000 op, 0.6 ms, 621383.9 ns, 1453 ticks, 2.0713 ns/op, 482793324.2 op/s
+// Warmup (idle): 300000 op, 0.7 ms, 653458.1 ns, 1528 ticks, 2.1782 ns/op, 459096007.9 op/s
+// Warmup (idle): 300000 op, 0.7 ms, 663294.2 ns, 1551 ticks, 2.211 ns/op, 452288007.7 op/s
+// IterationCount = 300000
+// Target (idle): 300000 op, 0.7 ms, 738133.9 ns, 1726 ticks, 2.4604 ns/op, 406430301.3 op/s
+// Target (idle): 300000 op, 0.7 ms, 665860.1 ns, 1557 ticks, 2.2195 ns/op, 450545086.7 op/s
+// Target (idle): 300000 op, 0.7 ms, 665432.5 ns, 1556 ticks, 2.2181 ns/op, 450834640.1 op/s
+// Target (idle): 300000 op, 0.6 ms, 640200.8 ns, 1497 ticks, 2.134 ns/op, 468603006 op/s
+// Target (idle): 300000 op, 0.6 ms, 639773.1 ns, 1496 ticks, 2.1326 ns/op, 468916243.3 op/s
+// Warmup 1: 300000 op, 1976.9 ms, 1976918132.6 ns, 4622685 ticks, 6589.7271 ns/op, 151751.4 op/s
+// Warmup 2: 300000 op, 1976.3 ms, 1976321980.4 ns, 4621291 ticks, 6587.7399 ns/op, 151797.1 op/s
+// Warmup 3: 300000 op, 1975.9 ms, 1975913996.7 ns, 4620337 ticks, 6586.38 ns/op, 151828.5 op/s
+// Warmup 4: 300000 op, 1976.8 ms, 1976784703.9 ns, 4622373 ticks, 6589.2823 ns/op, 151761.6 op/s
+// Warmup 5: 300000 op, 1975.6 ms, 1975615492.9 ns, 4619639 ticks, 6585.385 ns/op, 151851.4 op/s
+Target 1: 300000 op, 1977 ms, 1976959615.2 ns, 4622782 ticks, 6589.8654 ns/op, 151748.2 op/s
+Target 2: 300000 op, 1976.3 ms, 1976315137.9 ns, 4621275 ticks, 6587.7171 ns/op, 151797.7 op/s
+Target 3: 300000 op, 1975.8 ms, 1975833169.8 ns, 4620148 ticks, 6586.1106 ns/op, 151834.7 op/s
+Target 4: 300000 op, 1996 ms, 1995985594.8 ns, 4667271 ticks, 6653.2853 ns/op, 150301.7 op/s
+Target 5: 300000 op, 1991.6 ms, 1991550376.4 ns, 4656900 ticks, 6638.5013 ns/op, 150636.4 op/s
+Target 6: 300000 op, 1977.6 ms, 1977591690.5 ns, 4624260 ticks, 6591.9723 ns/op, 151699.7 op/s
+Target 7: 300000 op, 1981.9 ms, 1981935390.6 ns, 4634417 ticks, 6606.4513 ns/op, 151367.2 op/s
+Target 8: 300000 op, 1987.1 ms, 1987145521.4 ns, 4646600 ticks, 6623.8184 ns/op, 150970.3 op/s
+Target 9: 300000 op, 1981.5 ms, 1981451711.9 ns, 4633286 ticks, 6604.839 ns/op, 151404.1 op/s
+Target 10: 300000 op, 1988.2 ms, 1988209529.1 ns, 4649088 ticks, 6627.3651 ns/op, 150889.5 op/s
+// Benchmark finished
+
+AverageTime (ns/op): Avr=6609.16561885804 +- 12.610329751465
+OperationsPerSecond: Avr=151309.137321345 +- 285.193958121673
+
+// **************************
+// Benchmark: EnumeratorsBenchmarks_DedicatedClassEnumeratorCalledViaInterface (Throughput_X64_RyuJit_NET-HostFramework) [-w=5 -t=10]
+// Generated project: C:\Projects\DemoCode\Performance\Benchmarks\bin\Release\EnumeratorsBenchmarks_DedicatedClassEnumeratorCalledViaInterface_Throughput_X64_RyuJit_NET-HostFramework
+
+// Build:
+// OverallResult = Success
+
+// Run, Process: 1 / 3
+// Method=DedicatedClassEnumeratorCalledViaInterface Platform=X64 JitVersion=RyuJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+// Pre-Warmup: 1 op, 0 ms, 9836.1 ns, 23 ticks, 9836.0838 ns/op, 101666.5 op/s
+// Pre-Warmup: 1000 op, 4.9 ms, 4947122.5 ns, 11568 ticks, 4947.1225 ns/op, 202137.7 op/s
+// Pre-Warmup: 203000 op, 1007.9 ms, 1007870150 ns, 2356732 ticks, 4964.8776 ns/op, 201414.8 op/s
+// Warmup (idle): 203000 op, 0.4 ms, 421668.6 ns, 986 ticks, 2.0772 ns/op, 481420676.5 op/s
+// Warmup (idle): 203000 op, 0.5 ms, 463578.9 ns, 1084 ticks, 2.2836 ns/op, 437897405 op/s
+// Warmup (idle): 203000 op, 0.5 ms, 464006.6 ns, 1085 ticks, 2.2857 ns/op, 437493812.9 op/s
+// IterationCount = 203000
+// Target (idle): 203000 op, 0.5 ms, 546116.5 ns, 1277 ticks, 2.6902 ns/op, 371715573.2 op/s
+// Target (idle): 203000 op, 0.4 ms, 439630.2 ns, 1028 ticks, 2.1657 ns/op, 461751738.3 op/s
+// Target (idle): 203000 op, 0.4 ms, 439202.5 ns, 1027 ticks, 2.1636 ns/op, 462201350.5 op/s
+// Target (idle): 203000 op, 0.4 ms, 439630.2 ns, 1028 ticks, 2.1657 ns/op, 461751738.3 op/s
+// Target (idle): 203000 op, 0.4 ms, 439202.5 ns, 1027 ticks, 2.1636 ns/op, 462201350.5 op/s
+// Warmup 1: 203000 op, 994.1 ms, 994057294.8 ns, 2324433 ticks, 4896.834 ns/op, 204213.6 op/s
+// Warmup 2: 203000 op, 988.6 ms, 988602117.2 ns, 2311677 ticks, 4869.9612 ns/op, 205340.4 op/s
+// Warmup 3: 203000 op, 986.1 ms, 986105034.8 ns, 2305838 ticks, 4857.6603 ns/op, 205860.4 op/s
+// Warmup 4: 203000 op, 985.3 ms, 985271106 ns, 2303888 ticks, 4853.5522 ns/op, 206034.7 op/s
+// Warmup 5: 203000 op, 988.1 ms, 988142387.1 ns, 2310602 ticks, 4867.6965 ns/op, 205436 op/s
+Target 1: 203000 op, 986.5 ms, 986519005.7 ns, 2306806 ticks, 4859.6995 ns/op, 205774 op/s
+Target 2: 203000 op, 985.7 ms, 985702610.7 ns, 2304897 ticks, 4855.6779 ns/op, 205944.5 op/s
+Target 3: 203000 op, 985.9 ms, 985904036.6 ns, 2305368 ticks, 4856.6701 ns/op, 205902.4 op/s
+Target 4: 203000 op, 987.3 ms, 987282799 ns, 2308592 ticks, 4863.4621 ns/op, 205614.8 op/s
+Target 5: 203000 op, 1067.8 ms, 1067765057.9 ns, 2496786 ticks, 5259.9264 ns/op, 190116.7 op/s
+Target 6: 203000 op, 1034 ms, 1033956727.2 ns, 2417731 ticks, 5093.3829 ns/op, 196333.2 op/s
+Target 7: 203000 op, 1004.7 ms, 1004709773.5 ns, 2349342 ticks, 4949.3092 ns/op, 202048.4 op/s
+Target 8: 203000 op, 1022.2 ms, 1022212870.8 ns, 2390270 ticks, 5035.5314 ns/op, 198588.8 op/s
+Target 9: 203000 op, 1001.6 ms, 1001626375.1 ns, 2342132 ticks, 4934.1201 ns/op, 202670.4 op/s
+Target 10: 203000 op, 988.6 ms, 988644027.4 ns, 2311775 ticks, 4870.1676 ns/op, 205331.7 op/s
+// Benchmark finished
+// Run, Process: 2 / 3
+// Method=DedicatedClassEnumeratorCalledViaInterface Platform=X64 JitVersion=RyuJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+// Pre-Warmup: 1 op, 0 ms, 19672.2 ns, 46 ticks, 19672.1676 ns/op, 50833.2 op/s
+// Pre-Warmup: 1000 op, 4.9 ms, 4877842.3 ns, 11406 ticks, 4877.8423 ns/op, 205008.7 op/s
+// Pre-Warmup: 206000 op, 1015.4 ms, 1015359686.3 ns, 2374245 ticks, 4928.9305 ns/op, 202883.8 op/s
+// Warmup (idle): 206000 op, 0.4 ms, 427655.8 ns, 1000 ticks, 2.076 ns/op, 481695774 op/s
+// Warmup (idle): 206000 op, 0.5 ms, 469566.1 ns, 1098 ticks, 2.2794 ns/op, 438702890.7 op/s
+// Warmup (idle): 206000 op, 0.5 ms, 469993.7 ns, 1099 ticks, 2.2815 ns/op, 438303707 op/s
+// IterationCount = 206000
+// Target (idle): 206000 op, 0.5 ms, 534997.4 ns, 1251 ticks, 2.5971 ns/op, 385048580.3 op/s
+// Target (idle): 206000 op, 0.4 ms, 444762.1 ns, 1040 ticks, 2.159 ns/op, 463169013.5 op/s
+// Target (idle): 206000 op, 0.4 ms, 445617.4 ns, 1042 ticks, 2.1632 ns/op, 462280013.4 op/s
+// Target (idle): 206000 op, 0.4 ms, 446045 ns, 1043 ticks, 2.1653 ns/op, 461836791.9 op/s
+// Target (idle): 206000 op, 0.5 ms, 461013 ns, 1078 ticks, 2.2379 ns/op, 446842090.9 op/s
+// Warmup 1: 206000 op, 1001.5 ms, 1001491663.5 ns, 2341817 ticks, 4861.61 ns/op, 205693.2 op/s
+// Warmup 2: 206000 op, 1000.5 ms, 1000494370.1 ns, 2339485 ticks, 4856.7688 ns/op, 205898.2 op/s
+// Warmup 3: 206000 op, 999.6 ms, 999638203.2 ns, 2337483 ticks, 4852.6126 ns/op, 206074.6 op/s
+// Warmup 4: 206000 op, 1001.9 ms, 1001944978.7 ns, 2342877 ticks, 4863.8106 ns/op, 205600.1 op/s
+// Warmup 5: 206000 op, 1003.7 ms, 1003699222.8 ns, 2346979 ticks, 4872.3263 ns/op, 205240.8 op/s
+Target 1: 206000 op, 1002.9 ms, 1002858023.8 ns, 2345012 ticks, 4868.2428 ns/op, 205412.9 op/s
+Target 2: 206000 op, 1003 ms, 1002958095.3 ns, 2345246 ticks, 4868.7286 ns/op, 205392.4 op/s
+Target 3: 206000 op, 1003.8 ms, 1003768930.7 ns, 2347142 ticks, 4872.6647 ns/op, 205226.5 op/s
+Target 4: 206000 op, 1004.2 ms, 1004158525.2 ns, 2348053 ticks, 4874.5559 ns/op, 205146.9 op/s
+Target 5: 206000 op, 1005.9 ms, 1005862305.9 ns, 2352037 ticks, 4882.8267 ns/op, 204799.4 op/s
+Target 6: 206000 op, 1003.3 ms, 1003285252 ns, 2346011 ticks, 4870.3168 ns/op, 205325.5 op/s
+Target 7: 206000 op, 1000.4 ms, 1000409694.3 ns, 2339287 ticks, 4856.3577 ns/op, 205915.6 op/s
+Target 8: 206000 op, 1000.8 ms, 1000794584.5 ns, 2340187 ticks, 4858.2261 ns/op, 205836.4 op/s
+Target 9: 206000 op, 1002.3 ms, 1002320032.8 ns, 2343754 ticks, 4865.6312 ns/op, 205523.2 op/s
+Target 10: 206000 op, 1002.2 ms, 1002187459.5 ns, 2343444 ticks, 4864.9877 ns/op, 205550.4 op/s
+// Benchmark finished
+// Run, Process: 3 / 3
+// Method=DedicatedClassEnumeratorCalledViaInterface Platform=X64 JitVersion=RyuJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+// Pre-Warmup: 1 op, 0 ms, 19672.2 ns, 46 ticks, 19672.1676 ns/op, 50833.2 op/s
+// Pre-Warmup: 1000 op, 4.8 ms, 4810272.6 ns, 11248 ticks, 4810.2726 ns/op, 207888.4 op/s
+// Pre-Warmup: 208000 op, 1024 ms, 1024049652.6 ns, 2394565 ticks, 4923.3156 ns/op, 203115.2 op/s
+// Warmup (idle): 208000 op, 0.4 ms, 431932.4 ns, 1010 ticks, 2.0766 ns/op, 481556863.4 op/s
+// Warmup (idle): 208000 op, 0.5 ms, 472987.3 ns, 1106 ticks, 2.274 ns/op, 439758075.9 op/s
+// Warmup (idle): 208000 op, 0.5 ms, 473415 ns, 1107 ticks, 2.276 ns/op, 439360823.8 op/s
+// IterationCount = 208000
+// Target (idle): 208000 op, 0.6 ms, 567071.6 ns, 1326 ticks, 2.7263 ns/op, 366796705.9 op/s
+// Target (idle): 208000 op, 0.4 ms, 449893.9 ns, 1052 ticks, 2.163 ns/op, 462331209.1 op/s
+// Target (idle): 208000 op, 0.5 ms, 464861.9 ns, 1087 ticks, 2.2349 ns/op, 447444739.7 op/s
+// Target (idle): 208000 op, 0.4 ms, 449893.9 ns, 1052 ticks, 2.163 ns/op, 462331209.1 op/s
+// Target (idle): 208000 op, 0.5 ms, 464861.9 ns, 1087 ticks, 2.2349 ns/op, 447444739.7 op/s
+// Warmup 1: 208000 op, 1011.6 ms, 1011624112.8 ns, 2365510 ticks, 4863.5775 ns/op, 205610 op/s
+// Warmup 2: 208000 op, 1012.1 ms, 1012117627.6 ns, 2366664 ticks, 4865.9501 ns/op, 205509.7 op/s
+// Warmup 3: 208000 op, 1011.2 ms, 1011212280.2 ns, 2364547 ticks, 4861.5975 ns/op, 205693.7 op/s
+// Warmup 4: 208000 op, 1012 ms, 1011968803.4 ns, 2366316 ticks, 4865.2346 ns/op, 205539.9 op/s
+// Warmup 5: 208000 op, 1011.1 ms, 1011083983.5 ns, 2364247 ticks, 4860.9807 ns/op, 205719.8 op/s
+Target 1: 208000 op, 1015.5 ms, 1015455481.2 ns, 2374469 ticks, 4881.9975 ns/op, 204834.2 op/s
+Target 2: 208000 op, 1015.2 ms, 1015200170.7 ns, 2373872 ticks, 4880.7701 ns/op, 204885.7 op/s
+Target 3: 208000 op, 1015.3 ms, 1015307940 ns, 2374124 ticks, 4881.2882 ns/op, 204864 op/s
+Target 4: 208000 op, 1010.9 ms, 1010854332.3 ns, 2363710 ticks, 4859.8766 ns/op, 205766.5 op/s
+Target 5: 208000 op, 1014 ms, 1014000168.5 ns, 2371066 ticks, 4875.0008 ns/op, 205128.2 op/s
+Target 6: 208000 op, 1009.8 ms, 1009771080.1 ns, 2361177 ticks, 4854.6687 ns/op, 205987.3 op/s
+Target 7: 208000 op, 1010.9 ms, 1010854332.3 ns, 2363710 ticks, 4859.8766 ns/op, 205766.5 op/s
+Target 8: 208000 op, 1013.1 ms, 1013103374.2 ns, 2368969 ticks, 4870.6893 ns/op, 205309.7 op/s
+Target 9: 208000 op, 1013.9 ms, 1013918058.6 ns, 2370874 ticks, 4874.6061 ns/op, 205144.8 op/s
+Target 10: 208000 op, 1013.6 ms, 1013639654.6 ns, 2370223 ticks, 4873.2676 ns/op, 205201.1 op/s
+// Benchmark finished
+
+AverageTime (ns/op): Avr=4899.08422967861 +- 30.9083036942093
+OperationsPerSecond: Avr=204178.074233286 +- 1224.26541919755
+
+// **************************
+// Benchmark: EnumeratorsBenchmarks_DedicatedStructEnumeratorCalledDirectly (Throughput_X64_RyuJit_NET-HostFramework) [-w=5 -t=10]
+// Generated project: C:\Projects\DemoCode\Performance\Benchmarks\bin\Release\EnumeratorsBenchmarks_DedicatedStructEnumeratorCalledDirectly_Throughput_X64_RyuJit_NET-HostFramework
+
+// Build:
+// OverallResult = Success
+
+// Run, Process: 1 / 3
+// Method=DedicatedStructEnumeratorCalledDirectly Platform=X64 JitVersion=RyuJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+// Pre-Warmup: 1 op, 0 ms, 11974.4 ns, 28 ticks, 11974.3629 ns/op, 83511.8 op/s
+// Pre-Warmup: 1000 op, 0.6 ms, 558518.5 ns, 1306 ticks, 558.5185 ns/op, 1790451 op/s
+// Pre-Warmup: 1000000 op, 572.6 ms, 572644396.9 ns, 1339031 ticks, 572.6444 ns/op, 1746284.4 op/s
+// Pre-Warmup: 2000000 op, 1149.7 ms, 1149696642.3 ns, 2688369 ticks, 574.8483 ns/op, 1739589.3 op/s
+// Warmup (idle): 2000000 op, 4.2 ms, 4233792.6 ns, 9900 ticks, 2.1169 ns/op, 472389697 op/s
+// Warmup (idle): 2000000 op, 4.1 ms, 4138425.3 ns, 9677 ticks, 2.0692 ns/op, 483275601.9 op/s
+// Warmup (idle): 2000000 op, 4.2 ms, 4161091.1 ns, 9730 ticks, 2.0805 ns/op, 480643165.5 op/s
+// IterationCount = 2000000
+// Target (idle): 2000000 op, 4.2 ms, 4227805.4 ns, 9886 ticks, 2.1139 ns/op, 473058668.8 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4239352.1 ns, 9913 ticks, 2.1197 ns/op, 471770200.7 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4161518.8 ns, 9731 ticks, 2.0808 ns/op, 480593772.5 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4161091.1 ns, 9730 ticks, 2.0805 ns/op, 480643165.5 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4211982.1 ns, 9849 ticks, 2.106 ns/op, 474835820.9 op/s
+// Warmup 1: 2000000 op, 1142.1 ms, 1142098481.4 ns, 2670602 ticks, 571.0492 ns/op, 1751162.5 op/s
+// Warmup 2: 2000000 op, 1140 ms, 1140003823.2 ns, 2665704 ticks, 570.0019 ns/op, 1754380.1 op/s
+// Warmup 3: 2000000 op, 1139.6 ms, 1139574884.5 ns, 2664701 ticks, 569.7874 ns/op, 1755040.4 op/s
+// Warmup 4: 2000000 op, 1158 ms, 1157968361.2 ns, 2707711 ticks, 578.9842 ns/op, 1727162.9 op/s
+// Warmup 5: 2000000 op, 1141.9 ms, 1141878238.7 ns, 2670087 ticks, 570.9391 ns/op, 1751500.2 op/s
+Target 1: 2000000 op, 1139.9 ms, 1139908028.3 ns, 2665480 ticks, 569.954 ns/op, 1754527.5 op/s
+Target 2: 2000000 op, 1140.9 ms, 1140903183.4 ns, 2667807 ticks, 570.4516 ns/op, 1752997.1 op/s
+Target 3: 2000000 op, 1140.9 ms, 1140860845.5 ns, 2667708 ticks, 570.4304 ns/op, 1753062.2 op/s
+Target 4: 2000000 op, 1140.9 ms, 1140910881.2 ns, 2667825 ticks, 570.4554 ns/op, 1752985.3 op/s
+Target 5: 2000000 op, 1144 ms, 1144021222 ns, 2675098 ticks, 572.0106 ns/op, 1748219.3 op/s
+Target 6: 2000000 op, 1140.9 ms, 1140854430.7 ns, 2667693 ticks, 570.4272 ns/op, 1753072 op/s
+Target 7: 2000000 op, 1136.6 ms, 1136601821.2 ns, 2657749 ticks, 568.3009 ns/op, 1759631.2 op/s
+Target 8: 2000000 op, 1140 ms, 1140037608.1 ns, 2665783 ticks, 570.0188 ns/op, 1754328.1 op/s
+Target 9: 2000000 op, 1141.1 ms, 1141070396.9 ns, 2668198 ticks, 570.5352 ns/op, 1752740.2 op/s
+Target 10: 2000000 op, 1142.8 ms, 1142831483.5 ns, 2672316 ticks, 571.4157 ns/op, 1750039.3 op/s
+// Benchmark finished
+// Run, Process: 2 / 3
+// Method=DedicatedStructEnumeratorCalledDirectly Platform=X64 JitVersion=RyuJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+// Pre-Warmup: 1 op, 0 ms, 12402 ns, 29 ticks, 12402.0187 ns/op, 80632 op/s
+// Pre-Warmup: 1000 op, 0.6 ms, 574769.4 ns, 1344 ticks, 574.7694 ns/op, 1739828.1 op/s
+// Pre-Warmup: 1000000 op, 572.9 ms, 572851810 ns, 1339516 ticks, 572.8518 ns/op, 1745652.2 op/s
+// Pre-Warmup: 2000000 op, 1159.9 ms, 1159877416.7 ns, 2712175 ticks, 579.9387 ns/op, 1724320.1 op/s
+// Warmup (idle): 2000000 op, 4.3 ms, 4292809.1 ns, 10038 ticks, 2.1464 ns/op, 465895397.5 op/s
+// Warmup (idle): 2000000 op, 4.3 ms, 4289387.8 ns, 10030 ticks, 2.1447 ns/op, 466266999 op/s
+// Warmup (idle): 2000000 op, 4.3 ms, 4263300.8 ns, 9969 ticks, 2.1317 ns/op, 469120072.2 op/s
+// IterationCount = 2000000
+// Target (idle): 2000000 op, 4.3 ms, 4266722.1 ns, 9977 ticks, 2.1334 ns/op, 468743911 op/s
+// Target (idle): 2000000 op, 4.3 ms, 4290670.8 ns, 10033 ticks, 2.1453 ns/op, 466127579 op/s
+// Target (idle): 2000000 op, 4.3 ms, 4341989.5 ns, 10153 ticks, 2.171 ns/op, 460618339.4 op/s
+// Target (idle): 2000000 op, 4.3 ms, 4275275.2 ns, 9997 ticks, 2.1376 ns/op, 467806141.8 op/s
+// Target (idle): 2000000 op, 4.3 ms, 4324028 ns, 10111 ticks, 2.162 ns/op, 462531698.2 op/s
+// Warmup 1: 2000000 op, 1141.8 ms, 1141791424.6 ns, 2669884 ticks, 570.8957 ns/op, 1751633.4 op/s
+// Warmup 2: 2000000 op, 1138.5 ms, 1138477519.6 ns, 2662135 ticks, 569.2388 ns/op, 1756732.1 op/s
+// Warmup 3: 2000000 op, 1169.3 ms, 1169344861.2 ns, 2734313 ticks, 584.6724 ns/op, 1710359.4 op/s
+// Warmup 4: 2000000 op, 1165 ms, 1164982771.9 ns, 2724113 ticks, 582.4914 ns/op, 1716763.6 op/s
+// Warmup 5: 2000000 op, 1160.3 ms, 1160320895.8 ns, 2713212 ticks, 580.1604 ns/op, 1723661.1 op/s
+Target 1: 2000000 op, 1167.1 ms, 1167073581.2 ns, 2729002 ticks, 583.5368 ns/op, 1713688 op/s
+Target 2: 2000000 op, 1162.4 ms, 1162407428.6 ns, 2718091 ticks, 581.2037 ns/op, 1720567.1 op/s
+Target 3: 2000000 op, 1139.9 ms, 1139907173 ns, 2665478 ticks, 569.9536 ns/op, 1754528.8 op/s
+Target 4: 2000000 op, 1139.3 ms, 1139325133.5 ns, 2664117 ticks, 569.6626 ns/op, 1755425.2 op/s
+Target 5: 2000000 op, 1142.5 ms, 1142459422.9 ns, 2671446 ticks, 571.2297 ns/op, 1750609.2 op/s
+Target 6: 2000000 op, 1140.4 ms, 1140394273 ns, 2666617 ticks, 570.1971 ns/op, 1753779.4 op/s
+Target 7: 2000000 op, 1139 ms, 1139005674.6 ns, 2663370 ticks, 569.5028 ns/op, 1755917.5 op/s
+Target 8: 2000000 op, 1141.4 ms, 1141435614.9 ns, 2669052 ticks, 570.7178 ns/op, 1752179.4 op/s
+Target 9: 2000000 op, 1139.5 ms, 1139476096 ns, 2664470 ticks, 569.738 ns/op, 1755192.6 op/s
+Target 10: 2000000 op, 1138.7 ms, 1138725560 ns, 2662715 ticks, 569.3628 ns/op, 1756349.4 op/s
+// Benchmark finished
+// Run, Process: 3 / 3
+// Method=DedicatedStructEnumeratorCalledDirectly Platform=X64 JitVersion=RyuJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+// Pre-Warmup: 1 op, 0 ms, 12829.7 ns, 30 ticks, 12829.6745 ns/op, 77944.3 op/s
+// Pre-Warmup: 1000 op, 0.6 ms, 558518.5 ns, 1306 ticks, 558.5185 ns/op, 1790451 op/s
+// Pre-Warmup: 1000000 op, 573.1 ms, 573063927.3 ns, 1340012 ticks, 573.0639 ns/op, 1745006 op/s
+// Pre-Warmup: 2000000 op, 1144.4 ms, 1144430488.6 ns, 2676055 ticks, 572.2152 ns/op, 1747594.1 op/s
+// Warmup (idle): 2000000 op, 4.1 ms, 4139280.7 ns, 9679 ticks, 2.0696 ns/op, 483175741.3 op/s
+// Warmup (idle): 2000000 op, 4.2 ms, 4195731.2 ns, 9811 ticks, 2.0979 ns/op, 476674956.7 op/s
+// Warmup (idle): 2000000 op, 4.2 ms, 4161091.1 ns, 9730 ticks, 2.0805 ns/op, 480643165.5 op/s
+// IterationCount = 2000000
+// Target (idle): 2000000 op, 4.3 ms, 4287249.6 ns, 10025 ticks, 2.1436 ns/op, 466499551.1 op/s
+// Target (idle): 2000000 op, 4.1 ms, 4148261.4 ns, 9700 ticks, 2.0741 ns/op, 482129690.7 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4210699.2 ns, 9846 ticks, 2.1053 ns/op, 474980499.7 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4161946.4 ns, 9732 ticks, 2.081 ns/op, 480544389.6 op/s
+// Target (idle): 2000000 op, 4.3 ms, 4263728.5 ns, 9970 ticks, 2.1319 ns/op, 469073019.1 op/s
+// Warmup 1: 2000000 op, 1136.3 ms, 1136277658.1 ns, 2656991 ticks, 568.1388 ns/op, 1760133.2 op/s
+// Warmup 2: 2000000 op, 1140.1 ms, 1140114586.1 ns, 2665963 ticks, 570.0573 ns/op, 1754209.6 op/s
+// Warmup 3: 2000000 op, 1141.3 ms, 1141319720.2 ns, 2668781 ticks, 570.6599 ns/op, 1752357.3 op/s
+// Warmup 4: 2000000 op, 1137.8 ms, 1137802251.1 ns, 2660556 ticks, 568.9011 ns/op, 1757774.7 op/s
+// Warmup 5: 2000000 op, 1139.9 ms, 1139893060.4 ns, 2665445 ticks, 569.9465 ns/op, 1754550.6 op/s
+Target 1: 2000000 op, 1140.5 ms, 1140462270.3 ns, 2666776 ticks, 570.2311 ns/op, 1753674.8 op/s
+Target 2: 2000000 op, 1143.5 ms, 1143497771.3 ns, 2673874 ticks, 571.7489 ns/op, 1749019.6 op/s
+Target 3: 2000000 op, 1138.8 ms, 1138782865.9 ns, 2662849 ticks, 569.3914 ns/op, 1756261.1 op/s
+Target 4: 2000000 op, 1142.8 ms, 1142812239 ns, 2672271 ticks, 571.4061 ns/op, 1750068.8 op/s
+Target 5: 2000000 op, 1139.7 ms, 1139678377.2 ns, 2664943 ticks, 569.8392 ns/op, 1754881.1 op/s
+Target 6: 2000000 op, 1140.3 ms, 1140322854.5 ns, 2666450 ticks, 570.1614 ns/op, 1753889.3 op/s
+Target 7: 2000000 op, 1140 ms, 1140020929.5 ns, 2665744 ticks, 570.0105 ns/op, 1754353.8 op/s
+Target 8: 2000000 op, 1137.9 ms, 1137892486.5 ns, 2660767 ticks, 568.9462 ns/op, 1757635.3 op/s
+Target 9: 2000000 op, 1142.6 ms, 1142594989.8 ns, 2671763 ticks, 571.2975 ns/op, 1750401.5 op/s
+Target 10: 2000000 op, 1139.7 ms, 1139728412.9 ns, 2665060 ticks, 569.8642 ns/op, 1754804 op/s
+// Benchmark finished
+
+AverageTime (ns/op): Avr=571.06671759 +- 1.14298483358522
+OperationsPerSecond: Avr=1751160.93774101 +- 3445.5326529769
+
+// **************************
+// Benchmark: EnumeratorsBenchmarks_SingleClassEnumeratorCalledDirectly (Throughput_X64_RyuJit_NET-HostFramework) [-w=5 -t=10]
+// Generated project: C:\Projects\DemoCode\Performance\Benchmarks\bin\Release\EnumeratorsBenchmarks_SingleClassEnumeratorCalledDirectly_Throughput_X64_RyuJit_NET-HostFramework
+
+// Build:
+// OverallResult = Success
+
+// Run, Process: 1 / 3
+// Method=SingleClassEnumeratorCalledDirectly Platform=X64 JitVersion=RyuJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+// Pre-Warmup: 1 op, 0 ms, 13685 ns, 32 ticks, 13684.9862 ns/op, 73072.8 op/s
+// Pre-Warmup: 1000 op, 1.9 ms, 1939846.8 ns, 4536 ticks, 1939.8468 ns/op, 515504.6 op/s
+// Pre-Warmup: 516000 op, 1008 ms, 1008049337.8 ns, 2357151 ticks, 1953.584 ns/op, 511879.7 op/s
+// Warmup (idle): 516000 op, 1.1 ms, 1068284.2 ns, 2498 ticks, 2.0703 ns/op, 483017519.6 op/s
+// Warmup (idle): 516000 op, 1.1 ms, 1108911.5 ns, 2593 ticks, 2.1491 ns/op, 465321158.5 op/s
+// Warmup (idle): 516000 op, 1.1 ms, 1108911.5 ns, 2593 ticks, 2.1491 ns/op, 465321158.5 op/s
+// IterationCount = 516000
+// Target (idle): 516000 op, 1.2 ms, 1235925.3 ns, 2890 ticks, 2.3952 ns/op, 417500956.4 op/s
+// Target (idle): 516000 op, 1.1 ms, 1109339.2 ns, 2594 ticks, 2.1499 ns/op, 465141774.9 op/s
+// Target (idle): 516000 op, 1.1 ms, 1127300.7 ns, 2636 ticks, 2.1847 ns/op, 457730563 op/s
+// Target (idle): 516000 op, 1.1 ms, 1119175.3 ns, 2617 ticks, 2.1689 ns/op, 461053788.3 op/s
+// Target (idle): 516000 op, 1.1 ms, 1127300.7 ns, 2636 ticks, 2.1847 ns/op, 457730563 op/s
+// Warmup 1: 516000 op, 1012.7 ms, 1012699239.5 ns, 2368024 ticks, 1962.5954 ns/op, 509529.4 op/s
+// Warmup 2: 516000 op, 1010.1 ms, 1010142713 ns, 2362046 ticks, 1957.6409 ns/op, 510818.9 op/s
+// Warmup 3: 516000 op, 1007.1 ms, 1007128594.8 ns, 2354998 ticks, 1951.7996 ns/op, 512347.7 op/s
+// Warmup 4: 516000 op, 1007.7 ms, 1007693100.5 ns, 2356318 ticks, 1952.8936 ns/op, 512060.7 op/s
+// Warmup 5: 516000 op, 1008 ms, 1007999729.7 ns, 2357035 ticks, 1953.4878 ns/op, 511904.9 op/s
+Target 1: 516000 op, 1005.1 ms, 1005124599.7 ns, 2350312 ticks, 1947.9159 ns/op, 513369.2 op/s
+Target 2: 516000 op, 1008 ms, 1007950121.6 ns, 2356919 ticks, 1953.3917 ns/op, 511930.1 op/s
+Target 3: 516000 op, 1008.8 ms, 1008760101.8 ns, 2358813 ticks, 1954.9614 ns/op, 511519 op/s
+Target 4: 516000 op, 1007 ms, 1007027668 ns, 2354762 ticks, 1951.604 ns/op, 512399 op/s
+Target 5: 516000 op, 1009.8 ms, 1009847202.9 ns, 2361355 ticks, 1957.0682 ns/op, 510968.4 op/s
+Target 6: 516000 op, 1008.3 ms, 1008334584.2 ns, 2357818 ticks, 1954.1368 ns/op, 511734.9 op/s
+Target 7: 516000 op, 1005.3 ms, 1005252468.8 ns, 2350611 ticks, 1948.1637 ns/op, 513303.9 op/s
+Target 8: 516000 op, 1009 ms, 1009036795.1 ns, 2359460 ticks, 1955.4977 ns/op, 511378.8 op/s
+Target 9: 516000 op, 1008.5 ms, 1008535582.5 ns, 2358288 ticks, 1954.5263 ns/op, 511632.9 op/s
+Target 10: 516000 op, 1009.6 ms, 1009557252.2 ns, 2360677 ticks, 1956.5063 ns/op, 511115.1 op/s
+// Benchmark finished
+// Run, Process: 2 / 3
+// Method=SingleClassEnumeratorCalledDirectly Platform=X64 JitVersion=RyuJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+// Pre-Warmup: 1 op, 0 ms, 13685 ns, 32 ticks, 13684.9862 ns/op, 73072.8 op/s
+// Pre-Warmup: 1000 op, 1.9 ms, 1931721.3 ns, 4517 ticks, 1931.7213 ns/op, 517673 op/s
+// Pre-Warmup: 518000 op, 1013.1 ms, 1013078997.9 ns, 2368912 ticks, 1955.751 ns/op, 511312.5 op/s
+// Warmup (idle): 518000 op, 1.1 ms, 1071705.5 ns, 2506 ticks, 2.0689 ns/op, 483341748.6 op/s
+// Warmup (idle): 518000 op, 1.1 ms, 1112760.4 ns, 2602 ticks, 2.1482 ns/op, 465509001.5 op/s
+// Warmup (idle): 518000 op, 1.1 ms, 1112760.4 ns, 2602 ticks, 2.1482 ns/op, 465509001.5 op/s
+// IterationCount = 518000
+// Target (idle): 518000 op, 1.2 ms, 1192304.4 ns, 2788 ticks, 2.3017 ns/op, 434452805.6 op/s
+// Target (idle): 518000 op, 1.1 ms, 1115326.4 ns, 2608 ticks, 2.1531 ns/op, 464438045.2 op/s
+// Target (idle): 518000 op, 1.1 ms, 1123451.8 ns, 2627 ticks, 2.1688 ns/op, 461078957.7 op/s
+// Target (idle): 518000 op, 1.1 ms, 1096937.2 ns, 2565 ticks, 2.1176 ns/op, 472223946.2 op/s
+// Target (idle): 518000 op, 1.1 ms, 1112760.4 ns, 2602 ticks, 2.1482 ns/op, 465509001.5 op/s
+// Warmup 1: 518000 op, 1010.5 ms, 1010459606 ns, 2362787 ticks, 1950.6942 ns/op, 512638 op/s
+// Warmup 2: 518000 op, 1012.6 ms, 1012584200.1 ns, 2367755 ticks, 1954.7958 ns/op, 511562.4 op/s
+// Warmup 3: 518000 op, 1022.9 ms, 1022872743.7 ns, 2391813 ticks, 1974.6578 ns/op, 506416.9 op/s
+// Warmup 4: 518000 op, 1014.5 ms, 1014491545 ns, 2372215 ticks, 1958.4779 ns/op, 510600.6 op/s
+// Warmup 5: 518000 op, 1011.1 ms, 1011101517.4 ns, 2364288 ticks, 1951.9334 ns/op, 512312.6 op/s
+Target 1: 518000 op, 1014.4 ms, 1014427824.3 ns, 2372066 ticks, 1958.3549 ns/op, 510632.7 op/s
+Target 2: 518000 op, 1013.2 ms, 1013222262.6 ns, 2369247 ticks, 1956.0275 ns/op, 511240.2 op/s
+Target 3: 518000 op, 1013.7 ms, 1013702092.4 ns, 2370369 ticks, 1956.9538 ns/op, 510998.3 op/s
+Target 4: 518000 op, 1013.7 ms, 1013670018.2 ns, 2370294 ticks, 1956.8919 ns/op, 511014.4 op/s
+Target 5: 518000 op, 1013 ms, 1012967807.4 ns, 2368652 ticks, 1955.5363 ns/op, 511368.7 op/s
+Target 6: 518000 op, 1007.4 ms, 1007440355.9 ns, 2355727 ticks, 1944.8656 ns/op, 514174.4 op/s
+Target 7: 518000 op, 1032.6 ms, 1032556154.4 ns, 2414456 ticks, 1993.3516 ns/op, 501667.6 op/s
+Target 8: 518000 op, 1031.9 ms, 1031889011.3 ns, 2412896 ticks, 1992.0637 ns/op, 501992 op/s
+Target 9: 518000 op, 1018.6 ms, 1018635102.2 ns, 2381904 ticks, 1966.477 ns/op, 508523.6 op/s
+Target 10: 518000 op, 1015.7 ms, 1015683849.4 ns, 2375003 ticks, 1960.7796 ns/op, 510001.2 op/s
+// Benchmark finished
+// Run, Process: 3 / 3
+// Method=SingleClassEnumeratorCalledDirectly Platform=X64 JitVersion=RyuJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+// Pre-Warmup: 1 op, 0 ms, 3848.9 ns, 9 ticks, 3848.9024 ns/op, 259814.3 op/s
+// Pre-Warmup: 1000 op, 1.9 ms, 1915898.1 ns, 4480 ticks, 1915.8981 ns/op, 521948.4 op/s
+// Pre-Warmup: 522000 op, 1041.2 ms, 1041194801.9 ns, 2434656 ticks, 1994.6261 ns/op, 501347.1 op/s
+// Warmup (idle): 522000 op, 1.1 ms, 1079830.9 ns, 2525 ticks, 2.0686 ns/op, 483409005.1 op/s
+// Warmup (idle): 522000 op, 1.2 ms, 1173059.9 ns, 2743 ticks, 2.2472 ns/op, 444990061.2 op/s
+// Warmup (idle): 522000 op, 1.1 ms, 1124307.1 ns, 2629 ticks, 2.1538 ns/op, 464285940.7 op/s
+// IterationCount = 522000
+// Target (idle): 522000 op, 1.2 ms, 1187600.2 ns, 2777 ticks, 2.2751 ns/op, 439541857.4 op/s
+// Target (idle): 522000 op, 1.2 ms, 1169211 ns, 2734 ticks, 2.2399 ns/op, 446454915.1 op/s
+// Target (idle): 522000 op, 1.1 ms, 1132004.9 ns, 2647 ticks, 2.1686 ns/op, 461128726.1 op/s
+// Target (idle): 522000 op, 1.1 ms, 1140130.4 ns, 2666 ticks, 2.1842 ns/op, 457842362.3 op/s
+// Target (idle): 522000 op, 1.1 ms, 1132004.9 ns, 2647 ticks, 2.1686 ns/op, 461128726.1 op/s
+// Warmup 1: 522000 op, 1019.8 ms, 1019821419.5 ns, 2384678 ticks, 1953.6809 ns/op, 511854.3 op/s
+// Warmup 2: 522000 op, 1018.7 ms, 1018713363.3 ns, 2382087 ticks, 1951.5582 ns/op, 512411.1 op/s
+// Warmup 3: 522000 op, 1015.7 ms, 1015721055.5 ns, 2375090 ticks, 1945.8258 ns/op, 513920.6 op/s
+// Warmup 4: 522000 op, 1018.6 ms, 1018579079.3 ns, 2381773 ticks, 1951.3009 ns/op, 512478.6 op/s
+// Warmup 5: 522000 op, 1018.3 ms, 1018328900.7 ns, 2381188 ticks, 1950.8216 ns/op, 512604.5 op/s
+Target 1: 522000 op, 1017.4 ms, 1017401315.2 ns, 2379019 ticks, 1949.0447 ns/op, 513071.9 op/s
+Target 2: 522000 op, 1017.2 ms, 1017223410.4 ns, 2378603 ticks, 1948.7039 ns/op, 513161.6 op/s
+Target 3: 522000 op, 1018 ms, 1018031252.2 ns, 2380492 ticks, 1950.2514 ns/op, 512754.4 op/s
+Target 4: 522000 op, 1017.5 ms, 1017547573.5 ns, 2379361 ticks, 1949.3249 ns/op, 512998.1 op/s
+Target 5: 522000 op, 1010.5 ms, 1010532307.5 ns, 2362957 ticks, 1935.8856 ns/op, 516559.4 op/s
+Target 6: 522000 op, 1015.9 ms, 1015913073 ns, 2375539 ticks, 1946.1936 ns/op, 513823.5 op/s
+Target 7: 522000 op, 1018.5 ms, 1018508943.8 ns, 2381609 ticks, 1951.1666 ns/op, 512513.9 op/s
+Target 8: 522000 op, 1015.3 ms, 1015308367.6 ns, 2374125 ticks, 1945.0352 ns/op, 514129.5 op/s
+Target 9: 522000 op, 1017.5 ms, 1017455199.8 ns, 2379145 ticks, 1949.1479 ns/op, 513044.7 op/s
+Target 10: 522000 op, 1014.5 ms, 1014530889.4 ns, 2372307 ticks, 1943.5458 ns/op, 514523.5 op/s
+// Benchmark finished
+
+AverageTime (ns/op): Avr=1954.77912055642 +- 4.25590320319905
+OperationsPerSecond: Avr=511584.833651314 +- 1100.38858953508
+
+// **************************
+// Benchmark: EnumeratorsBenchmarks_SingleClassEnumeratorCalledViaInterface (Throughput_X64_RyuJit_NET-HostFramework) [-w=5 -t=10]
+// Generated project: C:\Projects\DemoCode\Performance\Benchmarks\bin\Release\EnumeratorsBenchmarks_SingleClassEnumeratorCalledViaInterface_Throughput_X64_RyuJit_NET-HostFramework
+
+// Build:
+// OverallResult = Success
+
+// Run, Process: 1 / 3
+// Method=SingleClassEnumeratorCalledViaInterface Platform=X64 JitVersion=RyuJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+// Pre-Warmup: 1 op, 0 ms, 20955.1 ns, 49 ticks, 20955.1351 ns/op, 47721 op/s
+// Pre-Warmup: 1000 op, 4.8 ms, 4836787.3 ns, 11310 ticks, 4836.7873 ns/op, 206748.8 op/s
+// Pre-Warmup: 207000 op, 1024.1 ms, 1024109524.4 ns, 2394705 ticks, 4947.389 ns/op, 202126.8 op/s
+// Warmup (idle): 207000 op, 0.4 ms, 429794.1 ns, 1005 ticks, 2.0763 ns/op, 481625973.1 op/s
+// Warmup (idle): 207000 op, 0.5 ms, 472987.3 ns, 1106 ticks, 2.285 ns/op, 437643854.4 op/s
+// Warmup (idle): 207000 op, 0.5 ms, 471276.7 ns, 1102 ticks, 2.2767 ns/op, 439232398.4 op/s
+// IterationCount = 207000
+// Target (idle): 207000 op, 0.6 ms, 550393 ns, 1287 ticks, 2.6589 ns/op, 376094874.1 op/s
+// Target (idle): 207000 op, 0.4 ms, 437491.9 ns, 1023 ticks, 2.1135 ns/op, 473151615.8 op/s
+// Target (idle): 207000 op, 0.4 ms, 448183.3 ns, 1048 ticks, 2.1651 ns/op, 461864602.1 op/s
+// Target (idle): 207000 op, 0.5 ms, 462723.6 ns, 1082 ticks, 2.2354 ns/op, 447351296.7 op/s
+// Target (idle): 207000 op, 0.5 ms, 463151.3 ns, 1083 ticks, 2.2374 ns/op, 446938229.9 op/s
+// Warmup 1: 207000 op, 1011.8 ms, 1011762245.6 ns, 2365833 ticks, 4887.7403 ns/op, 204593.5 op/s
+// Warmup 2: 207000 op, 1013.3 ms, 1013297957.6 ns, 2369424 ticks, 4895.1592 ns/op, 204283.4 op/s
+// Warmup 3: 207000 op, 1012.2 ms, 1012202731.1 ns, 2366863 ticks, 4889.8683 ns/op, 204504.5 op/s
+// Warmup 4: 207000 op, 1007.9 ms, 1007879130.8 ns, 2356753 ticks, 4868.9813 ns/op, 205381.8 op/s
+// Warmup 5: 207000 op, 1012.4 ms, 1012361819.1 ns, 2367235 ticks, 4890.6368 ns/op, 204472.3 op/s
+Target 1: 207000 op, 1006.4 ms, 1006406284.1 ns, 2353309 ticks, 4861.8661 ns/op, 205682.3 op/s
+Target 2: 207000 op, 1012.2 ms, 1012163386.8 ns, 2366771 ticks, 4889.6782 ns/op, 204512.4 op/s
+Target 3: 207000 op, 1010.9 ms, 1010893676.6 ns, 2363802 ticks, 4883.5443 ns/op, 204769.3 op/s
+Target 4: 207000 op, 1009.4 ms, 1009396026 ns, 2360300 ticks, 4876.3093 ns/op, 205073.1 op/s
+Target 5: 207000 op, 1011.9 ms, 1011900378.4 ns, 2366156 ticks, 4888.4076 ns/op, 204565.6 op/s
+Target 6: 207000 op, 1012.6 ms, 1012551698.2 ns, 2367679 ticks, 4891.5541 ns/op, 204434 op/s
+Target 7: 207000 op, 1006.4 ms, 1006376348.2 ns, 2353239 ticks, 4861.7215 ns/op, 205688.5 op/s
+Target 8: 207000 op, 1013.2 ms, 1013158114.2 ns, 2369097 ticks, 4894.4836 ns/op, 204311.6 op/s
+Target 9: 207000 op, 1012.3 ms, 1012319908.8 ns, 2367137 ticks, 4890.4343 ns/op, 204480.8 op/s
+Target 10: 207000 op, 1011.5 ms, 1011462458.9 ns, 2365132 ticks, 4886.2921 ns/op, 204654.2 op/s
+// Benchmark finished
+// Run, Process: 2 / 3
+// Method=SingleClassEnumeratorCalledViaInterface Platform=X64 JitVersion=RyuJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+// Pre-Warmup: 1 op, 0 ms, 19672.2 ns, 46 ticks, 19672.1676 ns/op, 50833.2 op/s
+// Pre-Warmup: 1000 op, 4.9 ms, 4934292.8 ns, 11538 ticks, 4934.2928 ns/op, 202663.3 op/s
+// Pre-Warmup: 203000 op, 998.9 ms, 998884673.6 ns, 2335721 ticks, 4920.6142 ns/op, 203226.7 op/s
+// Pre-Warmup: 406000 op, 1992.3 ms, 1992301767.6 ns, 4658657 ticks, 4907.1472 ns/op, 203784.4 op/s
+// Warmup (idle): 406000 op, 0.8 ms, 840343.7 ns, 1965 ticks, 2.0698 ns/op, 483135661.1 op/s
+// Warmup (idle): 406000 op, 0.9 ms, 882254 ns, 2063 ticks, 2.173 ns/op, 460184960.7 op/s
+// Warmup (idle): 406000 op, 0.9 ms, 882681.6 ns, 2064 ticks, 2.1741 ns/op, 459962002.9 op/s
+// IterationCount = 406000
+// Target (idle): 406000 op, 0.9 ms, 948540.6 ns, 2218 ticks, 2.3363 ns/op, 428025957.6 op/s
+// Target (idle): 406000 op, 0.9 ms, 882254 ns, 2063 ticks, 2.173 ns/op, 460184960.7 op/s
+// Target (idle): 406000 op, 0.9 ms, 893373 ns, 2089 ticks, 2.2004 ns/op, 454457431.3 op/s
+// Target (idle): 406000 op, 0.9 ms, 893373 ns, 2089 ticks, 2.2004 ns/op, 454457431.3 op/s
+// Target (idle): 406000 op, 0.9 ms, 892517.7 ns, 2087 ticks, 2.1983 ns/op, 454892943.9 op/s
+// Warmup 1: 406000 op, 1982.6 ms, 1982562761.7 ns, 4635884 ticks, 4883.1595 ns/op, 204785.4 op/s
+// Warmup 2: 406000 op, 1978.8 ms, 1978803239.4 ns, 4627093 ticks, 4873.8996 ns/op, 205174.5 op/s
+// Warmup 3: 406000 op, 1989 ms, 1989018653.9 ns, 4650980 ticks, 4899.0607 ns/op, 204120.8 op/s
+// Warmup 4: 406000 op, 1977.1 ms, 1977110150 ns, 4623134 ticks, 4869.7294 ns/op, 205350.2 op/s
+// Warmup 5: 406000 op, 1983.6 ms, 1983635322.5 ns, 4638392 ticks, 4885.8013 ns/op, 204674.7 op/s
+Target 1: 406000 op, 1981.6 ms, 1981582574.6 ns, 4633592 ticks, 4880.7453 ns/op, 204886.7 op/s
+Target 2: 406000 op, 1978.4 ms, 1978423908.7 ns, 4626206 ticks, 4872.9653 ns/op, 205213.9 op/s
+Target 3: 406000 op, 1983 ms, 1983010089.7 ns, 4636930 ticks, 4884.2613 ns/op, 204739.3 op/s
+Target 4: 406000 op, 1972.5 ms, 1972498309.7 ns, 4612350 ticks, 4858.3702 ns/op, 205830.3 op/s
+Target 5: 406000 op, 1978.5 ms, 1978548784.2 ns, 4626498 ticks, 4873.2729 ns/op, 205200.9 op/s
+Target 6: 406000 op, 1978.7 ms, 1978742939.9 ns, 4626952 ticks, 4873.7511 ns/op, 205180.8 op/s
+Target 7: 406000 op, 2060.2 ms, 2060207951.9 ns, 4817444 ticks, 5074.4038 ns/op, 197067.5 op/s
+Target 8: 406000 op, 2001.8 ms, 2001840630.6 ns, 4680962 ticks, 4930.6419 ns/op, 202813.3 op/s
+Target 9: 406000 op, 2086.9 ms, 2086920189.6 ns, 4879906 ticks, 5140.1975 ns/op, 194545.1 op/s
+Target 10: 406000 op, 2004.4 ms, 2004383472.1 ns, 4686908 ticks, 4936.9051 ns/op, 202556.1 op/s
+// Benchmark finished
+// Run, Process: 3 / 3
+// Method=SingleClassEnumeratorCalledViaInterface Platform=X64 JitVersion=RyuJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+// Pre-Warmup: 1 op, 0 ms, 20099.8 ns, 47 ticks, 20099.8234 ns/op, 49751.7 op/s
+// Pre-Warmup: 1000 op, 4.8 ms, 4815404.5 ns, 11260 ticks, 4815.4045 ns/op, 207666.9 op/s
+// Pre-Warmup: 208000 op, 1051.7 ms, 1051704443.6 ns, 2459231 ticks, 5056.2714 ns/op, 197774.2 op/s
+// Warmup (idle): 208000 op, 0.4 ms, 431932.4 ns, 1010 ticks, 2.0766 ns/op, 481556863.4 op/s
+// Warmup (idle): 208000 op, 0.5 ms, 472987.3 ns, 1106 ticks, 2.274 ns/op, 439758075.9 op/s
+// Warmup (idle): 208000 op, 0.5 ms, 473415 ns, 1107 ticks, 2.276 ns/op, 439360823.8 op/s
+// IterationCount = 208000
+// Target (idle): 208000 op, 0.5 ms, 539701.6 ns, 1262 ticks, 2.5947 ns/op, 385398123.6 op/s
+// Target (idle): 208000 op, 0.5 ms, 450321.6 ns, 1053 ticks, 2.165 ns/op, 461892148.1 op/s
+// Target (idle): 208000 op, 0.5 ms, 465289.5 ns, 1088 ticks, 2.237 ns/op, 447033485.3 op/s
+// Target (idle): 208000 op, 0.4 ms, 449893.9 ns, 1052 ticks, 2.163 ns/op, 462331209.1 op/s
+// Target (idle): 208000 op, 0.5 ms, 465717.2 ns, 1089 ticks, 2.239 ns/op, 446622986.2 op/s
+// Warmup 1: 208000 op, 1093.5 ms, 1093512931.7 ns, 2556993 ticks, 5257.2737 ns/op, 190212.7 op/s
+// Warmup 2: 208000 op, 1036.1 ms, 1036118527.4 ns, 2422786 ticks, 4981.3391 ns/op, 200749.2 op/s
+// Warmup 3: 208000 op, 1012.8 ms, 1012774934.6 ns, 2368201 ticks, 4869.1103 ns/op, 205376.3 op/s
+// Warmup 4: 208000 op, 1013.6 ms, 1013596889.1 ns, 2370123 ticks, 4873.062 ns/op, 205209.8 op/s
+// Warmup 5: 208000 op, 1016.7 ms, 1016653345.2 ns, 2377270 ticks, 4887.7565 ns/op, 204592.8 op/s
+Target 1: 208000 op, 1013.7 ms, 1013681137.3 ns, 2370320 ticks, 4873.467 ns/op, 205192.7 op/s
+Target 2: 208000 op, 1010 ms, 1009993888.8 ns, 2361698 ticks, 4855.7398 ns/op, 205941.8 op/s
+Target 3: 208000 op, 1013.1 ms, 1013056759.8 ns, 2368860 ticks, 4870.4652 ns/op, 205319.2 op/s
+Target 4: 208000 op, 1013 ms, 1012978498.7 ns, 2368677 ticks, 4870.0889 ns/op, 205335.1 op/s
+Target 5: 208000 op, 1009.3 ms, 1009281414.2 ns, 2360032 ticks, 4852.3145 ns/op, 206087.2 op/s
+Target 6: 208000 op, 1010.4 ms, 1010372791.9 ns, 2362584 ticks, 4857.5615 ns/op, 205864.6 op/s
+Target 7: 208000 op, 1013.4 ms, 1013412997.1 ns, 2369693 ticks, 4872.1779 ns/op, 205247 op/s
+Target 8: 208000 op, 1009.7 ms, 1009715057.2 ns, 2361046 ticks, 4854.3993 ns/op, 205998.7 op/s
+Target 9: 208000 op, 1010.1 ms, 1010066162.6 ns, 2361867 ticks, 4856.0873 ns/op, 205927.1 op/s
+Target 10: 208000 op, 1011.7 ms, 1011660463.5 ns, 2365595 ticks, 4863.7522 ns/op, 205602.6 op/s
+// Benchmark finished
+
+AverageTime (ns/op): Avr=4892.52864424124 +- 22.2581160995172
+OperationsPerSecond: Avr=204424.058764827 +- 896.166355528252
+
+// **************************
+// Benchmark: EnumeratorsBenchmarks_SingleStructEnumeratorCalledDirectly (Throughput_X64_RyuJit_NET-HostFramework) [-w=5 -t=10]
+// Generated project: C:\Projects\DemoCode\Performance\Benchmarks\bin\Release\EnumeratorsBenchmarks_SingleStructEnumeratorCalledDirectly_Throughput_X64_RyuJit_NET-HostFramework
+
+// Build:
+// OverallResult = Success
+
+// Run, Process: 1 / 3
+// Method=SingleStructEnumeratorCalledDirectly Platform=X64 JitVersion=RyuJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+// Pre-Warmup: 1 op, 0 ms, 12402 ns, 29 ticks, 12402.0187 ns/op, 80632 op/s
+// Pre-Warmup: 1000 op, 0.6 ms, 558946.2 ns, 1307 ticks, 558.9462 ns/op, 1789081.1 op/s
+// Pre-Warmup: 1000000 op, 574.5 ms, 574516246.4 ns, 1343408 ticks, 574.5162 ns/op, 1740594.8 op/s
+// Pre-Warmup: 2000000 op, 1145.6 ms, 1145563348.9 ns, 2678704 ticks, 572.7817 ns/op, 1745865.9 op/s
+// Warmup (idle): 2000000 op, 4.1 ms, 4139708.3 ns, 9680 ticks, 2.0699 ns/op, 483125826.4 op/s
+// Warmup (idle): 2000000 op, 4.4 ms, 4421961.2 ns, 10340 ticks, 2.211 ns/op, 452288007.7 op/s
+// Warmup (idle): 2000000 op, 4.1 ms, 4147406.1 ns, 9698 ticks, 2.0737 ns/op, 482229119.4 op/s
+// IterationCount = 2000000
+// Target (idle): 2000000 op, 4.3 ms, 4280834.7 ns, 10010 ticks, 2.1404 ns/op, 467198601.4 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4200863.1 ns, 9823 ticks, 2.1004 ns/op, 476092639.7 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4173065.5 ns, 9758 ticks, 2.0865 ns/op, 479263988.5 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4164512.4 ns, 9738 ticks, 2.0823 ns/op, 480248305.6 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4164084.7 ns, 9737 ticks, 2.082 ns/op, 480297627.6 op/s
+// Warmup 1: 2000000 op, 1142.2 ms, 1142201974.1 ns, 2670844 ticks, 571.101 ns/op, 1751003.8 op/s
+// Warmup 2: 2000000 op, 1139 ms, 1139039887 ns, 2663450 ticks, 569.5199 ns/op, 1755864.8 op/s
+// Warmup 3: 2000000 op, 1140.4 ms, 1140363909.4 ns, 2666546 ticks, 570.182 ns/op, 1753826.1 op/s
+// Warmup 4: 2000000 op, 1141.7 ms, 1141743527.1 ns, 2669772 ticks, 570.8718 ns/op, 1751706.9 op/s
+// Warmup 5: 2000000 op, 1139.9 ms, 1139949083.3 ns, 2665576 ticks, 569.9745 ns/op, 1754464.3 op/s
+Target 1: 2000000 op, 1138.7 ms, 1138692202.9 ns, 2662637 ticks, 569.3461 ns/op, 1756400.9 op/s
+Target 2: 2000000 op, 1140.2 ms, 1140226204.3 ns, 2666224 ticks, 570.1131 ns/op, 1754037.9 op/s
+Target 3: 2000000 op, 1140.1 ms, 1140088499.1 ns, 2665902 ticks, 570.0442 ns/op, 1754249.8 op/s
+Target 4: 2000000 op, 1140 ms, 1140026489 ns, 2665757 ticks, 570.0132 ns/op, 1754345.2 op/s
+Target 5: 2000000 op, 1141 ms, 1141008386.8 ns, 2668053 ticks, 570.5042 ns/op, 1752835.5 op/s
+Target 6: 2000000 op, 1137.2 ms, 1137208664.8 ns, 2659168 ticks, 568.6043 ns/op, 1758692.2 op/s
+Target 7: 2000000 op, 1138.7 ms, 1138705887.8 ns, 2662669 ticks, 569.3529 ns/op, 1756379.8 op/s
+Target 8: 2000000 op, 1137.8 ms, 1137775308.8 ns, 2660493 ticks, 568.8877 ns/op, 1757816.3 op/s
+Target 9: 2000000 op, 1140 ms, 1139993987.2 ns, 2665681 ticks, 569.997 ns/op, 1754395.2 op/s
+Target 10: 2000000 op, 1139.6 ms, 1139585575.9 ns, 2664726 ticks, 569.7928 ns/op, 1755024 op/s
+// Benchmark finished
+// Run, Process: 2 / 3
+// Method=SingleStructEnumeratorCalledDirectly Platform=X64 JitVersion=RyuJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+// Pre-Warmup: 1 op, 0 ms, 12402 ns, 29 ticks, 12402.0187 ns/op, 80632 op/s
+// Pre-Warmup: 1000 op, 0.6 ms, 575197.1 ns, 1345 ticks, 575.1971 ns/op, 1738534.6 op/s
+// Pre-Warmup: 1000000 op, 573.2 ms, 573206764.3 ns, 1340346 ticks, 573.2068 ns/op, 1744571.2 op/s
+// Pre-Warmup: 2000000 op, 1144.8 ms, 1144752513.4 ns, 2676808 ticks, 572.3763 ns/op, 1747102.5 op/s
+// Warmup (idle): 2000000 op, 4.1 ms, 4139708.3 ns, 9680 ticks, 2.0699 ns/op, 483125826.4 op/s
+// Warmup (idle): 2000000 op, 4.2 ms, 4247477.6 ns, 9932 ticks, 2.1237 ns/op, 470867700.4 op/s
+// Warmup (idle): 2000000 op, 4.1 ms, 4148261.4 ns, 9700 ticks, 2.0741 ns/op, 482129690.7 op/s
+// IterationCount = 2000000
+// Target (idle): 2000000 op, 4.2 ms, 4237213.8 ns, 9908 ticks, 2.1186 ns/op, 472008276.1 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4161091.1 ns, 9730 ticks, 2.0805 ns/op, 480643165.5 op/s
+// Target (idle): 2000000 op, 4.3 ms, 4269288 ns, 9983 ticks, 2.1346 ns/op, 468462185.7 op/s
+// Target (idle): 2000000 op, 4.1 ms, 4147833.8 ns, 9699 ticks, 2.0739 ns/op, 482179399.9 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4161946.4 ns, 9732 ticks, 2.081 ns/op, 480544389.6 op/s
+// Warmup 1: 2000000 op, 1141.9 ms, 1141920149 ns, 2670185 ticks, 570.9601 ns/op, 1751435.9 op/s
+// Warmup 2: 2000000 op, 1140.4 ms, 1140412234.5 ns, 2666659 ticks, 570.2061 ns/op, 1753751.8 op/s
+// Warmup 3: 2000000 op, 1142 ms, 1141966763.4 ns, 2670294 ticks, 570.9834 ns/op, 1751364.5 op/s
+// Warmup 4: 2000000 op, 1140.1 ms, 1140131692.3 ns, 2666003 ticks, 570.0658 ns/op, 1754183.3 op/s
+// Warmup 5: 2000000 op, 1141 ms, 1141039178 ns, 2668125 ticks, 570.5196 ns/op, 1752788.2 op/s
+Target 1: 2000000 op, 1140.1 ms, 1140118435 ns, 2665972 ticks, 570.0592 ns/op, 1754203.7 op/s
+Target 2: 2000000 op, 1141.1 ms, 1141094773.2 ns, 2668255 ticks, 570.5474 ns/op, 1752702.8 op/s
+Target 3: 2000000 op, 1141.9 ms, 1141904753.4 ns, 2670149 ticks, 570.9524 ns/op, 1751459.6 op/s
+Target 4: 2000000 op, 1139 ms, 1138969751.5 ns, 2663286 ticks, 569.4849 ns/op, 1755972.9 op/s
+Target 5: 2000000 op, 1140.5 ms, 1140545235.5 ns, 2666970 ticks, 570.2726 ns/op, 1753547.3 op/s
+Target 6: 2000000 op, 1137.3 ms, 1137317289.4 ns, 2659422 ticks, 568.6586 ns/op, 1758524.2 op/s
+Target 7: 2000000 op, 1138.6 ms, 1138605816.4 ns, 2662435 ticks, 569.3029 ns/op, 1756534.2 op/s
+Target 8: 2000000 op, 1138.8 ms, 1138849580.2 ns, 2663005 ticks, 569.4248 ns/op, 1756158.2 op/s
+Target 9: 2000000 op, 1140.8 ms, 1140750082.6 ns, 2667449 ticks, 570.375 ns/op, 1753232.4 op/s
+Target 10: 2000000 op, 1140.1 ms, 1140115013.8 ns, 2665964 ticks, 570.0575 ns/op, 1754209 op/s
+// Benchmark finished
+// Run, Process: 3 / 3
+// Method=SingleStructEnumeratorCalledDirectly Platform=X64 JitVersion=RyuJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+// Pre-Warmup: 1 op, 0 ms, 12402 ns, 29 ticks, 12402.0187 ns/op, 80632 op/s
+// Pre-Warmup: 1000 op, 0.6 ms, 575624.7 ns, 1346 ticks, 575.6247 ns/op, 1737242.9 op/s
+// Pre-Warmup: 1000000 op, 575.2 ms, 575175691.7 ns, 1344950 ticks, 575.1757 ns/op, 1738599.2 op/s
+// Pre-Warmup: 2000000 op, 1177 ms, 1176999045 ns, 2752211 ticks, 588.4995 ns/op, 1699236.7 op/s
+// Warmup (idle): 2000000 op, 4.1 ms, 4139708.3 ns, 9680 ticks, 2.0699 ns/op, 483125826.4 op/s
+// Warmup (idle): 2000000 op, 4.2 ms, 4200863.1 ns, 9823 ticks, 2.1004 ns/op, 476092639.7 op/s
+// Warmup (idle): 2000000 op, 4.2 ms, 4161518.8 ns, 9731 ticks, 2.0808 ns/op, 480593772.5 op/s
+// IterationCount = 2000000
+// Target (idle): 2000000 op, 4.3 ms, 4274847.6 ns, 9996 ticks, 2.1374 ns/op, 467852941.2 op/s
+// Target (idle): 2000000 op, 4.1 ms, 4147833.8 ns, 9699 ticks, 2.0739 ns/op, 482179399.9 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4213692.8 ns, 9853 ticks, 2.1068 ns/op, 474643052.9 op/s
+// Target (idle): 2000000 op, 4.1 ms, 4148261.4 ns, 9700 ticks, 2.0741 ns/op, 482129690.7 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4214548.1 ns, 9855 ticks, 2.1073 ns/op, 474546727.5 op/s
+// Warmup 1: 2000000 op, 1165.8 ms, 1165790186.1 ns, 2726001 ticks, 582.8951 ns/op, 1715574.6 op/s
+// Warmup 2: 2000000 op, 1164.3 ms, 1164314773.5 ns, 2722551 ticks, 582.1574 ns/op, 1717748.5 op/s
+// Warmup 3: 2000000 op, 1163.3 ms, 1163288399.5 ns, 2720151 ticks, 581.6442 ns/op, 1719264.1 op/s
+// Warmup 4: 2000000 op, 1162.8 ms, 1162839788.6 ns, 2719102 ticks, 581.4199 ns/op, 1719927.4 op/s
+// Warmup 5: 2000000 op, 1143.8 ms, 1143788149.6 ns, 2674553 ticks, 571.8941 ns/op, 1748575.6 op/s
+Target 1: 2000000 op, 1141.5 ms, 1141495914.4 ns, 2669193 ticks, 570.748 ns/op, 1752086.9 op/s
+Target 2: 2000000 op, 1138.6 ms, 1138640456.5 ns, 2662516 ticks, 569.3202 ns/op, 1756480.7 op/s
+Target 3: 2000000 op, 1141.5 ms, 1141523712 ns, 2669258 ticks, 570.7619 ns/op, 1752044.2 op/s
+Target 4: 2000000 op, 1137.8 ms, 1137762479.1 ns, 2660463 ticks, 568.8812 ns/op, 1757836.1 op/s
+Target 5: 2000000 op, 1142.1 ms, 1142068545.5 ns, 2670532 ticks, 571.0343 ns/op, 1751208.4 op/s
+Target 6: 2000000 op, 1138.7 ms, 1138706743.1 ns, 2662671 ticks, 569.3534 ns/op, 1756378.5 op/s
+Target 7: 2000000 op, 1138.9 ms, 1138909879.7 ns, 2663146 ticks, 569.4549 ns/op, 1756065.2 op/s
+Target 8: 2000000 op, 1139.5 ms, 1139545803.9 ns, 2664633 ticks, 569.7729 ns/op, 1755085.2 op/s
+Target 9: 2000000 op, 1264.7 ms, 1264743755 ns, 2957387 ticks, 632.3719 ns/op, 1581348 op/s
+Target 10: 2000000 op, 1138.7 ms, 1138683649.7 ns, 2662617 ticks, 569.3418 ns/op, 1756414.1 op/s
+// Benchmark finished
+
+AverageTime (ns/op): Avr=571.894381275 +- 4.09430847536399
+OperationsPerSecond: Avr=1749188.93953831 +- 11367.1863540643
+
+// **************************
+// Benchmark: EnumeratorsBenchmarks_SingleStructEnumeratorCalledViaInterface (Throughput_X64_RyuJit_NET-HostFramework) [-w=5 -t=10]
+// Generated project: C:\Projects\DemoCode\Performance\Benchmarks\bin\Release\EnumeratorsBenchmarks_SingleStructEnumeratorCalledViaInterface_Throughput_X64_RyuJit_NET-HostFramework
+
+// Build:
+// OverallResult = Success
+
+// Run, Process: 1 / 3
+// Method=SingleStructEnumeratorCalledViaInterface Platform=X64 JitVersion=RyuJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+// Pre-Warmup: 1 op, 0 ms, 12829.7 ns, 30 ticks, 12829.6745 ns/op, 77944.3 op/s
+// Pre-Warmup: 1000 op, 7 ms, 7022108.5 ns, 16420 ticks, 7022.1085 ns/op, 142407.4 op/s
+// Pre-Warmup: 143000 op, 986.1 ms, 986130694.2 ns, 2305898 ticks, 6896.0188 ns/op, 145011.2 op/s
+// Pre-Warmup: 286000 op, 1972.2 ms, 1972238295 ns, 4611742 ticks, 6895.9381 ns/op, 145012.9 op/s
+// Warmup (idle): 286000 op, 0.6 ms, 593158.6 ns, 1387 ticks, 2.074 ns/op, 482164451.3 op/s
+// Warmup (idle): 286000 op, 0.6 ms, 634213.6 ns, 1483 ticks, 2.2175 ns/op, 450952187.5 op/s
+// Warmup (idle): 286000 op, 0.6 ms, 634641.2 ns, 1484 ticks, 2.219 ns/op, 450648311.3 op/s
+// IterationCount = 286000
+// Target (idle): 286000 op, 0.7 ms, 714612.9 ns, 1671 ticks, 2.4986 ns/op, 400216693 op/s
+// Target (idle): 286000 op, 0.6 ms, 634213.6 ns, 1483 ticks, 2.2175 ns/op, 450952187.5 op/s
+// Target (idle): 286000 op, 0.6 ms, 645332.6 ns, 1509 ticks, 2.2564 ns/op, 443182302.2 op/s
+// Target (idle): 286000 op, 0.6 ms, 626515.8 ns, 1465 ticks, 2.1906 ns/op, 456492896.9 op/s
+// Target (idle): 286000 op, 0.7 ms, 678689.8 ns, 1587 ticks, 2.373 ns/op, 421400185.3 op/s
+// Warmup 1: 286000 op, 1966.1 ms, 1966135646.4 ns, 4597472 ticks, 6874.6002 ns/op, 145463 op/s
+// Warmup 2: 286000 op, 1965.8 ms, 1965777270.9 ns, 4596634 ticks, 6873.3471 ns/op, 145489.5 op/s
+// Warmup 3: 286000 op, 1966 ms, 1966033436.7 ns, 4597233 ticks, 6874.2428 ns/op, 145470.6 op/s
+// Warmup 4: 286000 op, 1969.4 ms, 1969372145.7 ns, 4605040 ticks, 6885.9166 ns/op, 145223.9 op/s
+// Warmup 5: 286000 op, 1966.6 ms, 1966640708 ns, 4598653 ticks, 6876.3661 ns/op, 145425.6 op/s
+Target 1: 286000 op, 1966.5 ms, 1966542774.8 ns, 4598424 ticks, 6876.0237 ns/op, 145432.9 op/s
+Target 2: 286000 op, 1965.8 ms, 1965825168.3 ns, 4596746 ticks, 6873.5146 ns/op, 145486 op/s
+Target 3: 286000 op, 1965.3 ms, 1965271781.7 ns, 4595452 ticks, 6871.5797 ns/op, 145526.9 op/s
+Target 4: 286000 op, 1978.4 ms, 1978398249.3 ns, 4626146 ticks, 6917.4764 ns/op, 144561.4 op/s
+Target 5: 286000 op, 1966.2 ms, 1966243843.4 ns, 4597725 ticks, 6874.9785 ns/op, 145455 op/s
+Target 6: 286000 op, 1964.9 ms, 1964947190.9 ns, 4594693 ticks, 6870.4447 ns/op, 145551 op/s
+Target 7: 286000 op, 1965.8 ms, 1965774277.3 ns, 4596627 ticks, 6873.3366 ns/op, 145489.7 op/s
+Target 8: 286000 op, 1966.4 ms, 1966434150.2 ns, 4598170 ticks, 6875.6439 ns/op, 145440.9 op/s
+Target 9: 286000 op, 1965.4 ms, 1965390670 ns, 4595730 ticks, 6871.9953 ns/op, 145518.1 op/s
+Target 10: 286000 op, 1967.1 ms, 1967108563.4 ns, 4599747 ticks, 6878.002 ns/op, 145391.1 op/s
+// Benchmark finished
+// Run, Process: 2 / 3
+// Method=SingleStructEnumeratorCalledViaInterface Platform=X64 JitVersion=RyuJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+// Pre-Warmup: 1 op, 0 ms, 12402 ns, 29 ticks, 12402.0187 ns/op, 80632 op/s
+// Pre-Warmup: 1000 op, 7 ms, 7026812.7 ns, 16431 ticks, 7026.8127 ns/op, 142312 op/s
+// Pre-Warmup: 143000 op, 983.9 ms, 983885073.5 ns, 2300647 ticks, 6880.3152 ns/op, 145342.2 op/s
+// Pre-Warmup: 286000 op, 1969 ms, 1969013770.1 ns, 4604202 ticks, 6884.6635 ns/op, 145250.4 op/s
+// Warmup (idle): 286000 op, 0.6 ms, 640628.4 ns, 1498 ticks, 2.24 ns/op, 446436644.9 op/s
+// Warmup (idle): 286000 op, 0.6 ms, 634213.6 ns, 1483 ticks, 2.2175 ns/op, 450952187.5 op/s
+// Warmup (idle): 286000 op, 0.6 ms, 634213.6 ns, 1483 ticks, 2.2175 ns/op, 450952187.5 op/s
+// IterationCount = 286000
+// Target (idle): 286000 op, 0.7 ms, 700072.6 ns, 1637 ticks, 2.4478 ns/op, 408529073.9 op/s
+// Target (idle): 286000 op, 0.6 ms, 636351.9 ns, 1488 ticks, 2.225 ns/op, 449436891.1 op/s
+// Target (idle): 286000 op, 0.6 ms, 645332.6 ns, 1509 ticks, 2.2564 ns/op, 443182302.2 op/s
+// Target (idle): 286000 op, 0.6 ms, 626088.1 ns, 1464 ticks, 2.1891 ns/op, 456804709 op/s
+// Target (idle): 286000 op, 0.6 ms, 626088.1 ns, 1464 ticks, 2.1891 ns/op, 456804709 op/s
+// Warmup 1: 286000 op, 1967.1 ms, 1967142775.9 ns, 4599827 ticks, 6878.1216 ns/op, 145388.5 op/s
+// Warmup 2: 286000 op, 1966.9 ms, 1966934079.8 ns, 4599339 ticks, 6877.3919 ns/op, 145404 op/s
+// Warmup 3: 286000 op, 1967.6 ms, 1967595235.7 ns, 4600885 ticks, 6879.7036 ns/op, 145355.1 op/s
+// Warmup 4: 286000 op, 1966.1 ms, 1966080478.8 ns, 4597343 ticks, 6874.4073 ns/op, 145467.1 op/s
+// Warmup 5: 286000 op, 1966 ms, 1966029160.1 ns, 4597223 ticks, 6874.2278 ns/op, 145470.9 op/s
+Target 1: 286000 op, 2074.5 ms, 2074537415.4 ns, 4850951 ticks, 7253.6273 ns/op, 137862.1 op/s
+Target 2: 286000 op, 2007.4 ms, 2007404432.8 ns, 4693972 ticks, 7018.8966 ns/op, 142472.5 op/s
+Target 3: 286000 op, 2024.4 ms, 2024350722.2 ns, 4733598 ticks, 7078.1494 ns/op, 141279.9 op/s
+Target 4: 286000 op, 1966.3 ms, 1966264370.8 ns, 4597773 ticks, 6875.0502 ns/op, 145453.5 op/s
+Target 5: 286000 op, 1966.8 ms, 1966793808.7 ns, 4599011 ticks, 6876.9014 ns/op, 145414.3 op/s
+Target 6: 286000 op, 1965.4 ms, 1965415901.7 ns, 4595789 ticks, 6872.0836 ns/op, 145516.3 op/s
+Target 7: 286000 op, 1965.7 ms, 1965707135.3 ns, 4596470 ticks, 6873.1019 ns/op, 145494.7 op/s
+Target 8: 286000 op, 1965.2 ms, 1965195231.3 ns, 4595273 ticks, 6871.312 ns/op, 145532.6 op/s
+Target 9: 286000 op, 1965.8 ms, 1965784968.7 ns, 4596652 ticks, 6873.374 ns/op, 145489 op/s
+Target 10: 286000 op, 1964.9 ms, 1964880049 ns, 4594536 ticks, 6870.21 ns/op, 145556 op/s
+// Benchmark finished
+// Run, Process: 3 / 3
+// Method=SingleStructEnumeratorCalledViaInterface Platform=X64 JitVersion=RyuJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+// Pre-Warmup: 1 op, 0 ms, 23093.4 ns, 54 ticks, 23093.4141 ns/op, 43302.4 op/s
+// Pre-Warmup: 1000 op, 6.8 ms, 6816833.7 ns, 15940 ticks, 6816.8337 ns/op, 146695.7 op/s
+// Pre-Warmup: 147000 op, 1013.4 ms, 1013365099.6 ns, 2369581 ticks, 6893.6401 ns/op, 145061.2 op/s
+// Warmup (idle): 147000 op, 0.3 ms, 306201.6 ns, 716 ticks, 2.083 ns/op, 480075926 op/s
+// Warmup (idle): 147000 op, 0.3 ms, 347256.5 ns, 812 ticks, 2.3623 ns/op, 423318181 op/s
+// Warmup (idle): 147000 op, 0.3 ms, 347256.5 ns, 812 ticks, 2.3623 ns/op, 423318181 op/s
+// IterationCount = 147000
+// Target (idle): 147000 op, 0.4 ms, 436636.6 ns, 1021 ticks, 2.9703 ns/op, 336664410.4 op/s
+// Target (idle): 147000 op, 0.4 ms, 386173.2 ns, 903 ticks, 2.627 ns/op, 380658209.3 op/s
+// Target (idle): 147000 op, 0.3 ms, 323307.8 ns, 756 ticks, 2.1994 ns/op, 454675083.3 op/s
+// Target (idle): 147000 op, 0.3 ms, 322880.1 ns, 755 ticks, 2.1965 ns/op, 455277302 op/s
+// Target (idle): 147000 op, 0.3 ms, 312616.4 ns, 731 ticks, 2.1266 ns/op, 470224846.8 op/s
+// Warmup 1: 147000 op, 1011.3 ms, 1011332023.9 ns, 2364827 ticks, 6879.8097 ns/op, 145352.9 op/s
+// Warmup 2: 147000 op, 1012.4 ms, 1012417414.3 ns, 2367365 ticks, 6887.1933 ns/op, 145197 op/s
+// Warmup 3: 147000 op, 1011.3 ms, 1011266164.9 ns, 2364673 ticks, 6879.3617 ns/op, 145362.3 op/s
+// Warmup 4: 147000 op, 1010.3 ms, 1010316341.3 ns, 2362452 ticks, 6872.9003 ns/op, 145499 op/s
+// Warmup 5: 147000 op, 1010.2 ms, 1010244922.8 ns, 2362285 ticks, 6872.4144 ns/op, 145509.3 op/s
+Target 1: 147000 op, 1010.3 ms, 1010274858.7 ns, 2362355 ticks, 6872.6181 ns/op, 145505 op/s
+Target 2: 147000 op, 1011.9 ms, 1011940150.4 ns, 2366249 ticks, 6883.9466 ns/op, 145265.5 op/s
+Target 3: 147000 op, 1025.9 ms, 1025935187.1 ns, 2398974 ticks, 6979.1509 ns/op, 143283.9 op/s
+Target 4: 147000 op, 1011 ms, 1011015130.9 ns, 2364086 ticks, 6877.654 ns/op, 145398.4 op/s
+Target 5: 147000 op, 1010.5 ms, 1010494673.8 ns, 2362869 ticks, 6874.1134 ns/op, 145473.3 op/s
+Target 6: 147000 op, 1022.4 ms, 1022378373.6 ns, 2390657 ticks, 6954.9549 ns/op, 143782.4 op/s
+Target 7: 147000 op, 1010.6 ms, 1010625536.4 ns, 2363175 ticks, 6875.0036 ns/op, 145454.5 op/s
+Target 8: 147000 op, 1011 ms, 1010972365.3 ns, 2363986 ticks, 6877.363 ns/op, 145404.6 op/s
+Target 9: 147000 op, 1011 ms, 1010972365.3 ns, 2363986 ticks, 6877.363 ns/op, 145404.6 op/s
+Target 10: 147000 op, 1011.1 ms, 1011120334.2 ns, 2364332 ticks, 6878.3696 ns/op, 145383.3 op/s
+// Benchmark finished
+
+AverageTime (ns/op): Avr=6906.54130053645 +- 29.3256594610622
+OperationsPerSecond: Avr=144809.307498457 +- 593.916689180489
+
+// **************************
+// Benchmark: EnumeratorsBenchmarks_DedicatedClassEnumeratorCalledViaInterface (Throughput_X86_LegacyJit_NET-HostFramework) [-w=5 -t=10]
+// Generated project: C:\Projects\DemoCode\Performance\Benchmarks\bin\Release\EnumeratorsBenchmarks_DedicatedClassEnumeratorCalledViaInterface_Throughput_X86_LegacyJit_NET-HostFramework
+
+// Build:
+// OverallResult = Success
+
+// Run, Process: 1 / 3
+// Method=DedicatedClassEnumeratorCalledViaInterface Platform=X86 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=32-bit 
+// Pre-Warmup: 1 op, 0 ms, 8553.1 ns, 20 ticks, 8553.1163 ns/op, 116916.5 op/s
+// Pre-Warmup: 1000 op, 4.7 ms, 4741847.7 ns, 11088 ticks, 4741.8477 ns/op, 210888.3 op/s
+// Pre-Warmup: 211000 op, 1010.1 ms, 1010094815.6 ns, 2361934 ticks, 4787.1792 ns/op, 208891.3 op/s
+// Warmup (idle): 211000 op, 0.4 ms, 438774.9 ns, 1026 ticks, 2.0795 ns/op, 480884424 op/s
+// Warmup (idle): 211000 op, 0.5 ms, 469566.1 ns, 1098 ticks, 2.2254 ns/op, 449351019.1 op/s
+// Warmup (idle): 211000 op, 0.5 ms, 479829.8 ns, 1122 ticks, 2.2741 ns/op, 439739232.6 op/s
+// IterationCount = 211000
+// Target (idle): 211000 op, 0.5 ms, 524306 ns, 1226 ticks, 2.4849 ns/op, 402436720.2 op/s
+// Target (idle): 211000 op, 0.5 ms, 481968.1 ns, 1127 ticks, 2.2842 ns/op, 437788304.3 op/s
+// Target (idle): 211000 op, 0.5 ms, 471276.7 ns, 1102 ticks, 2.2335 ns/op, 447719980.9 op/s
+// Target (idle): 211000 op, 0.5 ms, 471704.4 ns, 1103 ticks, 2.2356 ns/op, 447314069.8 op/s
+// Target (idle): 211000 op, 0.5 ms, 471276.7 ns, 1102 ticks, 2.2335 ns/op, 447719980.9 op/s
+// Warmup 1: 211000 op, 1010.2 ms, 1010218835.8 ns, 2362224 ticks, 4787.767 ns/op, 208865.6 op/s
+// Warmup 2: 211000 op, 1009.6 ms, 1009559390.5 ns, 2360682 ticks, 4784.6417 ns/op, 209002.1 op/s
+// Warmup 3: 211000 op, 1009.6 ms, 1009574786.1 ns, 2360718 ticks, 4784.7146 ns/op, 208998.9 op/s
+// Warmup 4: 211000 op, 1007.4 ms, 1007355680.1 ns, 2355529 ticks, 4774.1975 ns/op, 209459.3 op/s
+// Warmup 5: 211000 op, 1007.8 ms, 1007762380.7 ns, 2356480 ticks, 4776.125 ns/op, 209374.8 op/s
+Target 1: 211000 op, 1008.8 ms, 1008828954.4 ns, 2358974 ticks, 4781.1799 ns/op, 209153.4 op/s
+Target 2: 211000 op, 1008.9 ms, 1008925604.6 ns, 2359200 ticks, 4781.6379 ns/op, 209133.4 op/s
+Target 3: 211000 op, 1020.2 ms, 1020151997.4 ns, 2385451 ticks, 4834.8436 ns/op, 206831.9 op/s
+Target 4: 211000 op, 1011.8 ms, 1011796458.1 ns, 2365913 ticks, 4795.2439 ns/op, 208540 op/s
+Target 5: 211000 op, 1007.7 ms, 1007680698.5 ns, 2356289 ticks, 4775.7379 ns/op, 209391.7 op/s
+Target 6: 211000 op, 1008.5 ms, 1008451334.3 ns, 2358091 ticks, 4779.3902 ns/op, 209231.7 op/s
+Target 7: 211000 op, 1006.6 ms, 1006588465.5 ns, 2353735 ticks, 4770.5614 ns/op, 209618.9 op/s
+Target 8: 211000 op, 1010 ms, 1010019548.1 ns, 2361758 ticks, 4786.8225 ns/op, 208906.8 op/s
+Target 9: 211000 op, 1009.2 ms, 1009191606.5 ns, 2359822 ticks, 4782.8986 ns/op, 209078.2 op/s
+Target 10: 211000 op, 1008 ms, 1007988610.7 ns, 2357009 ticks, 4777.1972 ns/op, 209327.8 op/s
+// Benchmark finished
+// Run, Process: 2 / 3
+// Method=DedicatedClassEnumeratorCalledViaInterface Platform=X86 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=32-bit 
+// Pre-Warmup: 1 op, 0 ms, 8553.1 ns, 20 ticks, 8553.1163 ns/op, 116916.5 op/s
+// Pre-Warmup: 1000 op, 4.7 ms, 4740564.7 ns, 11085 ticks, 4740.5647 ns/op, 210945.3 op/s
+// Pre-Warmup: 211000 op, 1008.4 ms, 1008412845.2 ns, 2358001 ticks, 4779.2078 ns/op, 209239.7 op/s
+// Warmup (idle): 211000 op, 0.4 ms, 438774.9 ns, 1026 ticks, 2.0795 ns/op, 480884424 op/s
+// Warmup (idle): 211000 op, 0.5 ms, 457591.7 ns, 1070 ticks, 2.1687 ns/op, 461109737.4 op/s
+// Warmup (idle): 211000 op, 0.5 ms, 481540.5 ns, 1126 ticks, 2.2822 ns/op, 438177103.9 op/s
+// IterationCount = 211000
+// Target (idle): 211000 op, 0.6 ms, 559801.5 ns, 1309 ticks, 2.6531 ns/op, 376919342.2 op/s
+// Target (idle): 211000 op, 0.5 ms, 471704.4 ns, 1103 ticks, 2.2356 ns/op, 447314069.8 op/s
+// Target (idle): 211000 op, 0.5 ms, 471276.7 ns, 1102 ticks, 2.2335 ns/op, 447719980.9 op/s
+// Target (idle): 211000 op, 0.5 ms, 471704.4 ns, 1103 ticks, 2.2356 ns/op, 447314069.8 op/s
+// Target (idle): 211000 op, 0.5 ms, 471704.4 ns, 1103 ticks, 2.2356 ns/op, 447314069.8 op/s
+// Warmup 1: 211000 op, 1007 ms, 1007025957.4 ns, 2354758 ticks, 4772.6349 ns/op, 209527.9 op/s
+// Warmup 2: 211000 op, 1009 ms, 1009020544.2 ns, 2359422 ticks, 4782.0879 ns/op, 209113.7 op/s
+// Warmup 3: 211000 op, 1007.7 ms, 1007742708.6 ns, 2356434 ticks, 4776.0318 ns/op, 209378.8 op/s
+// Warmup 4: 211000 op, 1007 ms, 1007039214.8 ns, 2354789 ticks, 4772.6977 ns/op, 209525.1 op/s
+// Warmup 5: 211000 op, 1006.9 ms, 1006891245.8 ns, 2354443 ticks, 4771.9964 ns/op, 209555.9 op/s
+Target 1: 211000 op, 1007.3 ms, 1007273142.5 ns, 2355336 ticks, 4773.8064 ns/op, 209476.4 op/s
+Target 2: 211000 op, 1007.5 ms, 1007514340.4 ns, 2355900 ticks, 4774.9495 ns/op, 209426.3 op/s
+Target 3: 211000 op, 1007.4 ms, 1007364660.8 ns, 2355550 ticks, 4774.2401 ns/op, 209457.4 op/s
+Target 4: 211000 op, 1007.9 ms, 1007857748 ns, 2356703 ticks, 4776.577 ns/op, 209354.9 op/s
+Target 5: 211000 op, 1043.5 ms, 1043504143.3 ns, 2440056 ticks, 4945.5173 ns/op, 202203.3 op/s
+Target 6: 211000 op, 1023.7 ms, 1023744306.3 ns, 2393851 ticks, 4851.8688 ns/op, 206106.2 op/s
+Target 7: 211000 op, 1013.9 ms, 1013871016.4 ns, 2370764 ticks, 4805.0759 ns/op, 208113.3 op/s
+Target 8: 211000 op, 1015.1 ms, 1015131318.1 ns, 2373711 ticks, 4811.0489 ns/op, 207854.9 op/s
+Target 9: 211000 op, 1023.9 ms, 1023851220.3 ns, 2394101 ticks, 4852.3755 ns/op, 206084.6 op/s
+Target 10: 211000 op, 1021.6 ms, 1021591914.6 ns, 2388818 ticks, 4841.6678 ns/op, 206540.4 op/s
+// Benchmark finished
+// Run, Process: 3 / 3
+// Method=DedicatedClassEnumeratorCalledViaInterface Platform=X86 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=32-bit 
+// Pre-Warmup: 1 op, 0 ms, 8553.1 ns, 20 ticks, 8553.1163 ns/op, 116916.5 op/s
+// Pre-Warmup: 1000 op, 4.7 ms, 4735005.2 ns, 11072 ticks, 4735.0052 ns/op, 211193 op/s
+// Pre-Warmup: 212000 op, 1015.8 ms, 1015819416.3 ns, 2375320 ticks, 4791.601 ns/op, 208698.5 op/s
+// Warmup (idle): 212000 op, 0.4 ms, 440485.5 ns, 1030 ticks, 2.0778 ns/op, 481287134 op/s
+// Warmup (idle): 212000 op, 0.5 ms, 473842.6 ns, 1108 ticks, 2.2351 ns/op, 447405909.7 op/s
+// Warmup (idle): 212000 op, 0.5 ms, 481968.1 ns, 1127 ticks, 2.2734 ns/op, 439863130.4 op/s
+// IterationCount = 212000
+// Target (idle): 212000 op, 0.6 ms, 562367.4 ns, 1315 ticks, 2.6527 ns/op, 376977755.1 op/s
+// Target (idle): 212000 op, 0.5 ms, 473842.6 ns, 1108 ticks, 2.2351 ns/op, 447405909.7 op/s
+// Target (idle): 212000 op, 0.5 ms, 524306 ns, 1226 ticks, 2.4731 ns/op, 404344003.3 op/s
+// Target (idle): 212000 op, 0.5 ms, 505489.2 ns, 1182 ticks, 2.3844 ns/op, 419395725.9 op/s
+// Target (idle): 212000 op, 0.5 ms, 475553.3 ns, 1112 ticks, 2.2432 ns/op, 445796536 op/s
+// Warmup 1: 212000 op, 1012.3 ms, 1012315632.2 ns, 2367127 ticks, 4775.0737 ns/op, 209420.8 op/s
+// Warmup 2: 212000 op, 1013.6 ms, 1013584059.4 ns, 2370093 ticks, 4781.0569 ns/op, 209158.8 op/s
+// Warmup 3: 212000 op, 1011.7 ms, 1011713920.5 ns, 2365720 ticks, 4772.2355 ns/op, 209545.4 op/s
+// Warmup 4: 212000 op, 1014.1 ms, 1014050631.9 ns, 2371184 ticks, 4783.2577 ns/op, 209062.5 op/s
+// Warmup 5: 212000 op, 1011.7 ms, 1011673293.2 ns, 2365625 ticks, 4772.0438 ns/op, 209553.8 op/s
+Target 1: 212000 op, 1012.4 ms, 1012443929 ns, 2367427 ticks, 4775.6789 ns/op, 209394.3 op/s
+Target 2: 212000 op, 1011.6 ms, 1011638653.1 ns, 2365544 ticks, 4771.8804 ns/op, 209561 op/s
+Target 3: 212000 op, 1012.2 ms, 1012213850.1 ns, 2366889 ticks, 4774.5936 ns/op, 209441.9 op/s
+Target 4: 212000 op, 1011.9 ms, 1011868304.2 ns, 2366081 ticks, 4772.9637 ns/op, 209513.4 op/s
+Target 5: 212000 op, 1011.6 ms, 1011628817 ns, 2365521 ticks, 4771.834 ns/op, 209563 op/s
+Target 6: 212000 op, 1011.5 ms, 1011530456.2 ns, 2365291 ticks, 4771.3701 ns/op, 209583.4 op/s
+Target 7: 212000 op, 1012.1 ms, 1012129602 ns, 2366692 ticks, 4774.1962 ns/op, 209459.3 op/s
+Target 8: 212000 op, 1012.2 ms, 1012216843.7 ns, 2366896 ticks, 4774.6078 ns/op, 209441.3 op/s
+Target 9: 212000 op, 1012.4 ms, 1012413137.8 ns, 2367355 ticks, 4775.5337 ns/op, 209400.7 op/s
+Target 10: 212000 op, 1011.7 ms, 1011675431.5 ns, 2365630 ticks, 4772.0539 ns/op, 209553.4 op/s
+// Benchmark finished
+
+AverageTime (ns/op): Avr=4793.57842038228 +- 13.5593705616718
+OperationsPerSecond: Avr=208624.77892003 +- 578.769602227555
+
+// **************************
+// Benchmark: EnumeratorsBenchmarks_DedicatedStructEnumeratorCalledDirectly (Throughput_X86_LegacyJit_NET-HostFramework) [-w=5 -t=10]
+// Generated project: C:\Projects\DemoCode\Performance\Benchmarks\bin\Release\EnumeratorsBenchmarks_DedicatedStructEnumeratorCalledDirectly_Throughput_X86_LegacyJit_NET-HostFramework
+
+// Build:
+// OverallResult = Success
+
+// Run, Process: 1 / 3
+// Method=DedicatedStructEnumeratorCalledDirectly Platform=X86 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=32-bit 
+// Pre-Warmup: 1 op, 0 ms, 2565.9 ns, 6 ticks, 2565.9349 ns/op, 389721.5 op/s
+// Pre-Warmup: 1000 op, 0.5 ms, 546544.1 ns, 1278 ticks, 546.5441 ns/op, 1829678.4 op/s
+// Pre-Warmup: 1000000 op, 551.3 ms, 551308648.2 ns, 1289141 ticks, 551.3086 ns/op, 1813866 op/s
+// Pre-Warmup: 2000000 op, 1103.7 ms, 1103666763.7 ns, 2580736 ticks, 551.8334 ns/op, 1812141.2 op/s
+// Warmup (idle): 2000000 op, 4.4 ms, 4407420.9 ns, 10306 ticks, 2.2037 ns/op, 453780128.1 op/s
+// Warmup (idle): 2000000 op, 4.4 ms, 4417684.6 ns, 10330 ticks, 2.2088 ns/op, 452725847 op/s
+// Warmup (idle): 2000000 op, 4.4 ms, 4406993.2 ns, 10305 ticks, 2.2035 ns/op, 453824163 op/s
+// IterationCount = 2000000
+// Target (idle): 2000000 op, 4.4 ms, 4424099.4 ns, 10345 ticks, 2.212 ns/op, 452069405.5 op/s
+// Target (idle): 2000000 op, 4.4 ms, 4385610.4 ns, 10255 ticks, 2.1928 ns/op, 456036860.1 op/s
+// Target (idle): 2000000 op, 4.6 ms, 4622959.4 ns, 10810 ticks, 2.3115 ns/op, 432623311.7 op/s
+// Target (idle): 2000000 op, 4.4 ms, 4416829.3 ns, 10328 ticks, 2.2084 ns/op, 452813516.7 op/s
+// Target (idle): 2000000 op, 4.4 ms, 4390742.3 ns, 10267 ticks, 2.1954 ns/op, 455503847.3 op/s
+// Warmup 1: 2000000 op, 1104 ms, 1104003756.5 ns, 2581524 ticks, 552.0019 ns/op, 1811588 op/s
+// Warmup 2: 2000000 op, 1098.6 ms, 1098603746.5 ns, 2568897 ticks, 549.3019 ns/op, 1820492.6 op/s
+// Warmup 3: 2000000 op, 1096.7 ms, 1096694691 ns, 2564433 ticks, 548.3473 ns/op, 1823661.6 op/s
+// Warmup 4: 2000000 op, 1097.8 ms, 1097801464.2 ns, 2567021 ticks, 548.9007 ns/op, 1821823 op/s
+// Warmup 5: 2000000 op, 1097.8 ms, 1097827123.6 ns, 2567081 ticks, 548.9136 ns/op, 1821780.5 op/s
+Target 1: 2000000 op, 1104.2 ms, 1104221861 ns, 2582034 ticks, 552.1109 ns/op, 1811230.2 op/s
+Target 2: 2000000 op, 1096 ms, 1096042515.8 ns, 2562908 ticks, 548.0213 ns/op, 1824746.7 op/s
+Target 3: 2000000 op, 1099.5 ms, 1099495408.9 ns, 2570982 ticks, 549.7477 ns/op, 1819016.2 op/s
+Target 4: 2000000 op, 1096 ms, 1096018139.4 ns, 2562851 ticks, 548.0091 ns/op, 1824787.3 op/s
+Target 5: 2000000 op, 1105.7 ms, 1105723788.2 ns, 2585546 ticks, 552.8619 ns/op, 1808770 op/s
+Target 6: 2000000 op, 1096.3 ms, 1096261048 ns, 2563419 ticks, 548.1305 ns/op, 1824383 op/s
+Target 7: 2000000 op, 1096.3 ms, 1096332894.1 ns, 2563587 ticks, 548.1664 ns/op, 1824263.4 op/s
+Target 8: 2000000 op, 1095.8 ms, 1095825694.3 ns, 2562401 ticks, 547.9128 ns/op, 1825107.8 op/s
+Target 9: 2000000 op, 1096.2 ms, 1096208873.9 ns, 2563297 ticks, 548.1044 ns/op, 1824469.8 op/s
+Target 10: 2000000 op, 1096.3 ms, 1096308945.4 ns, 2563531 ticks, 548.1545 ns/op, 1824303.3 op/s
+// Benchmark finished
+// Run, Process: 2 / 3
+// Method=DedicatedStructEnumeratorCalledDirectly Platform=X86 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=32-bit 
+// Pre-Warmup: 1 op, 0 ms, 2138.3 ns, 5 ticks, 2138.2791 ns/op, 467665.8 op/s
+// Pre-Warmup: 1000 op, 0.5 ms, 544833.5 ns, 1274 ticks, 544.8335 ns/op, 1835423.1 op/s
+// Pre-Warmup: 1000000 op, 552.1 ms, 552135734.5 ns, 1291075 ticks, 552.1357 ns/op, 1811148.8 op/s
+// Pre-Warmup: 2000000 op, 1103.8 ms, 1103805751.9 ns, 2581061 ticks, 551.9029 ns/op, 1811913 op/s
+// Warmup (idle): 2000000 op, 4.1 ms, 4140136 ns, 9681 ticks, 2.0701 ns/op, 483075921.9 op/s
+// Warmup (idle): 2000000 op, 4.2 ms, 4200435.4 ns, 9822 ticks, 2.1002 ns/op, 476141111.8 op/s
+// Warmup (idle): 2000000 op, 4.3 ms, 4260307.3 ns, 9962 ticks, 2.1302 ns/op, 469449708.9 op/s
+// IterationCount = 2000000
+// Target (idle): 2000000 op, 4.2 ms, 4226522.4 ns, 9883 ticks, 2.1133 ns/op, 473202266.5 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4161518.8 ns, 9731 ticks, 2.0808 ns/op, 480593772.5 op/s
+// Target (idle): 2000000 op, 4.3 ms, 4268860.4 ns, 9982 ticks, 2.1344 ns/op, 468509116.4 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4161946.4 ns, 9732 ticks, 2.081 ns/op, 480544389.6 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4170927.2 ns, 9753 ticks, 2.0855 ns/op, 479509689.3 op/s
+// Warmup 1: 2000000 op, 1096.8 ms, 1096816145.2 ns, 2564717 ticks, 548.4081 ns/op, 1823459.7 op/s
+// Warmup 2: 2000000 op, 1099 ms, 1098956562.6 ns, 2569722 ticks, 549.4783 ns/op, 1819908.1 op/s
+// Warmup 3: 2000000 op, 1097 ms, 1097045368.7 ns, 2565253 ticks, 548.5227 ns/op, 1823078.7 op/s
+// Warmup 4: 2000000 op, 1096.7 ms, 1096686993.1 ns, 2564415 ticks, 548.3435 ns/op, 1823674.4 op/s
+// Warmup 5: 2000000 op, 1099.7 ms, 1099678873.2 ns, 2571411 ticks, 549.8394 ns/op, 1818712.8 op/s
+Target 1: 2000000 op, 1097.3 ms, 1097283573 ns, 2565810 ticks, 548.6418 ns/op, 1822682.9 op/s
+Target 2: 2000000 op, 1098.1 ms, 1098058913 ns, 2567623 ticks, 549.0295 ns/op, 1821395.9 op/s
+Target 3: 2000000 op, 1096 ms, 1095963399.5 ns, 2562723 ticks, 547.9817 ns/op, 1824878.5 op/s
+Target 4: 2000000 op, 1096.5 ms, 1096539879.5 ns, 2564071 ticks, 548.2699 ns/op, 1823919.1 op/s
+Target 5: 2000000 op, 1098.8 ms, 1098785500.2 ns, 2569322 ticks, 549.3928 ns/op, 1820191.5 op/s
+Target 6: 2000000 op, 1096.4 ms, 1096432110.3 ns, 2563819 ticks, 548.2161 ns/op, 1824098.3 op/s
+Target 7: 2000000 op, 1096.7 ms, 1096698967.5 ns, 2564443 ticks, 548.3495 ns/op, 1823654.5 op/s
+Target 8: 2000000 op, 1097.1 ms, 1097069745.1 ns, 2565310 ticks, 548.5349 ns/op, 1823038.2 op/s
+Target 9: 2000000 op, 1097.2 ms, 1097212154.5 ns, 2565643 ticks, 548.6061 ns/op, 1822801.5 op/s
+Target 10: 2000000 op, 1097.6 ms, 1097613295.6 ns, 2566581 ticks, 548.8066 ns/op, 1822135.4 op/s
+// Benchmark finished
+// Run, Process: 3 / 3
+// Method=DedicatedStructEnumeratorCalledDirectly Platform=X86 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=32-bit 
+// Pre-Warmup: 1 op, 0 ms, 2138.3 ns, 5 ticks, 2138.2791 ns/op, 467665.8 op/s
+// Pre-Warmup: 1000 op, 0.5 ms, 545261.2 ns, 1275 ticks, 545.2612 ns/op, 1833983.5 op/s
+// Pre-Warmup: 1000000 op, 551.5 ms, 551461749 ns, 1289499 ticks, 551.4617 ns/op, 1813362.4 op/s
+// Pre-Warmup: 2000000 op, 1136 ms, 1136009945.6 ns, 2656365 ticks, 568.005 ns/op, 1760548 op/s
+// Warmup (idle): 2000000 op, 4.3 ms, 4301789.9 ns, 10059 ticks, 2.1509 ns/op, 464922755.7 op/s
+// Warmup (idle): 2000000 op, 4.3 ms, 4270998.6 ns, 9987 ticks, 2.1355 ns/op, 468274556.9 op/s
+// Warmup (idle): 2000000 op, 4.3 ms, 4271854 ns, 9989 ticks, 2.1359 ns/op, 468180798.9 op/s
+// IterationCount = 2000000
+// Target (idle): 2000000 op, 4.3 ms, 4295375 ns, 10044 ticks, 2.1477 ns/op, 465617084.8 op/s
+// Target (idle): 2000000 op, 4.3 ms, 4303500.5 ns, 10063 ticks, 2.1518 ns/op, 464737950.9 op/s
+// Target (idle): 2000000 op, 4.3 ms, 4294519.7 ns, 10042 ticks, 2.1473 ns/op, 465709818.8 op/s
+// Target (idle): 2000000 op, 4.3 ms, 4296230.3 ns, 10046 ticks, 2.1481 ns/op, 465524387.8 op/s
+// Target (idle): 2000000 op, 4.3 ms, 4308632.4 ns, 10075 ticks, 2.1543 ns/op, 464184416.9 op/s
+// Warmup 1: 2000000 op, 1199.9 ms, 1199923962.8 ns, 2805817 ticks, 599.962 ns/op, 1666772.3 op/s
+// Warmup 2: 2000000 op, 1182.9 ms, 1182867338.2 ns, 2765933 ticks, 591.4337 ns/op, 1690806.7 op/s
+// Warmup 3: 2000000 op, 1117.2 ms, 1117186674.8 ns, 2612350 ticks, 558.5933 ns/op, 1790211.1 op/s
+// Warmup 4: 2000000 op, 1118.4 ms, 1118449542.4 ns, 2615303 ticks, 559.2248 ns/op, 1788189.7 op/s
+// Warmup 5: 2000000 op, 1128.6 ms, 1128583702.3 ns, 2639000 ticks, 564.2919 ns/op, 1772132.6 op/s
+Target 1: 2000000 op, 1116.7 ms, 1116732504.3 ns, 2611288 ticks, 558.3663 ns/op, 1790939.2 op/s
+Target 2: 2000000 op, 1098.6 ms, 1098638386.6 ns, 2568978 ticks, 549.3192 ns/op, 1820435.2 op/s
+Target 3: 2000000 op, 1097.5 ms, 1097547864.3 ns, 2566428 ticks, 548.7739 ns/op, 1822244 op/s
+Target 4: 2000000 op, 1097.3 ms, 1097306238.8 ns, 2565863 ticks, 548.6531 ns/op, 1822645.2 op/s
+Target 5: 2000000 op, 1096.3 ms, 1096341447.2 ns, 2563607 ticks, 548.1707 ns/op, 1824249.2 op/s
+Target 6: 2000000 op, 1098.3 ms, 1098278728.1 ns, 2568137 ticks, 549.1394 ns/op, 1821031.4 op/s
+Target 7: 2000000 op, 1096.9 ms, 1096947863.2 ns, 2565025 ticks, 548.4739 ns/op, 1823240.7 op/s
+Target 8: 2000000 op, 1097.3 ms, 1097332325.8 ns, 2565924 ticks, 548.6662 ns/op, 1822601.9 op/s
+Target 9: 2000000 op, 1097.2 ms, 1097150144.4 ns, 2565498 ticks, 548.5751 ns/op, 1822904.6 op/s
+Target 10: 2000000 op, 1097.8 ms, 1097781792 ns, 2566975 ticks, 548.8909 ns/op, 1821855.7 op/s
+// Benchmark finished
+
+AverageTime (ns/op): Avr=549.135900031667 +- 0.737790300006848
+OperationsPerSecond: Avr=1821067.34999994 +- 2416.4448003808
+
+// **************************
+// Benchmark: EnumeratorsBenchmarks_SingleClassEnumeratorCalledDirectly (Throughput_X86_LegacyJit_NET-HostFramework) [-w=5 -t=10]
+// Generated project: C:\Projects\DemoCode\Performance\Benchmarks\bin\Release\EnumeratorsBenchmarks_SingleClassEnumeratorCalledDirectly_Throughput_X86_LegacyJit_NET-HostFramework
+
+// Build:
+// OverallResult = Success
+
+// Run, Process: 1 / 3
+// Method=SingleClassEnumeratorCalledDirectly Platform=X86 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=32-bit 
+// Pre-Warmup: 1 op, 0 ms, 3848.9 ns, 9 ticks, 3848.9024 ns/op, 259814.3 op/s
+// Pre-Warmup: 1000 op, 2.1 ms, 2144693.9 ns, 5015 ticks, 2144.6939 ns/op, 466267 op/s
+// Pre-Warmup: 467000 op, 980.3 ms, 980265394.6 ns, 2292183 ticks, 2099.0694 ns/op, 476401.6 op/s
+// Pre-Warmup: 934000 op, 1883.5 ms, 1883472342.9 ns, 4404178 ticks, 2016.5657 ns/op, 495892.6 op/s
+// Warmup (idle): 934000 op, 2 ms, 1983895.3 ns, 4639 ticks, 2.1241 ns/op, 470790964.9 op/s
+// Warmup (idle): 934000 op, 2.3 ms, 2346119.8 ns, 5486 ticks, 2.5119 ns/op, 398104135.3 op/s
+// Warmup (idle): 934000 op, 2 ms, 2012120.6 ns, 4705 ticks, 2.1543 ns/op, 464186883.3 op/s
+// IterationCount = 934000
+// Target (idle): 934000 op, 2 ms, 2045477.8 ns, 4783 ticks, 2.19 ns/op, 456617036.6 op/s
+// Target (idle): 934000 op, 2 ms, 1971921 ns, 4611 ticks, 2.1113 ns/op, 473649812.6 op/s
+// Target (idle): 934000 op, 2 ms, 1981757.1 ns, 4634 ticks, 2.1218 ns/op, 471298939.6 op/s
+// Target (idle): 934000 op, 2 ms, 1982184.7 ns, 4635 ticks, 2.1223 ns/op, 471197257 op/s
+// Target (idle): 934000 op, 2.2 ms, 2209270 ns, 5166 ticks, 2.3654 ns/op, 422764089.4 op/s
+// Warmup 1: 934000 op, 1908 ms, 1908000542.3 ns, 4461533 ticks, 2042.8271 ns/op, 489517.7 op/s
+// Warmup 2: 934000 op, 1886.9 ms, 1886885891.6 ns, 4412160 ticks, 2020.2204 ns/op, 494995.5 op/s
+// Warmup 3: 934000 op, 1888.1 ms, 1888134218.9 ns, 4415079 ticks, 2021.557 ns/op, 494668.2 op/s
+// Warmup 4: 934000 op, 1883.8 ms, 1883814467.5 ns, 4404978 ticks, 2016.932 ns/op, 495802.5 op/s
+// Warmup 5: 934000 op, 1880.9 ms, 1880886308.1 ns, 4398131 ticks, 2013.7969 ns/op, 496574.4 op/s
+Target 1: 934000 op, 1883.8 ms, 1883779827.4 ns, 4404897 ticks, 2016.8949 ns/op, 495811.7 op/s
+Target 2: 934000 op, 1886.3 ms, 1886329939 ns, 4410860 ticks, 2019.6252 ns/op, 495141.4 op/s
+Target 3: 934000 op, 1884.8 ms, 1884821169.3 ns, 4407332 ticks, 2018.0098 ns/op, 495537.7 op/s
+Target 4: 934000 op, 1887.4 ms, 1887365721.4 ns, 4413282 ticks, 2020.7342 ns/op, 494869.6 op/s
+Target 5: 934000 op, 1884.6 ms, 1884603492.5 ns, 4406823 ticks, 2017.7768 ns/op, 495595 op/s
+Target 6: 934000 op, 1887.4 ms, 1887379834.1 ns, 4413315 ticks, 2020.7493 ns/op, 494865.9 op/s
+Target 7: 934000 op, 1949.6 ms, 1949604610.8 ns, 4558817 ticks, 2087.3711 ns/op, 479071.5 op/s
+Target 8: 934000 op, 1885.7 ms, 1885657664.1 ns, 4409288 ticks, 2018.9054 ns/op, 495317.9 op/s
+Target 9: 934000 op, 1881 ms, 1880976971.2 ns, 4398343 ticks, 2013.894 ns/op, 496550.5 op/s
+Target 10: 934000 op, 1883.9 ms, 1883854239.5 ns, 4405071 ticks, 2016.9746 ns/op, 495792.1 op/s
+// Benchmark finished
+// Run, Process: 2 / 3
+// Method=SingleClassEnumeratorCalledDirectly Platform=X86 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=32-bit 
+// Pre-Warmup: 1 op, 0 ms, 3421.2 ns, 8 ticks, 3421.2465 ns/op, 292291.1 op/s
+// Pre-Warmup: 1000 op, 2 ms, 2006988.8 ns, 4693 ticks, 2006.9888 ns/op, 498258.9 op/s
+// Pre-Warmup: 499000 op, 1011.1 ms, 1011061317.7 ns, 2364194 ticks, 2026.175 ns/op, 493540.8 op/s
+// Warmup (idle): 499000 op, 1 ms, 1046473.8 ns, 2447 ticks, 2.0971 ns/op, 476839465.1 op/s
+// Warmup (idle): 499000 op, 1.1 ms, 1067001.3 ns, 2495 ticks, 2.1383 ns/op, 467665800 op/s
+// Warmup (idle): 499000 op, 1.1 ms, 1073843.8 ns, 2511 ticks, 2.152 ns/op, 464685850.7 op/s
+// IterationCount = 499000
+// Target (idle): 499000 op, 1.2 ms, 1152960.1 ns, 2696 ticks, 2.3105 ns/op, 432799024.9 op/s
+// Target (idle): 499000 op, 1.1 ms, 1073843.8 ns, 2511 ticks, 2.152 ns/op, 464685850.7 op/s
+// Target (idle): 499000 op, 1.1 ms, 1084535.2 ns, 2536 ticks, 2.1734 ns/op, 460104957 op/s
+// Target (idle): 499000 op, 1.1 ms, 1084535.2 ns, 2536 ticks, 2.1734 ns/op, 460104957 op/s
+// Target (idle): 499000 op, 1.1 ms, 1084535.2 ns, 2536 ticks, 2.1734 ns/op, 460104957 op/s
+// Warmup 1: 499000 op, 1009.2 ms, 1009218548.8 ns, 2359885 ticks, 2022.4821 ns/op, 494442 op/s
+// Warmup 2: 499000 op, 1006.8 ms, 1006792029.7 ns, 2354211 ticks, 2017.6193 ns/op, 495633.6 op/s
+// Warmup 3: 499000 op, 1008.4 ms, 1008388896.5 ns, 2357945 ticks, 2020.8194 ns/op, 494848.8 op/s
+// Warmup 4: 499000 op, 1009.1 ms, 1009089396.7 ns, 2359583 ticks, 2022.2232 ns/op, 494505.2 op/s
+// Warmup 5: 499000 op, 1004.7 ms, 1004661448.4 ns, 2349229 ticks, 2013.3496 ns/op, 496684.7 op/s
+Target 1: 499000 op, 1006.2 ms, 1006190318 ns, 2352804 ticks, 2016.4135 ns/op, 495930 op/s
+Target 2: 499000 op, 1006.6 ms, 1006555108.4 ns, 2353657 ticks, 2017.1445 ns/op, 495750.3 op/s
+Target 3: 499000 op, 1006.6 ms, 1006575208.2 ns, 2353704 ticks, 2017.1848 ns/op, 495740.4 op/s
+Target 4: 499000 op, 1008.4 ms, 1008353401.1 ns, 2357862 ticks, 2020.7483 ns/op, 494866.2 op/s
+Target 5: 499000 op, 1012.7 ms, 1012718056.4 ns, 2368068 ticks, 2029.4951 ns/op, 492733.4 op/s
+Target 6: 499000 op, 1005.2 ms, 1005178484.3 ns, 2350438 ticks, 2014.3857 ns/op, 496429.2 op/s
+Target 7: 499000 op, 1003.7 ms, 1003708631.2 ns, 2347001 ticks, 2011.4401 ns/op, 497156.2 op/s
+Target 8: 499000 op, 1009.4 ms, 1009403296.1 ns, 2360317 ticks, 2022.8523 ns/op, 494351.5 op/s
+Target 9: 499000 op, 1009.1 ms, 1009141998.4 ns, 2359706 ticks, 2022.3287 ns/op, 494479.5 op/s
+Target 10: 499000 op, 1005.3 ms, 1005340993.5 ns, 2350818 ticks, 2014.7114 ns/op, 496349 op/s
+// Benchmark finished
+// Run, Process: 3 / 3
+// Method=SingleClassEnumeratorCalledDirectly Platform=X86 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=32-bit 
+// Pre-Warmup: 1 op, 0 ms, 3848.9 ns, 9 ticks, 3848.9024 ns/op, 259814.3 op/s
+// Pre-Warmup: 1000 op, 2.1 ms, 2068998.8 ns, 4838 ticks, 2068.9988 ns/op, 483325.5 op/s
+// Pre-Warmup: 484000 op, 990.1 ms, 990075819.1 ns, 2315123 ticks, 2045.6112 ns/op, 488851.5 op/s
+// Pre-Warmup: 968000 op, 1967.9 ms, 1967901009.7 ns, 4601600 ticks, 2032.9556 ns/op, 491894.7 op/s
+// Warmup (idle): 968000 op, 2.1 ms, 2144693.9 ns, 5015 ticks, 2.2156 ns/op, 451346455 op/s
+// Warmup (idle): 968000 op, 2 ms, 2032220.4 ns, 4752 ticks, 2.0994 ns/op, 476326277.8 op/s
+// Warmup (idle): 968000 op, 2 ms, 2041628.9 ns, 4774 ticks, 2.1091 ns/op, 474131225.8 op/s
+// IterationCount = 968000
+// Target (idle): 968000 op, 2.1 ms, 2139134.4 ns, 5002 ticks, 2.2098 ns/op, 452519486.6 op/s
+// Target (idle): 968000 op, 2 ms, 2041201.2 ns, 4773 ticks, 2.1087 ns/op, 474230561.9 op/s
+// Target (idle): 968000 op, 2.1 ms, 2052747.9 ns, 4800 ticks, 2.1206 ns/op, 471563015 op/s
+// Target (idle): 968000 op, 2.1 ms, 2051892.6 ns, 4798 ticks, 2.1197 ns/op, 471759581.5 op/s
+// Target (idle): 968000 op, 2.4 ms, 2428657.4 ns, 5679 ticks, 2.5089 ns/op, 398574127.8 op/s
+// Warmup 1: 968000 op, 1974.3 ms, 1974291042.9 ns, 4616542 ticks, 2039.5569 ns/op, 490302.6 op/s
+// Warmup 2: 968000 op, 1950 ms, 1949971967.2 ns, 4559676 ticks, 2014.4339 ns/op, 496417.4 op/s
+// Warmup 3: 968000 op, 1943.3 ms, 1943278298.3 ns, 4544024 ticks, 2007.5189 ns/op, 498127.3 op/s
+// Warmup 4: 968000 op, 1949.8 ms, 1949770113.6 ns, 4559204 ticks, 2014.2253 ns/op, 496468.8 op/s
+// Warmup 5: 968000 op, 1944.1 ms, 1944140880.1 ns, 4546041 ticks, 2008.41 ns/op, 497906.3 op/s
+Target 1: 968000 op, 1963.6 ms, 1963551750 ns, 4591430 ticks, 2028.4626 ns/op, 492984.2 op/s
+Target 2: 968000 op, 1947.8 ms, 1947760986.6 ns, 4554506 ticks, 2012.1498 ns/op, 496980.9 op/s
+Target 3: 968000 op, 1952.3 ms, 1952274466.1 ns, 4565060 ticks, 2016.8125 ns/op, 495831.9 op/s
+Target 4: 968000 op, 1952 ms, 1951996917.5 ns, 4564411 ticks, 2016.5257 ns/op, 495902.4 op/s
+Target 5: 968000 op, 1957.9 ms, 1957940050.4 ns, 4578308 ticks, 2022.6653 ns/op, 494397.2 op/s
+Target 6: 968000 op, 1961.5 ms, 1961537063.4 ns, 4586719 ticks, 2026.3813 ns/op, 493490.5 op/s
+Target 7: 968000 op, 1957.9 ms, 1957863072.3 ns, 4578128 ticks, 2022.5858 ns/op, 494416.6 op/s
+Target 8: 968000 op, 1960.1 ms, 1960120667.4 ns, 4583407 ticks, 2024.918 ns/op, 493847.1 op/s
+Target 9: 968000 op, 1963.2 ms, 1963163438.5 ns, 4590522 ticks, 2028.0614 ns/op, 493081.7 op/s
+Target 10: 968000 op, 1943.5 ms, 1943463045.6 ns, 4544456 ticks, 2007.7098 ns/op, 498080 op/s
+// Benchmark finished
+
+AverageTime (ns/op): Avr=2021.46372530396 +- 4.81853294833813
+OperationsPerSecond: Avr=494711.71892542 +- 1149.06902193768
+
+// **************************
+// Benchmark: EnumeratorsBenchmarks_SingleClassEnumeratorCalledViaInterface (Throughput_X86_LegacyJit_NET-HostFramework) [-w=5 -t=10]
+// Generated project: C:\Projects\DemoCode\Performance\Benchmarks\bin\Release\EnumeratorsBenchmarks_SingleClassEnumeratorCalledViaInterface_Throughput_X86_LegacyJit_NET-HostFramework
+
+// Build:
+// OverallResult = Success
+
+// Run, Process: 1 / 3
+// Method=SingleClassEnumeratorCalledViaInterface Platform=X86 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=32-bit 
+// Pre-Warmup: 1 op, 0 ms, 8980.8 ns, 21 ticks, 8980.7722 ns/op, 111349 op/s
+// Pre-Warmup: 1000 op, 4.8 ms, 4770500.6 ns, 11155 ticks, 4770.5006 ns/op, 209621.6 op/s
+// Pre-Warmup: 210000 op, 1002.1 ms, 1002130153.6 ns, 2343310 ticks, 4772.0484 ns/op, 209553.6 op/s
+// Warmup (idle): 210000 op, 0.4 ms, 436636.6 ns, 1021 ticks, 2.0792 ns/op, 480949157.7 op/s
+// Warmup (idle): 210000 op, 0.5 ms, 467427.8 ns, 1093 ticks, 2.2258 ns/op, 449267237 op/s
+// Warmup (idle): 210000 op, 0.5 ms, 478119.2 ns, 1118 ticks, 2.2768 ns/op, 439221010.7 op/s
+// IterationCount = 210000
+// Target (idle): 210000 op, 0.6 ms, 594869.2 ns, 1391 ticks, 2.8327 ns/op, 353018756.3 op/s
+// Target (idle): 210000 op, 0.5 ms, 469138.4 ns, 1097 ticks, 2.234 ns/op, 447629070.2 op/s
+// Target (idle): 210000 op, 0.5 ms, 469566.1 ns, 1098 ticks, 2.236 ns/op, 447221393.4 op/s
+// Target (idle): 210000 op, 0.5 ms, 469566.1 ns, 1098 ticks, 2.236 ns/op, 447221393.4 op/s
+// Target (idle): 210000 op, 0.5 ms, 469993.7 ns, 1099 ticks, 2.2381 ns/op, 446814458.6 op/s
+// Warmup 1: 210000 op, 1000.7 ms, 1000706915.1 ns, 2339982 ticks, 4765.271 ns/op, 209851.7 op/s
+// Warmup 2: 210000 op, 1000.3 ms, 1000258304.1 ns, 2338933 ticks, 4763.1348 ns/op, 209945.8 op/s
+// Warmup 3: 210000 op, 999.9 ms, 999902922.1 ns, 2338102 ticks, 4761.4425 ns/op, 210020.4 op/s
+// Warmup 4: 210000 op, 1000.1 ms, 1000126158.5 ns, 2338624 ticks, 4762.5055 ns/op, 209973.5 op/s
+// Warmup 5: 210000 op, 1000 ms, 1000045759.2 ns, 2338436 ticks, 4762.1227 ns/op, 209990.4 op/s
+Target 1: 210000 op, 1000.2 ms, 1000237776.6 ns, 2338885 ticks, 4763.037 ns/op, 209950.1 op/s
+Target 2: 210000 op, 999.8 ms, 999813114.4 ns, 2337892 ticks, 4761.0148 ns/op, 210039.3 op/s
+Target 3: 210000 op, 1000 ms, 1000022238.1 ns, 2338381 ticks, 4762.0107 ns/op, 209995.3 op/s
+Target 4: 210000 op, 1000.5 ms, 1000543978.2 ns, 2339601 ticks, 4764.4951 ns/op, 209885.8 op/s
+Target 5: 210000 op, 1000 ms, 1000018816.9 ns, 2338373 ticks, 4761.9944 ns/op, 209996 op/s
+Target 6: 210000 op, 999.2 ms, 999227225.9 ns, 2336522 ticks, 4758.2249 ns/op, 210162.4 op/s
+Target 7: 210000 op, 1000.3 ms, 1000310905.8 ns, 2339056 ticks, 4763.3853 ns/op, 209934.7 op/s
+Target 8: 210000 op, 999.2 ms, 999174624.3 ns, 2336399 ticks, 4757.9744 ns/op, 210173.5 op/s
+Target 9: 210000 op, 999.2 ms, 999216534.5 ns, 2336497 ticks, 4758.174 ns/op, 210164.7 op/s
+Target 10: 210000 op, 999.5 ms, 999491944.9 ns, 2337141 ticks, 4759.4855 ns/op, 210106.7 op/s
+// Benchmark finished
+// Run, Process: 2 / 3
+// Method=SingleClassEnumeratorCalledViaInterface Platform=X86 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=32-bit 
+// Pre-Warmup: 1 op, 0 ms, 8980.8 ns, 21 ticks, 8980.7722 ns/op, 111349 op/s
+// Pre-Warmup: 1000 op, 4.7 ms, 4741420 ns, 11087 ticks, 4741.42 ns/op, 210907.3 op/s
+// Pre-Warmup: 211000 op, 1006.5 ms, 1006498230.1 ns, 2353524 ticks, 4770.1338 ns/op, 209637.7 op/s
+// Warmup (idle): 211000 op, 0.4 ms, 440485.5 ns, 1030 ticks, 2.0876 ns/op, 479016911.7 op/s
+// Warmup (idle): 211000 op, 0.5 ms, 479402.2 ns, 1121 ticks, 2.272 ns/op, 440131506.7 op/s
+// Warmup (idle): 211000 op, 0.5 ms, 479829.8 ns, 1122 ticks, 2.2741 ns/op, 439739232.6 op/s
+// IterationCount = 211000
+// Target (idle): 211000 op, 0.6 ms, 562367.4 ns, 1315 ticks, 2.6652 ns/op, 375199558.2 op/s
+// Target (idle): 211000 op, 0.5 ms, 481968.1 ns, 1127 ticks, 2.2842 ns/op, 437788304.3 op/s
+// Target (idle): 211000 op, 0.5 ms, 471276.7 ns, 1102 ticks, 2.2335 ns/op, 447719980.9 op/s
+// Target (idle): 211000 op, 0.5 ms, 471276.7 ns, 1102 ticks, 2.2335 ns/op, 447719980.9 op/s
+// Target (idle): 211000 op, 0.5 ms, 471704.4 ns, 1103 ticks, 2.2356 ns/op, 447314069.8 op/s
+// Warmup 1: 211000 op, 1004.2 ms, 1004222673.5 ns, 2348203 ticks, 4759.3492 ns/op, 210112.8 op/s
+// Warmup 2: 211000 op, 1004.8 ms, 1004841063.9 ns, 2349649 ticks, 4762.2799 ns/op, 209983.5 op/s
+// Warmup 3: 211000 op, 1003.8 ms, 1003793734.8 ns, 2347200 ticks, 4757.3163 ns/op, 210202.5 op/s
+// Warmup 4: 211000 op, 1005.2 ms, 1005179767.3 ns, 2350441 ticks, 4763.8852 ns/op, 209912.7 op/s
+// Warmup 5: 211000 op, 1004.2 ms, 1004190599.4 ns, 2348128 ticks, 4759.1972 ns/op, 210119.5 op/s
+Target 1: 211000 op, 1004 ms, 1004001147.8 ns, 2347685 ticks, 4758.2993 ns/op, 210159.1 op/s
+Target 2: 211000 op, 1004.1 ms, 1004126023.3 ns, 2347977 ticks, 4758.8911 ns/op, 210133 op/s
+Target 3: 211000 op, 1004.4 ms, 1004387321 ns, 2348588 ticks, 4760.1295 ns/op, 210078.3 op/s
+Target 4: 211000 op, 1005 ms, 1005030087.7 ns, 2350091 ticks, 4763.1758 ns/op, 209944 op/s
+Target 5: 211000 op, 1004.3 ms, 1004253464.8 ns, 2348275 ticks, 4759.4951 ns/op, 210106.3 op/s
+Target 6: 211000 op, 1035.9 ms, 1035866638.1 ns, 2422197 ticks, 4909.3206 ns/op, 203694.2 op/s
+Target 7: 211000 op, 1062.6 ms, 1062636181.6 ns, 2484793 ticks, 5036.1904 ns/op, 198562.8 op/s
+Target 8: 211000 op, 1039.4 ms, 1039353743.6 ns, 2430351 ticks, 4925.8471 ns/op, 203010.8 op/s
+Target 9: 211000 op, 1015.1 ms, 1015133884.1 ns, 2373717 ticks, 4811.0611 ns/op, 207854.4 op/s
+Target 10: 211000 op, 1044.7 ms, 1044684045.7 ns, 2442815 ticks, 4951.1092 ns/op, 201974.9 op/s
+// Benchmark finished
+// Run, Process: 3 / 3
+// Method=SingleClassEnumeratorCalledViaInterface Platform=X86 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=32-bit 
+// Pre-Warmup: 1 op, 0 ms, 8553.1 ns, 20 ticks, 8553.1163 ns/op, 116916.5 op/s
+// Pre-Warmup: 1000 op, 4.8 ms, 4763230.5 ns, 11138 ticks, 4763.2305 ns/op, 209941.6 op/s
+// Pre-Warmup: 210000 op, 1026.6 ms, 1026557426.3 ns, 2400429 ticks, 4888.3687 ns/op, 204567.2 op/s
+// Warmup (idle): 210000 op, 0.5 ms, 465289.5 ns, 1088 ticks, 2.2157 ns/op, 451331884.2 op/s
+// Warmup (idle): 210000 op, 0.5 ms, 543550.5 ns, 1271 ticks, 2.5883 ns/op, 386348615.3 op/s
+// Warmup (idle): 210000 op, 0.5 ms, 455025.8 ns, 1064 ticks, 2.1668 ns/op, 461512302.6 op/s
+// IterationCount = 210000
+// Target (idle): 210000 op, 0.6 ms, 561084.4 ns, 1312 ticks, 2.6718 ns/op, 374275221 op/s
+// Target (idle): 210000 op, 0.5 ms, 469138.4 ns, 1097 ticks, 2.234 ns/op, 447629070.2 op/s
+// Target (idle): 210000 op, 0.5 ms, 469138.4 ns, 1097 ticks, 2.234 ns/op, 447629070.2 op/s
+// Target (idle): 210000 op, 0.5 ms, 464006.6 ns, 1085 ticks, 2.2096 ns/op, 452579806.5 op/s
+// Target (idle): 210000 op, 0.5 ms, 469138.4 ns, 1097 ticks, 2.234 ns/op, 447629070.2 op/s
+// Warmup 1: 210000 op, 1024.5 ms, 1024502540.1 ns, 2395624 ticks, 4878.5835 ns/op, 204977.5 op/s
+// Warmup 2: 210000 op, 1030.4 ms, 1030372543.8 ns, 2409350 ticks, 4906.5359 ns/op, 203809.8 op/s
+// Warmup 3: 210000 op, 1014.2 ms, 1014166954.3 ns, 2371456 ticks, 4829.3664 ns/op, 207066.5 op/s
+// Warmup 4: 210000 op, 1015.7 ms, 1015742438.3 ns, 2375140 ticks, 4836.8688 ns/op, 206745.3 op/s
+// Warmup 5: 210000 op, 1021.2 ms, 1021232256 ns, 2387977 ticks, 4863.0107 ns/op, 205633.9 op/s
+Target 1: 210000 op, 1010.5 ms, 1010533162.8 ns, 2362959 ticks, 4812.0627 ns/op, 207811.1 op/s
+Target 2: 210000 op, 1017.7 ms, 1017674159.6 ns, 2379657 ticks, 4846.0674 ns/op, 206352.9 op/s
+Target 3: 210000 op, 1003.7 ms, 1003738994.8 ns, 2347072 ticks, 4779.7095 ns/op, 209217.7 op/s
+Target 4: 210000 op, 1003.6 ms, 1003576485.6 ns, 2346692 ticks, 4778.9356 ns/op, 209251.6 op/s
+Target 5: 210000 op, 1013.7 ms, 1013652912 ns, 2370254 ticks, 4826.9186 ns/op, 207171.5 op/s
+Target 6: 210000 op, 1014.3 ms, 1014345286.7 ns, 2371873 ticks, 4830.2157 ns/op, 207030.1 op/s
+Target 7: 210000 op, 1011 ms, 1010962529.2 ns, 2363963 ticks, 4814.1073 ns/op, 207722.8 op/s
+Target 8: 210000 op, 1012.8 ms, 1012831812.8 ns, 2368334 ticks, 4823.0086 ns/op, 207339.5 op/s
+Target 9: 210000 op, 1010.1 ms, 1010144423.6 ns, 2362050 ticks, 4810.2115 ns/op, 207891.1 op/s
+Target 10: 210000 op, 1012.3 ms, 1012345995.8 ns, 2367198 ticks, 4820.6952 ns/op, 207439 op/s
+// Benchmark finished
+
+AverageTime (ns/op): Avr=4806.17491128 +- 24.3883095355649
+OperationsPerSecond: Avr=208105.117686934 +- 1029.97116225179
+
+// **************************
+// Benchmark: EnumeratorsBenchmarks_SingleStructEnumeratorCalledDirectly (Throughput_X86_LegacyJit_NET-HostFramework) [-w=5 -t=10]
+// Generated project: C:\Projects\DemoCode\Performance\Benchmarks\bin\Release\EnumeratorsBenchmarks_SingleStructEnumeratorCalledDirectly_Throughput_X86_LegacyJit_NET-HostFramework
+
+// Build:
+// OverallResult = Success
+
+// Run, Process: 1 / 3
+// Method=SingleStructEnumeratorCalledDirectly Platform=X86 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=32-bit 
+// Pre-Warmup: 1 op, 0 ms, 2565.9 ns, 6 ticks, 2565.9349 ns/op, 389721.5 op/s
+// Pre-Warmup: 1000 op, 0.5 ms, 545261.2 ns, 1275 ticks, 545.2612 ns/op, 1833983.5 op/s
+// Pre-Warmup: 1000000 op, 554.8 ms, 554832959.8 ns, 1297382 ticks, 554.833 ns/op, 1802344.3 op/s
+// Pre-Warmup: 2000000 op, 1108.6 ms, 1108554442.1 ns, 2592165 ticks, 554.2772 ns/op, 1804151.4 op/s
+// Warmup (idle): 2000000 op, 4.7 ms, 4679410 ns, 10942 ticks, 2.3397 ns/op, 427404313.7 op/s
+// Warmup (idle): 2000000 op, 4.4 ms, 4438212.1 ns, 10378 ticks, 2.2191 ns/op, 450631913.7 op/s
+// Warmup (idle): 2000000 op, 4.3 ms, 4263728.5 ns, 9970 ticks, 2.1319 ns/op, 469073019.1 op/s
+// IterationCount = 2000000
+// Target (idle): 2000000 op, 4.4 ms, 4385182.8 ns, 10254 ticks, 2.1926 ns/op, 456081334.1 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4150399.7 ns, 9705 ticks, 2.0752 ns/op, 481881298.3 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4171782.5 ns, 9755 ticks, 2.0859 ns/op, 479411378.8 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4171782.5 ns, 9755 ticks, 2.0859 ns/op, 479411378.8 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4226522.4 ns, 9883 ticks, 2.1133 ns/op, 473202266.5 op/s
+// Warmup 1: 2000000 op, 1112 ms, 1112037698.7 ns, 2600310 ticks, 556.0188 ns/op, 1798500.2 op/s
+// Warmup 2: 2000000 op, 1119 ms, 1119023456.5 ns, 2616645 ticks, 559.5117 ns/op, 1787272.6 op/s
+// Warmup 3: 2000000 op, 1109.3 ms, 1109253659.3 ns, 2593800 ticks, 554.6268 ns/op, 1803014.1 op/s
+// Warmup 4: 2000000 op, 1105.4 ms, 1105432554.6 ns, 2584865 ticks, 552.7163 ns/op, 1809246.5 op/s
+// Warmup 5: 2000000 op, 1126 ms, 1125958750.9 ns, 2632862 ticks, 562.9794 ns/op, 1776264 op/s
+Target 1: 2000000 op, 1114.2 ms, 1114195650 ns, 2605356 ticks, 557.0978 ns/op, 1795016.9 op/s
+Target 2: 2000000 op, 1102.4 ms, 1102363268.8 ns, 2577688 ticks, 551.1816 ns/op, 1814284 op/s
+Target 3: 2000000 op, 1168.5 ms, 1168537447 ns, 2732425 ticks, 584.2687 ns/op, 1711541.2 op/s
+Target 4: 2000000 op, 1108.4 ms, 1108396209.4 ns, 2591795 ticks, 554.1981 ns/op, 1804408.9 op/s
+Target 5: 2000000 op, 1099.3 ms, 1099333327.3 ns, 2570603 ticks, 549.6667 ns/op, 1819284.4 op/s
+Target 6: 2000000 op, 1099.9 ms, 1099895694.7 ns, 2571918 ticks, 549.9478 ns/op, 1818354.2 op/s
+Target 7: 2000000 op, 1108.5 ms, 1108535625.2 ns, 2592121 ticks, 554.2678 ns/op, 1804182 op/s
+Target 8: 2000000 op, 1104.3 ms, 1104330057.9 ns, 2582287 ticks, 552.165 ns/op, 1811052.8 op/s
+Target 9: 2000000 op, 1100.7 ms, 1100656922.1 ns, 2573698 ticks, 550.3285 ns/op, 1817096.6 op/s
+Target 10: 2000000 op, 1102.8 ms, 1102757995.1 ns, 2578611 ticks, 551.379 ns/op, 1813634.5 op/s
+// Benchmark finished
+// Run, Process: 2 / 3
+// Method=SingleStructEnumeratorCalledDirectly Platform=X86 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=32-bit 
+// Pre-Warmup: 1 op, 0 ms, 2138.3 ns, 5 ticks, 2138.2791 ns/op, 467665.8 op/s
+// Pre-Warmup: 1000 op, 0.5 ms, 544833.5 ns, 1274 ticks, 544.8335 ns/op, 1835423.1 op/s
+// Pre-Warmup: 1000000 op, 555.5 ms, 555503096.4 ns, 1298949 ticks, 555.5031 ns/op, 1800170 op/s
+// Pre-Warmup: 2000000 op, 1107.5 ms, 1107459643.2 ns, 2589605 ticks, 553.7298 ns/op, 1805934.9 op/s
+// Warmup (idle): 2000000 op, 4.2 ms, 4178625 ns, 9771 ticks, 2.0893 ns/op, 478626343.3 op/s
+// Warmup (idle): 2000000 op, 4.1 ms, 4148261.4 ns, 9700 ticks, 2.0741 ns/op, 482129690.7 op/s
+// Warmup (idle): 2000000 op, 4.2 ms, 4161091.1 ns, 9730 ticks, 2.0805 ns/op, 480643165.5 op/s
+// IterationCount = 2000000
+// Target (idle): 2000000 op, 4.3 ms, 4279551.8 ns, 10007 ticks, 2.1398 ns/op, 467338662.9 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4163229.4 ns, 9735 ticks, 2.0816 ns/op, 480396302 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4211982.1 ns, 9849 ticks, 2.106 ns/op, 474835820.9 op/s
+// Target (idle): 2000000 op, 4.2 ms, 4215831 ns, 9858 ticks, 2.1079 ns/op, 474402312.8 op/s
+// Target (idle): 2000000 op, 4.3 ms, 4284256 ns, 10018 ticks, 2.1421 ns/op, 466825514.1 op/s
+// Warmup 1: 2000000 op, 1110.1 ms, 1110092720.1 ns, 2595762 ticks, 555.0464 ns/op, 1801651.3 op/s
+// Warmup 2: 2000000 op, 1110.9 ms, 1110877040.8 ns, 2597596 ticks, 555.4385 ns/op, 1800379.3 op/s
+// Warmup 3: 2000000 op, 1101.3 ms, 1101292418.6 ns, 2575184 ticks, 550.6462 ns/op, 1816048.1 op/s
+// Warmup 4: 2000000 op, 1098.9 ms, 1098856491.1 ns, 2569488 ticks, 549.4282 ns/op, 1820073.9 op/s
+// Warmup 5: 2000000 op, 1107 ms, 1106986228.2 ns, 2588498 ticks, 553.4931 ns/op, 1806707.2 op/s
+Target 1: 2000000 op, 1102.9 ms, 1102933761.7 ns, 2579022 ticks, 551.4669 ns/op, 1813345.5 op/s
+Target 2: 2000000 op, 1110.3 ms, 1110312107.5 ns, 2596275 ticks, 555.1561 ns/op, 1801295.3 op/s
+Target 3: 2000000 op, 1118.6 ms, 1118584254 ns, 2615618 ticks, 559.2921 ns/op, 1787974.4 op/s
+Target 4: 2000000 op, 1099.9 ms, 1099944875.2 ns, 2572033 ticks, 549.9724 ns/op, 1818272.9 op/s
+Target 5: 2000000 op, 1101.3 ms, 1101315512.1 ns, 2575238 ticks, 550.6578 ns/op, 1816010 op/s
+Target 6: 2000000 op, 1106.6 ms, 1106624859 ns, 2587653 ticks, 553.3124 ns/op, 1807297.2 op/s
+Target 7: 2000000 op, 1118.6 ms, 1118576556.2 ns, 2615600 ticks, 559.2883 ns/op, 1787986.7 op/s
+Target 8: 2000000 op, 1110.1 ms, 1110121800.7 ns, 2595830 ticks, 555.0609 ns/op, 1801604.1 op/s
+Target 9: 2000000 op, 1109.4 ms, 1109424721.7 ns, 2594200 ticks, 554.7124 ns/op, 1802736.1 op/s
+Target 10: 2000000 op, 1102.1 ms, 1102082298.9 ns, 2577031 ticks, 551.0411 ns/op, 1814746.5 op/s
+// Benchmark finished
+// Run, Process: 3 / 3
+// Method=SingleStructEnumeratorCalledDirectly Platform=X86 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=32-bit 
+// Pre-Warmup: 1 op, 0 ms, 2565.9 ns, 6 ticks, 2565.9349 ns/op, 389721.5 op/s
+// Pre-Warmup: 1000 op, 0.5 ms, 546116.5 ns, 1277 ticks, 546.1165 ns/op, 1831111.2 op/s
+// Pre-Warmup: 1000000 op, 556.8 ms, 556774944.8 ns, 1301923 ticks, 556.7749 ns/op, 1796057.8 op/s
+// Pre-Warmup: 2000000 op, 1110 ms, 1110003767.6 ns, 2595554 ticks, 555.0019 ns/op, 1801795.7 op/s
+// Warmup (idle): 2000000 op, 4.4 ms, 4350115 ns, 10172 ticks, 2.1751 ns/op, 459757963 op/s
+// Warmup (idle): 2000000 op, 4.3 ms, 4273564.6 ns, 9993 ticks, 2.1368 ns/op, 467993395.4 op/s
+// Warmup (idle): 2000000 op, 4.3 ms, 4330870.5 ns, 10127 ticks, 2.1654 ns/op, 461800928.2 op/s
+// IterationCount = 2000000
+// Target (idle): 2000000 op, 4.3 ms, 4299651.6 ns, 10054 ticks, 2.1498 ns/op, 465153968.6 op/s
+// Target (idle): 2000000 op, 4.3 ms, 4307349.4 ns, 10072 ticks, 2.1537 ns/op, 464322676.7 op/s
+// Target (idle): 2000000 op, 4.3 ms, 4268860.4 ns, 9982 ticks, 2.1344 ns/op, 468509116.4 op/s
+// Target (idle): 2000000 op, 4.3 ms, 4303928.1 ns, 10064 ticks, 2.152 ns/op, 464691772.7 op/s
+// Target (idle): 2000000 op, 4.4 ms, 4422388.8 ns, 10341 ticks, 2.2112 ns/op, 452244270.4 op/s
+// Warmup 1: 2000000 op, 1112.1 ms, 1112122374.6 ns, 2600508 ticks, 556.0612 ns/op, 1798363.2 op/s
+// Warmup 2: 2000000 op, 1191.2 ms, 1191228864.7 ns, 2785485 ticks, 595.6144 ns/op, 1678938.5 op/s
+// Warmup 3: 2000000 op, 1130.8 ms, 1130793399.9 ns, 2644167 ticks, 565.3967 ns/op, 1768669.7 op/s
+// Warmup 4: 2000000 op, 1099.9 ms, 1099861482.3 ns, 2571838 ticks, 549.9307 ns/op, 1818410.8 op/s
+// Warmup 5: 2000000 op, 1105.8 ms, 1105775534.6 ns, 2585667 ticks, 552.8878 ns/op, 1808685.3 op/s
+Target 1: 2000000 op, 1176.1 ms, 1176080440.3 ns, 2750063 ticks, 588.0402 ns/op, 1700564 op/s
+Target 2: 2000000 op, 1196.8 ms, 1196829873 ns, 2798582 ticks, 598.4149 ns/op, 1671081.3 op/s
+Target 3: 2000000 op, 1184.3 ms, 1184320512.6 ns, 2769331 ticks, 592.1603 ns/op, 1688732 op/s
+Target 4: 2000000 op, 1121.1 ms, 1121053966.3 ns, 2621393 ticks, 560.527 ns/op, 1784035.4 op/s
+Target 5: 2000000 op, 1175.3 ms, 1175263617.7 ns, 2748153 ticks, 587.6318 ns/op, 1701745.9 op/s
+Target 6: 2000000 op, 1098.4 ms, 1098377516.6 ns, 2568368 ticks, 549.1888 ns/op, 1820867.6 op/s
+Target 7: 2000000 op, 1102.8 ms, 1102823854.1 ns, 2578765 ticks, 551.4119 ns/op, 1813526.2 op/s
+Target 8: 2000000 op, 1102.4 ms, 1102403468.5 ns, 2577782 ticks, 551.2017 ns/op, 1814217.8 op/s
+Target 9: 2000000 op, 1182.6 ms, 1182572683.3 ns, 2765244 ticks, 591.2863 ns/op, 1691228 op/s
+Target 10: 2000000 op, 1121.9 ms, 1121867795.3 ns, 2623296 ticks, 560.9339 ns/op, 1782741.3 op/s
+// Benchmark finished
+
+AverageTime (ns/op): Avr=560.841944536667 +- 5.53084971079102
+OperationsPerSecond: Avr=1784295.45937123 +- 16952.9150928712
+
+// **************************
+// Benchmark: EnumeratorsBenchmarks_SingleStructEnumeratorCalledViaInterface (Throughput_X86_LegacyJit_NET-HostFramework) [-w=5 -t=10]
+// Generated project: C:\Projects\DemoCode\Performance\Benchmarks\bin\Release\EnumeratorsBenchmarks_SingleStructEnumeratorCalledViaInterface_Throughput_X86_LegacyJit_NET-HostFramework
+
+// Build:
+// OverallResult = Success
+
+// Run, Process: 1 / 3
+// Method=SingleStructEnumeratorCalledViaInterface Platform=X86 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=32-bit 
+// Pre-Warmup: 1 op, 0 ms, 10263.7 ns, 24 ticks, 10263.7396 ns/op, 97430.4 op/s
+// Pre-Warmup: 1000 op, 5.9 ms, 5930730.9 ns, 13868 ticks, 5930.7309 ns/op, 168613.3 op/s
+// Pre-Warmup: 169000 op, 1080.9 ms, 1080874419.3 ns, 2527440 ticks, 6395.7066 ns/op, 156354.9 op/s
+// Warmup (idle): 169000 op, 0.4 ms, 351960.7 ns, 823 ticks, 2.0826 ns/op, 480167194.4 op/s
+// Warmup (idle): 169000 op, 0.4 ms, 393871 ns, 921 ticks, 2.3306 ns/op, 429074485.3 op/s
+// Warmup (idle): 169000 op, 0.4 ms, 393015.7 ns, 919 ticks, 2.3255 ns/op, 430008270.9 op/s
+// IterationCount = 169000
+// Target (idle): 169000 op, 0.5 ms, 480257.5 ns, 1123 ticks, 2.8418 ns/op, 351894569 op/s
+// Target (idle): 169000 op, 0.4 ms, 395581.6 ns, 925 ticks, 2.3407 ns/op, 427219028.1 op/s
+// Target (idle): 169000 op, 0.4 ms, 384462.6 ns, 899 ticks, 2.2749 ns/op, 439574639.6 op/s
+// Target (idle): 169000 op, 0.4 ms, 384462.6 ns, 899 ticks, 2.2749 ns/op, 439574639.6 op/s
+// Target (idle): 169000 op, 0.4 ms, 369494.6 ns, 864 ticks, 2.1864 ns/op, 457381482.6 op/s
+// Warmup 1: 169000 op, 1091.6 ms, 1091610290.9 ns, 2552544 ticks, 6459.2325 ns/op, 154817.2 op/s
+// Warmup 2: 169000 op, 1092 ms, 1092041368 ns, 2553552 ticks, 6461.7832 ns/op, 154756 op/s
+// Warmup 3: 169000 op, 1081.2 ms, 1081216971.6 ns, 2528241 ticks, 6397.7336 ns/op, 156305.4 op/s
+// Warmup 4: 169000 op, 1096.1 ms, 1096053634.9 ns, 2562934 ticks, 6485.5245 ns/op, 154189.5 op/s
+// Warmup 5: 169000 op, 1087.8 ms, 1087751980.2 ns, 2543522 ticks, 6436.4022 ns/op, 155366.3 op/s
+Target 1: 169000 op, 1096.4 ms, 1096376942.7 ns, 2563690 ticks, 6487.4375 ns/op, 154144.1 op/s
+Target 2: 169000 op, 1105.4 ms, 1105426995.1 ns, 2584852 ticks, 6540.9881 ns/op, 152882.1 op/s
+Target 3: 169000 op, 1091.3 ms, 1091296819.2 ns, 2551811 ticks, 6457.3776 ns/op, 154861.6 op/s
+Target 4: 169000 op, 1083.1 ms, 1083149120.6 ns, 2532759 ticks, 6409.1664 ns/op, 156026.5 op/s
+Target 5: 169000 op, 1082.1 ms, 1082076987.5 ns, 2530252 ticks, 6402.8224 ns/op, 156181.1 op/s
+Target 6: 169000 op, 1077.1 ms, 1077137562.8 ns, 2518702 ticks, 6373.595 ns/op, 156897.3 op/s
+Target 7: 169000 op, 1075.5 ms, 1075515464.2 ns, 2514909 ticks, 6363.9968 ns/op, 157134 op/s
+Target 8: 169000 op, 1077.5 ms, 1077514327.5 ns, 2519583 ticks, 6375.8244 ns/op, 156842.5 op/s
+Target 9: 169000 op, 1079.3 ms, 1079280973.7 ns, 2523714 ticks, 6386.278 ns/op, 156585.7 op/s
+Target 10: 169000 op, 1085.4 ms, 1085402011.4 ns, 2538027 ticks, 6422.4971 ns/op, 155702.7 op/s
+// Benchmark finished
+// Run, Process: 2 / 3
+// Method=SingleStructEnumeratorCalledViaInterface Platform=X86 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=32-bit 
+// Pre-Warmup: 1 op, 0 ms, 10263.7 ns, 24 ticks, 10263.7396 ns/op, 97430.4 op/s
+// Pre-Warmup: 1000 op, 5.9 ms, 5932013.8 ns, 13871 ticks, 5932.0138 ns/op, 168576.8 op/s
+// Pre-Warmup: 169000 op, 1092.2 ms, 1092245359.8 ns, 2554029 ticks, 6462.9903 ns/op, 154727.1 op/s
+// Warmup (idle): 169000 op, 0.4 ms, 352816 ns, 825 ticks, 2.0877 ns/op, 479003152.7 op/s
+// Warmup (idle): 169000 op, 0.4 ms, 392588 ns, 918 ticks, 2.323 ns/op, 430476689.5 op/s
+// Warmup (idle): 169000 op, 0.4 ms, 393015.7 ns, 919 ticks, 2.3255 ns/op, 430008270.9 op/s
+// IterationCount = 169000
+// Target (idle): 169000 op, 0.5 ms, 472987.3 ns, 1106 ticks, 2.7987 ns/op, 357303436.7 op/s
+// Target (idle): 169000 op, 0.4 ms, 396009.3 ns, 926 ticks, 2.3433 ns/op, 426757668.5 op/s
+// Target (idle): 169000 op, 0.4 ms, 384462.6 ns, 899 ticks, 2.2749 ns/op, 439574639.6 op/s
+// Target (idle): 169000 op, 0.4 ms, 384890.2 ns, 900 ticks, 2.2775 ns/op, 439086223.3 op/s
+// Target (idle): 169000 op, 0.4 ms, 369922.3 ns, 865 ticks, 2.1889 ns/op, 456852717.9 op/s
+// Warmup 1: 169000 op, 1078.8 ms, 1078769497.4 ns, 2522518 ticks, 6383.2515 ns/op, 156660 op/s
+// Warmup 2: 169000 op, 1076.6 ms, 1076578616.6 ns, 2517395 ticks, 6370.2877 ns/op, 156978.8 op/s
+// Warmup 3: 169000 op, 1088.6 ms, 1088564098.6 ns, 2545421 ticks, 6441.2077 ns/op, 155250.4 op/s
+// Warmup 4: 169000 op, 1106.6 ms, 1106624003.7 ns, 2587651 ticks, 6548.071 ns/op, 152716.7 op/s
+// Warmup 5: 169000 op, 1086.1 ms, 1086064022.6 ns, 2539575 ticks, 6426.4143 ns/op, 155607.8 op/s
+Target 1: 169000 op, 1077 ms, 1076970777 ns, 2518312 ticks, 6372.6081 ns/op, 156921.6 op/s
+Target 2: 169000 op, 1075.5 ms, 1075467139.1 ns, 2514796 ticks, 6363.7109 ns/op, 157141 op/s
+Target 3: 169000 op, 1076.9 ms, 1076923307.2 ns, 2518201 ticks, 6372.3273 ns/op, 156928.5 op/s
+Target 4: 169000 op, 1077.6 ms, 1077557948.4 ns, 2519685 ticks, 6376.0825 ns/op, 156836.1 op/s
+Target 5: 169000 op, 1075.3 ms, 1075321736.2 ns, 2514456 ticks, 6362.8505 ns/op, 157162.3 op/s
+Target 6: 169000 op, 1078 ms, 1077962938.5 ns, 2520632 ticks, 6378.4789 ns/op, 156777.2 op/s
+Target 7: 169000 op, 1079.5 ms, 1079474701.8 ns, 2524167 ticks, 6387.4243 ns/op, 156557.6 op/s
+Target 8: 169000 op, 1086.7 ms, 1086680274.7 ns, 2541016 ticks, 6430.0608 ns/op, 155519.5 op/s
+Target 9: 169000 op, 1078.5 ms, 1078519318.7 ns, 2521933 ticks, 6381.7711 ns/op, 156696.3 op/s
+Target 10: 169000 op, 1074.7 ms, 1074668705.7 ns, 2512929 ticks, 6358.9864 ns/op, 157257.8 op/s
+// Benchmark finished
+// Run, Process: 3 / 3
+// Method=SingleStructEnumeratorCalledViaInterface Platform=X86 JitVersion=LegacyJit 
+// BenchmarkDotNet=v0.7.8.0
+// OS=Microsoft Windows NT 6.2.9200.0
+// Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+// CLR=MS.NET 4.0.30319.42000, Arch=32-bit 
+// Pre-Warmup: 1 op, 0 ms, 10263.7 ns, 24 ticks, 10263.7396 ns/op, 97430.4 op/s
+// Pre-Warmup: 1000 op, 5.9 ms, 5930730.9 ns, 13868 ticks, 5930.7309 ns/op, 168613.3 op/s
+// Pre-Warmup: 169000 op, 1091.7 ms, 1091733028.2 ns, 2552831 ticks, 6459.9587 ns/op, 154799.8 op/s
+// Warmup (idle): 169000 op, 0.4 ms, 353243.7 ns, 826 ticks, 2.0902 ns/op, 478423245.8 op/s
+// Warmup (idle): 169000 op, 0.4 ms, 383607.3 ns, 897 ticks, 2.2699 ns/op, 440554739.1 op/s
+// Warmup (idle): 169000 op, 0.4 ms, 395154 ns, 924 ticks, 2.3382 ns/op, 427681386.4 op/s
+// IterationCount = 169000
+// Target (idle): 169000 op, 0.5 ms, 475553.3 ns, 1112 ticks, 2.8139 ns/op, 355375540.5 op/s
+// Target (idle): 169000 op, 0.4 ms, 390022.1 ns, 912 ticks, 2.3078 ns/op, 433308773 op/s
+// Target (idle): 169000 op, 0.4 ms, 395581.6 ns, 925 ticks, 2.3407 ns/op, 427219028.1 op/s
+// Target (idle): 169000 op, 0.4 ms, 384890.2 ns, 900 ticks, 2.2775 ns/op, 439086223.3 op/s
+// Target (idle): 169000 op, 0.4 ms, 369494.6 ns, 864 ticks, 2.1864 ns/op, 457381482.6 op/s
+// Warmup 1: 169000 op, 1077.6 ms, 1077606701.2 ns, 2519799 ticks, 6376.371 ns/op, 156829 op/s
+// Warmup 2: 169000 op, 1091.1 ms, 1091077859.4 ns, 2551299 ticks, 6456.082 ns/op, 154892.7 op/s
+// Warmup 3: 169000 op, 1076.2 ms, 1076179186.1 ns, 2516461 ticks, 6367.9242 ns/op, 157037 op/s
+// Warmup 4: 169000 op, 1076.2 ms, 1076205700.7 ns, 2516523 ticks, 6368.0811 ns/op, 157033.2 op/s
+// Warmup 5: 169000 op, 1078.7 ms, 1078717323.4 ns, 2522396 ticks, 6382.9427 ns/op, 156667.5 op/s
+Target 1: 169000 op, 1077.6 ms, 1077634498.8 ns, 2519864 ticks, 6376.5355 ns/op, 156825 op/s
+Target 2: 169000 op, 1076.8 ms, 1076765074.5 ns, 2517831 ticks, 6371.391 ns/op, 156951.6 op/s
+Target 3: 169000 op, 1076.1 ms, 1076076548.7 ns, 2516221 ticks, 6367.3169 ns/op, 157052 op/s
+Target 4: 169000 op, 1078.2 ms, 1078176766.4 ns, 2521132 ticks, 6379.7442 ns/op, 156746.1 op/s
+Target 5: 169000 op, 1085.6 ms, 1085588041.7 ns, 2538462 ticks, 6423.5979 ns/op, 155676 op/s
+Target 6: 169000 op, 1081 ms, 1081031796.6 ns, 2527808 ticks, 6396.6378 ns/op, 156332.1 op/s
+Target 7: 169000 op, 1088.1 ms, 1088082558.1 ns, 2544295 ticks, 6438.3583 ns/op, 155319.1 op/s
+Target 8: 169000 op, 1077.9 ms, 1077866288.3 ns, 2520406 ticks, 6377.907 ns/op, 156791.2 op/s
+Target 9: 169000 op, 1078 ms, 1077984321.3 ns, 2520682 ticks, 6378.6055 ns/op, 156774.1 op/s
+Target 10: 169000 op, 1105.3 ms, 1105323074.7 ns, 2584609 ticks, 6540.3732 ns/op, 152896.5 op/s
+// Benchmark finished
+
+AverageTime (ns/op): Avr=6401.8250534714 +- 17.3206533494866
+OperationsPerSecond: Avr=156213.976178575 +- 417.186665217884
+
+// ***** Competition: Finish  *****
+
+```ini
+BenchmarkDotNet=v0.7.8.0
+OS=Microsoft Windows NT 6.2.9200.0
+Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+HostCLR=MS.NET 4.0.30319.42000, Arch=32-bit 
+Type=EnumeratorsBenchmarks  Mode=Throughput  .NET=HostFramework  
+```
+
+                                     Method | Platform |       Jit |       AvrTime |     StdDev |         op/s |
+------------------------------------------- |--------- |---------- |-------------- |----------- |------------- |
+ DedicatedClassEnumeratorCalledViaInterface |      X64 | LegacyJit | 4,487.1596 ns | 92.3106 ns |   222,858.13 |
+    DedicatedStructEnumeratorCalledDirectly |      X64 | LegacyJit | 2,147.7536 ns | 23.5147 ns |   465,602.83 |
+        SingleClassEnumeratorCalledDirectly |      X64 | LegacyJit | 1,834.3687 ns |  5.3615 ns |   545,146.67 |
+    SingleClassEnumeratorCalledViaInterface |      X64 | LegacyJit | 4,480.2760 ns | 65.6278 ns |   223,200.54 |
+       SingleStructEnumeratorCalledDirectly |      X64 | LegacyJit | 2,146.8989 ns | 27.4993 ns |   465,788.33 |
+   SingleStructEnumeratorCalledViaInterface |      X64 | LegacyJit | 6,592.5049 ns | 35.2396 ns |   151,687.41 |
+ DedicatedClassEnumeratorCalledViaInterface |      X64 |    RyuJit | 4,870.5030 ns | 86.3733 ns |   205,317.60 |
+    DedicatedStructEnumeratorCalledDirectly |      X64 |    RyuJit |   570.2141 ns |  3.1941 ns | 1,753,727.13 |
+        SingleClassEnumeratorCalledDirectly |      X64 |    RyuJit | 1,953.7642 ns | 11.8931 ns |   511,832.50 |
+    SingleClassEnumeratorCalledViaInterface |      X64 |    RyuJit | 4,873.6090 ns | 62.2004 ns |   205,186.75 |
+       SingleStructEnumeratorCalledDirectly |      X64 |    RyuJit |   569.8949 ns | 11.4416 ns | 1,754,709.59 |
+   SingleStructEnumeratorCalledViaInterface |      X64 |    RyuJit | 6,875.3471 ns | 81.9506 ns |   145,447.20 |
+ DedicatedClassEnumeratorCalledViaInterface |      X86 | LegacyJit | 4,776.1575 ns | 37.8917 ns |   209,373.33 |
+    DedicatedStructEnumeratorCalledDirectly |      X86 | LegacyJit |   548.5906 ns |  2.0618 ns | 1,822,853.05 |
+        SingleClassEnumeratorCalledDirectly |      X86 | LegacyJit | 2,018.4576 ns | 13.4654 ns |   495,427.82 |
+    SingleClassEnumeratorCalledViaInterface |      X86 | LegacyJit | 4,771.7154 ns | 68.1532 ns |   209,568.72 |
+       SingleStructEnumeratorCalledDirectly |      X86 | LegacyJit |   554.2330 ns | 15.4560 ns | 1,804,295.45 |
+   SingleStructEnumeratorCalledViaInterface |      X86 | LegacyJit | 6,379.1748 ns | 48.4026 ns |   156,760.09 |
+
+// ***** Competition: End *****
+
