@@ -7,7 +7,9 @@ namespace Exceptional
     {
         static void Main(string[] args)
         {
-            CanThrowNonExceptionType();
+            //CanThrowNonExceptionType();
+            StackUnwinding();
+            //new ExceptionLogger().Execute(() => { throw new Exception("Just log and forget"); });
 
             Console.WriteLine("Press any key to terminate");
             Console.ReadLine();
@@ -25,6 +27,11 @@ namespace Exceptional
             {
                 Console.WriteLine(wrappedException.WrappedException);
             }
+        }
+
+        private static void StackUnwinding()
+        {
+            new StackUnwinding().Present();
         }
     }
 }
