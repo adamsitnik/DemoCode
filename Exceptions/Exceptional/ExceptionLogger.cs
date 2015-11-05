@@ -2,11 +2,16 @@
 
 namespace Exceptional
 {
-    class ExceptionLogger
+    class ExceptionLogger : Demoable
     {
-        readonly Action<string> _log = Console.WriteLine;
+        protected override string Description => "Filtering exception with when keyword";
 
-        internal void Execute(Action command)
+        protected override void RunDemo()
+        {
+            Execute(() => { throw new Exception("Just log and forget"); });
+        }
+
+        void Execute(Action command)
         {
             try
             {
@@ -20,7 +25,7 @@ namespace Exceptional
 
         bool LogOnly(Exception ex)
         {
-            _log($"Exception occured, details: {ex.Message}");
+            Console.WriteLine($"Exception occured, details: {ex.Message}");
 
             return false;
         }

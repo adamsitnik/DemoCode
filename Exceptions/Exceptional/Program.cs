@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace Exceptional
 {
@@ -7,31 +6,15 @@ namespace Exceptional
     {
         static void Main(string[] args)
         {
-            //CanThrowNonExceptionType();
-            StackUnwinding();
-            //new ExceptionLogger().Execute(() => { throw new Exception("Just log and forget"); });
+            Demoable[] demos = { new ThrowingAnything(), new ExceptionLogger(), new StackUnwinding() };
+
+            foreach (var demo in demos)
+            {
+                demo.Execute();
+            }
 
             Console.WriteLine("Press any key to terminate");
             Console.ReadLine();
-        }
-
-        private static void CanThrowNonExceptionType()
-        {
-            try
-            {
-                Action<string> throwingMethod = ThrowAnythingMethodBuilder.BuildThrowingMethod<string>();
-
-                throwingMethod.Invoke("I can throw the string");
-            }
-            catch (RuntimeWrappedException wrappedException)
-            {
-                Console.WriteLine(wrappedException.WrappedException);
-            }
-        }
-
-        private static void StackUnwinding()
-        {
-            new StackUnwinding().Present();
         }
     }
 }

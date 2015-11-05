@@ -3,12 +3,17 @@ using System.Diagnostics;
 
 namespace Exceptional
 {
-    class StackUnwinding
+    class StackUnwinding : Demoable
     {
-        internal void Present()
-        {
-            // !! make sure that your Visual Studio is set up to break only on uncaught exceptions! (CTRL + ALT + E)
+        protected override string Description => "Stack Unwinding";
 
+        /// <summary>
+        /// !! make sure that your Visual Studio is set up to break only on uncaught exceptions! (CTRL + ALT + E)
+        /// </summary>
+        protected override bool IsVisualStudioConfigurationRequired => true;
+
+        protected override void RunDemo()
+        {
             try
             {
                 PutSomeLocalVariablesOnStackAndThrow();
