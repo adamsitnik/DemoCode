@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace Exceptional
+namespace Exceptional.Demos
 {
     class StackUnwinding : Demoable
     {

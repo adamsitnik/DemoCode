@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Exceptional
+namespace Exceptional.Demos
 {
-    class ExceptionLogger : Demoable
+    class SilentExceptionLogingWithWhen : Demoable
     {
         protected override string Description => "Filtering exception with when keyword";
 

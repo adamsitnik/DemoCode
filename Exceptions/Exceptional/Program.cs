@@ -1,4 +1,5 @@
 ﻿using System;
+using Exceptional.Demos;
 
 namespace Exceptional
 {
@@ -6,7 +7,14 @@ namespace Exceptional
     {
         static void Main(string[] args)
         {
-            Demoable[] demos = { new ThrowingAnything(), new ExceptionLogger(), new StackUnwinding() };
+            Demoable[] demos =
+            {
+                new ThrowingAnything(),
+                new SilentExceptionLogingWithWhen(),
+                new StackUnwinding(),
+                new ExceptionHierarchyAndOrderMatters(),
+                new ExceptionInFinallyBlock()
+            };
 
             foreach (var demo in demos)
             {

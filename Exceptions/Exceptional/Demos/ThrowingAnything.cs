@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
 
-namespace Exceptional
+namespace Exceptional.Demos
 {
     class ThrowingAnything : Demoable
     {

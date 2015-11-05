@@ -42,12 +42,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CanThrowAnythingMethodBuilder.cs" />
-    <Compile Include="ExceptionLogger.cs" />
+    <Compile Include="Demos\ExceptionHierarchyAndOrderMatters.cs" />
+    <Compile Include="Demos\ExceptionInFinallyBlock.cs" />
+    <Compile Include="Demos\SilentExceptionLogingWithWhen.cs" />
+    <Compile Include="Demos\StackUnwinding.cs" />
+    <Compile Include="Demos\ThrowingAnything.cs" />
     <Compile Include="Demoable.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StackUnwinding.cs" />
-    <Compile Include="ThrowingAnything.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
