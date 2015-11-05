@@ -10,7 +10,8 @@ namespace Benchmarks
             var competitionSwitch = new BenchmarkCompetitionSwitch(
                 new[]
                 {
-                    typeof(EnumeratorsBenchmarks)
+                    typeof(EnumeratorsBenchmarks),
+                    typeof(BoundariesCheckBenchmarks)
                 });
 
             competitionSwitch.Run(args);
