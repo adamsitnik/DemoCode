@@ -30,6 +30,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BenchmarkDotNet">
@@ -46,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Collections\BoundariesCheckBenchmarks.cs" />
     <Compile Include="Collections\EnumeratorsBenchmarks.cs" />
+    <Compile Include="Collections\LengthForLoopBenchmarks.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

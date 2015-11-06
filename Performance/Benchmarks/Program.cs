@@ -11,7 +11,8 @@ namespace Benchmarks
                 new[]
                 {
                     typeof(EnumeratorsBenchmarks),
-                    typeof(BoundariesCheckBenchmarks)
+                    typeof(BoundariesCheckBenchmarks),
+                    typeof(LengthForLoopBenchmarks)
                 });
 
             competitionSwitch.Run(args);
