@@ -1,0 +1,29 @@
+BenchmarkDotNet=v0.7.8.0
+OS=Microsoft Windows NT 6.2.9200.0
+Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+HostCLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+Type=BoundariesCheckBenchmarks  Mode=Throughput  .NET=HostFramework  
+
+      Method | Platform |       Jit |       AvrTime |     StdDev |         op/s |
+------------ |--------- |---------- |-------------- |----------- |------------- |
+ DoubleCheck |      X64 | LegacyJit | 1,135.2462 ns | 54.3913 ns |   880,867.72 |
+ SingleCheck |      X64 | LegacyJit |   967.9507 ns | 65.3920 ns | 1,033,139.13 |
+ DoubleCheck |      X64 |    RyuJit |   678.2918 ns | 60.1333 ns | 1,474,292.02 |
+ SingleCheck |      X64 |    RyuJit |   461.7189 ns |  1.7552 ns | 2,165,819.99 |
+ DoubleCheck |      X86 | LegacyJit |   624.1259 ns |  6.9804 ns | 1,602,240.78 |
+ SingleCheck |      X86 | LegacyJit |   531.2280 ns |  1.5832 ns | 1,882,431.06 |
+ 
+BenchmarkDotNet=v0.7.8.0
+OS=Microsoft Windows NT 6.2.9200.0
+Processor=Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz, ProcessorCount=2
+HostCLR=MS.NET 4.0.30319.18449, Arch=64-bit 
+Type=BoundariesCheckBenchmarks  Mode=Throughput  .NET=HostFramework  
+
+      Method | Platform |       Jit |   AvrTime |    StdDev |       op/s |
+------------ |--------- |---------- |---------- |---------- |----------- |
+ DoubleCheck |      X64 | LegacyJit | 2.0639 us | 0.0215 us | 484,527.04 |
+ SingleCheck |      X64 | LegacyJit | 1.5675 us | 0.0132 us | 637,943.43 |
+ DoubleCheck |      X64 |    RyuJit | 2.0658 us | 0.0286 us | 484,076.75 |
+ SingleCheck |      X64 |    RyuJit | 1.6282 us | 0.1022 us | 614,168.22 |
+ DoubleCheck |      X86 | LegacyJit | 2.0795 us | 0.1926 us | 480,899.33 |
+ SingleCheck |      X86 | LegacyJit | 1.5486 us | 0.0182 us | 645,727.96 |

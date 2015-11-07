@@ -1,0 +1,42 @@
+BenchmarkDotNet=v0.7.8.0
+OS=Microsoft Windows NT 6.2.9200.0
+Processor=Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, ProcessorCount=8
+HostCLR=MS.NET 4.0.30319.42000, Arch=64-bit  [RyuJIT]
+Type=LengthForLoopBenchmarks  Mode=Throughput  .NET=HostFramework  
+
+                           Method | Platform |       Jit |     AvrTime |     StdDev |         op/s |
+--------------------------------- |--------- |---------- |------------ |----------- |------------- |
+  PublicGetPropertyWithPrivateSet |      X64 | LegacyJit | 605.8821 ns |  4.4568 ns | 1,650,486.05 |
+              PublicReadOnlyField |      X64 | LegacyJit | 306.6468 ns |  5.4358 ns | 3,261,080.81 |
+ PublicReadOnlyInlineableProperty |      X64 | LegacyJit | 610.9818 ns |  8.2661 ns | 1,636,709.93 |
+           PublicReadOnlyProperty |      X64 | LegacyJit | 616.1200 ns | 18.5058 ns | 1,623,064.05 |
+  PublicGetPropertyWithPrivateSet |      X64 |    RyuJit | 329.3992 ns |  5.8268 ns | 3,035,838.90 |
+              PublicReadOnlyField |      X64 |    RyuJit | 324.0434 ns | 10.3441 ns | 3,086,007.32 |
+ PublicReadOnlyInlineableProperty |      X64 |    RyuJit | 308.5380 ns |  2.3695 ns | 3,241,092.56 |
+           PublicReadOnlyProperty |      X64 |    RyuJit | 308.6624 ns |  2.0111 ns | 3,239,786.24 |
+  PublicGetPropertyWithPrivateSet |      X86 | LegacyJit | 310.7687 ns |  2.5310 ns | 3,217,827.67 |
+              PublicReadOnlyField |      X86 | LegacyJit | 310.7765 ns |  1.7686 ns | 3,217,746.32 |
+ PublicReadOnlyInlineableProperty |      X86 | LegacyJit | 310.7363 ns |  2.4263 ns | 3,218,162.95 |
+           PublicReadOnlyProperty |      X86 | LegacyJit | 310.5960 ns |  1.8067 ns | 3,219,616.52 |
+
+
+BenchmarkDotNet=v0.7.8.0
+OS=Microsoft Windows NT 6.2.9200.0
+Processor=Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz, ProcessorCount=2
+HostCLR=MS.NET 4.0.30319.18449, Arch=64-bit 
+Type=LengthForLoopBenchmarks  Mode=Throughput  .NET=HostFramework  
+
+                           Method | Platform |       Jit |       AvrTime |      StdDev |         op/s |
+--------------------------------- |--------- |---------- |-------------- |------------ |------------- |
+  PublicGetPropertyWithPrivateSet |      X64 | LegacyJit | 1,066.3131 ns | 147.7195 ns |   937,811.67 |
+              PublicReadOnlyField |      X64 | LegacyJit |   935.5166 ns |  51.6396 ns | 1,068,928.08 |
+ PublicReadOnlyInlineableProperty |      X64 | LegacyJit | 1,054.2246 ns |  43.5859 ns |   948,564.68 |
+           PublicReadOnlyProperty |      X64 | LegacyJit | 1,056.8009 ns |  53.1932 ns |   946,253.46 |
+  PublicGetPropertyWithPrivateSet |      X64 |    RyuJit | 1,058.7804 ns | 111.8268 ns |   944,482.91 |
+              PublicReadOnlyField |      X64 |    RyuJit |   933.2488 ns |   2.3556 ns | 1,071,525.59 |
+ PublicReadOnlyInlineableProperty |      X64 |    RyuJit | 1,050.3838 ns |  52.7857 ns |   952,032.98 |
+           PublicReadOnlyProperty |      X64 |    RyuJit | 1,061.7089 ns | 110.9487 ns |   941,877.82 |
+  PublicGetPropertyWithPrivateSet |      X86 | LegacyJit |   958.4990 ns |  36.8962 ns | 1,043,298.92 |
+              PublicReadOnlyField |      X86 | LegacyJit |   953.7173 ns |   4.5518 ns | 1,048,528.70 |
+ PublicReadOnlyInlineableProperty |      X86 | LegacyJit |   956.4374 ns |  36.2583 ns | 1,045,546.79 |
+           PublicReadOnlyProperty |      X86 | LegacyJit |   954.9282 ns |  48.3182 ns | 1,047,199.10 |
