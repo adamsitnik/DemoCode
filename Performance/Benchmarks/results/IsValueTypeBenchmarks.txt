@@ -1,0 +1,26 @@
+BenchmarkDotNet=v0.7.8.0
+OS=Microsoft Windows NT 6.2.9200.0
+Processor=Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz, ProcessorCount=2
+HostCLR=MS.NET 4.0.30319.18449, Arch=64-bit 
+Type=IsValueTypeBenchmarks  Mode=Throughput  .NET=HostFramework  
+
+                                      Method | Platform |       Jit |    AvrTime |    StdDev |                      op/s |
+-------------------------------------------- |--------- |---------- |----------- |---------- |-------------------------- |
+                  CanInlineConstResultOfType |      X64 | LegacyJit | 41.7001 ns | 3.8364 ns |             23,980,770.91 |
+ GenericOfStruct_CompareDefaultValueWithNull |      X64 | LegacyJit |  2.4465 ns | 0.1423 ns |            408,745,155.05 |
+         GenericOfStruct_GetType_IsValueType |      X64 | LegacyJit | 43.7282 ns | 3.3841 ns |             22,868,561.76 |
+                  HelperClassWithCachedValue |      X64 | LegacyJit |  0.0000 ns | 0.1269 ns | 14,042,553,190,000,000.00 |
+                             NoOptimizations |      X64 | LegacyJit | 52.3118 ns | 3.1404 ns |             19,116,149.42 |
+                    ReturnConstForComparison |      X64 | LegacyJit |  0.0000 ns | 0.0596 ns | 12,487,309,640,000,000.00 |
+                  CanInlineConstResultOfType |      X64 |    RyuJit | 41.6497 ns | 0.7698 ns |             24,009,774.47 |
+ GenericOfStruct_CompareDefaultValueWithNull |      X64 |    RyuJit |  2.5437 ns | 0.1209 ns |            393,128,898.34 |
+         GenericOfStruct_GetType_IsValueType |      X64 |    RyuJit | 43.7291 ns | 3.4783 ns |             22,868,046.65 |
+                  HelperClassWithCachedValue |      X64 |    RyuJit |  0.0000 ns | 0.0781 ns | 14,943,820,220,000,000.00 |
+                             NoOptimizations |      X64 |    RyuJit | 52.3148 ns | 0.5938 ns |             19,115,053.11 |
+                    ReturnConstForComparison |      X64 |    RyuJit |  0.0000 ns | 0.1401 ns |  7,962,382,440,000,000.00 |
+                  CanInlineConstResultOfType |      X86 | LegacyJit | 66.7717 ns | 3.1453 ns |             14,976,403.46 |
+ GenericOfStruct_CompareDefaultValueWithNull |      X86 | LegacyJit |  2.0358 ns | 0.3296 ns |            491,207,487.28 |
+         GenericOfStruct_GetType_IsValueType |      X86 | LegacyJit | 66.6615 ns | 1.5145 ns |             15,001,154.73 |
+                  HelperClassWithCachedValue |      X86 | LegacyJit |  0.0012 ns | 0.1179 ns |  4,156,452,378,633,690.00 |
+                             NoOptimizations |      X86 | LegacyJit | 82.5730 ns | 7.5368 ns |             12,110,501.42 |
+                    ReturnConstForComparison |      X86 | LegacyJit |  0.0000 ns | 0.0492 ns | 22,166,666,660,000,000.00 |

@@ -1,5 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using BenchmarkDotNet;
 using BenchmarkDotNet.Tasks;
@@ -14,41 +16,22 @@ namespace Benchmarks.Collections
         [Params(0, 1, 10, 100, 1000, 100000, 1000000)]
         public int ItemsCount = 0;
 
-        // each benchmarks has it's own data just to avoid better results for Benchmarks that got the CPU cached warmed up by previous benchmarks
         // we compare array with it's own copy just to measure the pessimistic scenario - full range check required
-        private byte[] ObjectEqualsData, ObjectEqualsCopy,
-            ByteEqualsData, ByteEqualsDataCopy,
-            EqualsOperatorData, EqualsOperatorDataCopy,
-            DefaultComparerLoopData, DefaultComparerLoopDataCopy,
-            EnumerableSequenceEqualsData, EnumerableSequenceEqualsDataCopy,
-            MemCmpData, MemCmpDataCopy,
-            UnsafeData, UnsafeDataCopy;
+        private byte[] Values, SameValues;
 
         [Setup]
         public void SetupData()
         {
-            ObjectEqualsData = Enumerable.Range(0, ItemsCount).Select(number => (byte)number).ToArray();
-            ObjectEqualsCopy = ObjectEqualsData.ToArray();
-            ByteEqualsData = ObjectEqualsData.ToArray();
-            ByteEqualsDataCopy = ObjectEqualsData.ToArray();
-            EqualsOperatorData = ObjectEqualsData.ToArray();
-            EqualsOperatorDataCopy = ObjectEqualsData.ToArray();
-            DefaultComparerLoopData = ObjectEqualsData.ToArray();
-            DefaultComparerLoopDataCopy = ObjectEqualsData.ToArray();
-            EnumerableSequenceEqualsData = ObjectEqualsData.ToArray();
-            EnumerableSequenceEqualsDataCopy = ObjectEqualsData.ToArray();
-            MemCmpData = ObjectEqualsData.ToArray();
-            MemCmpDataCopy = ObjectEqualsData.ToArray();
-            UnsafeData = ObjectEqualsData.ToArray();
-            UnsafeDataCopy = ObjectEqualsData.ToArray();
+            Values = Enumerable.Range(0, ItemsCount).Select(number => (byte)number).ToArray();
+            SameValues = Values.ToArray();
         }
 
         [Benchmark]
         public bool ObjectEquals()
         {
-            for (int i = 0; i < ObjectEqualsData.Length; i++)
+            for (int i = 0; i < Values.Length; i++)
             {
-                if (!object.Equals(ObjectEqualsData[i], ObjectEqualsCopy[i]))
+                if (!object.Equals(Values[i], SameValues[i]))
                 {
                     return false;
                 }
@@ -59,9 +42,9 @@ namespace Benchmarks.Collections
         [Benchmark]
         public bool BytesEqual()
         {
-            for (int i = 0; i < ByteEqualsData.Length; i++)
+            for (int i = 0; i < Values.Length; i++)
             {
-                if (!ByteEqualsData[i].Equals(ByteEqualsDataCopy[i]))
+                if (!Values[i].Equals(SameValues[i]))
                 {
                     return false;
                 }
@@ -70,11 +53,52 @@ namespace Benchmarks.Collections
         }
 
         [Benchmark]
+        public bool IEqutableGenericConstraint()
+        {
+            return CompareEqutable(Values, SameValues);
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private bool CompareEqutable<T>(T[] left, T[] right)
+            where T : IEquatable<T>
+        {
+            for (int i = 0; i < left.Length; i++)
+            {
+                if (!left[i].Equals(right[i]))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        [Benchmark]
+        public bool IEqutableGenericStructConstraint()
+        {
+            return CompareEqutableStructs(Values, SameValues);
+        }
+
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        private bool CompareEqutableStructs<T>(T[] left, T[] right)
+            where T : struct, IEquatable<T>
+        {
+            for (int i = 0; i < left.Length; i++)
+            {
+                if (!left[i].Equals(right[i]))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+
+        [Benchmark]
         public bool EqualsOperator()
         {
-            for (int i = 0; i < EqualsOperatorData.Length; i++)
+            for (int i = 0; i < Values.Length; i++)
             {
-                if (!EqualsOperatorData[i].Equals(EqualsOperatorDataCopy[i]))
+                if (!Values[i].Equals(SameValues[i]))
                 {
                     return false;
                 }
@@ -87,9 +111,9 @@ namespace Benchmarks.Collections
         public bool DefaultComparer()
         {
             var nonBoxingComparer = EqualityComparer<byte>.Default;
-            for (int i = 0; i < ByteEqualsData.Length; i++)
+            for (int i = 0; i < Values.Length; i++)
             {
-                if (!nonBoxingComparer.Equals(DefaultComparerLoopData[i], DefaultComparerLoopDataCopy[i]))
+                if (!nonBoxingComparer.Equals(Values[i], SameValues[i]))
                 {
                     return false;
                 }
@@ -100,7 +124,7 @@ namespace Benchmarks.Collections
         [Benchmark]
         public bool EnumerableSequenceEquals()
         {
-            return Enumerable.SequenceEqual(EnumerableSequenceEqualsData, EnumerableSequenceEqualsDataCopy);
+            return Enumerable.SequenceEqual(Values, SameValues);
         }
 
         [DllImport("msvcrt.dll", CallingConvention = CallingConvention.Cdecl)]
@@ -111,9 +135,9 @@ namespace Benchmarks.Collections
         {
             unsafe
             {
-                fixed (byte* first = MemCmpData, second = MemCmpDataCopy)
+                fixed (byte* first = Values, second = SameValues)
                 {
-                    return memcmp(first, second, MemCmpData.Length) == 0;
+                    return memcmp(first, second, Values.Length) == 0;
                 }
             }
         }
@@ -121,7 +145,7 @@ namespace Benchmarks.Collections
         [Benchmark]
         public bool Unsafe()
         {
-            return UnsafeCompare(UnsafeData, UnsafeDataCopy);
+            return UnsafeCompare(Values, SameValues);
         }
 
         // Copyright (c) 2008-2013 Hafthor Stefansson

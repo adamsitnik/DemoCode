@@ -1,5 +1,7 @@
 ﻿using BenchmarkDotNet;
 using Benchmarks.Collections;
+using Benchmarks.Common;
+using Benchmarks.Math;
 
 namespace Benchmarks
 {
@@ -12,7 +14,10 @@ namespace Benchmarks
                 {
                     typeof(EnumeratorsBenchmarks),
                     typeof(BoundariesCheckBenchmarks),
-                    typeof(LengthForLoopBenchmarks)
+                    typeof(LengthForLoopBenchmarks),
+                    typeof(SequentialEqualityBenchmarks),
+                    typeof(ModuloOperatorBenchmarks),
+                    typeof(IsValueTypeBenchmarks)
                 });
 
             competitionSwitch.Run(args);
