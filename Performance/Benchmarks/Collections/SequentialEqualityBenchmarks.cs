@@ -98,7 +98,7 @@ namespace Benchmarks.Collections
         {
             for (int i = 0; i < Values.Length; i++)
             {
-                if (!Values[i].Equals(SameValues[i]))
+                if (Values[i] != SameValues[i])
                 {
                     return false;
                 }
