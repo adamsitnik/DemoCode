@@ -182,5 +182,95 @@ namespace Benchmarks.Collections
                 return true;
             }
         }
+
+        [Benchmark]
+        public bool LikeStringEqualsHelper()
+        {
+            unsafe
+            {
+                fixed (byte* pinnedFirst = Values, pinnedSecond = SameValues)
+                {
+                    byte* firstPointer = pinnedFirst;
+                    byte* secondPointer = pinnedSecond;
+
+                    long bytesCount = Values.Length;
+
+                    while (bytesCount >= 20)
+                    {
+                        if (*(int*)firstPointer != *(int*)secondPointer)
+                            break;
+                        if (*(int*)(firstPointer + 4) != *(int*)(secondPointer + 4))
+                            break;
+                        if (*(int*)(firstPointer + 8) != *(int*)(secondPointer + 8))
+                            break;
+                        if (*(int*)(firstPointer + 12) != *(int*)(secondPointer + 12))
+                            break;
+                        if (*(int*)(firstPointer + 16) != *(int*)(secondPointer + 16))
+                            break;
+                        firstPointer += 20;
+                        secondPointer += 20;
+                        bytesCount -= 20;
+                    }
+                    while (bytesCount > 0)
+                    {
+                        if (*firstPointer != *secondPointer)
+                            break;
+                        ++firstPointer;
+                        ++secondPointer;
+                        --bytesCount;
+                    }
+
+                    return bytesCount == 0;
+                }
+            }
+        }
+
+        /// <summary>
+        /// this method = idea from String.EqualsHelper + hints from Vladimir Sadov + some improvements by Adam Sitnik
+        /// </summary>
+        [Benchmark]
+        public bool OptimizedHybrid()
+        {
+            unsafe
+            {
+                fixed (byte* pinnedFirst = Values, pinnedSecond = SameValues)
+                {
+                    byte* firstPointer = pinnedFirst;
+                    byte* secondPointer = pinnedSecond;
+
+                    int step = sizeof(void*) * 5;
+                    byte* firstPointerLimit = firstPointer + (Values.Length - step);
+
+                    if (step < Values.Length)
+                    {
+                        while (firstPointer < firstPointerLimit)
+                        {
+                            if (*((void**)firstPointer + 0) != *((void**)secondPointer + 0)) break;
+                            if (*((void**)firstPointer + 1) != *((void**)secondPointer + 1)) break;
+                            if (*((void**)firstPointer + 2) != *((void**)secondPointer + 2)) break;
+                            if (*((void**)firstPointer + 3) != *((void**)secondPointer + 3)) break;
+                            if (*((void**)firstPointer + 4) != *((void**)secondPointer + 4)) break;
+
+                            firstPointer += step;
+                            secondPointer += step;
+                        }
+                        if (firstPointer < firstPointerLimit) // the upper loop ended with break;
+                        {
+                            return false;
+                        }
+                    }
+                    firstPointerLimit += step;
+                    while (firstPointer < firstPointerLimit)
+                    {
+                        if (*firstPointer != *secondPointer) break;
+                        
+                        ++firstPointer;
+                        ++secondPointer;
+                    }
+
+                    return firstPointer == firstPointerLimit;
+                }
+            }
+        }
     }
 }
