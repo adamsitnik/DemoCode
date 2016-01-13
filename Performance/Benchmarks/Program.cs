@@ -9,7 +9,7 @@ namespace Benchmarks
     {
         static void Main(string[] args)
         {
-            var competitionSwitch = new BenchmarkCompetitionSwitch(
+            var competitionSwitch = new BenchmarkSwitcher(
                 new[]
                 {
                     typeof(EnumeratorsBenchmarks),
@@ -17,7 +17,8 @@ namespace Benchmarks
                     typeof(LengthForLoopBenchmarks),
                     typeof(SequentialEqualityBenchmarks),
                     typeof(ModuloOperatorBenchmarks),
-                    typeof(IsValueTypeBenchmarks)
+                    typeof(IsValueTypeBenchmarks),
+                    typeof(MemCpy)
                 });
 
             competitionSwitch.Run(args);

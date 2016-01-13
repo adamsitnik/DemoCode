@@ -35,8 +35,9 @@
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BenchmarkDotNet">
-      <HintPath>..\packages\BenchmarkDotNet.0.7.8\lib\net40\BenchmarkDotNet.dll</HintPath>
+    <Reference Include="BenchmarkDotNet, Version=0.8.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BenchmarkDotNet.0.8.1\lib\net40\BenchmarkDotNet.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -50,6 +51,7 @@
     <Compile Include="Collections\BoundariesCheckBenchmarks.cs" />
     <Compile Include="Collections\EnumeratorsBenchmarks.cs" />
     <Compile Include="Collections\LengthForLoopBenchmarks.cs" />
+    <Compile Include="Collections\MemCpy.cs" />
     <Compile Include="Collections\SequentialEqualityBenchmarks.cs" />
     <Compile Include="Common\IsValueTypeBenchmarks.cs" />
     <Compile Include="Math\ModuloOperatorBenchmarks.cs" />
