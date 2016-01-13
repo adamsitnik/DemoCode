@@ -7,7 +7,9 @@ namespace Exceptional
     {
         protected abstract string Description { get; }
 
-        protected virtual bool IsVisualStudioConfigurationRequired => false;
+        protected virtual string VisualStudioConfigurationRequired => string.Empty;
+
+        private bool IsVisualStudioConfigurationRequired => !string.IsNullOrEmpty(VisualStudioConfigurationRequired);
 
         protected abstract void RunDemo();
 
@@ -15,6 +17,7 @@ namespace Exceptional
         {
             if (IsVisualStudioConfigurationRequired)
             {
+                Console.WriteLine(VisualStudioConfigurationRequired);
                 Debugger.Break(); // configure you VS now
             }
 

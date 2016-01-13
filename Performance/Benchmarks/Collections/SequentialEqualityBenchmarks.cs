@@ -197,24 +197,20 @@ namespace Benchmarks.Collections
 
                     while (bytesCount >= 20)
                     {
-                        if (*(int*)firstPointer != *(int*)secondPointer)
-                            break;
-                        if (*(int*)(firstPointer + 4) != *(int*)(secondPointer + 4))
-                            break;
-                        if (*(int*)(firstPointer + 8) != *(int*)(secondPointer + 8))
-                            break;
-                        if (*(int*)(firstPointer + 12) != *(int*)(secondPointer + 12))
-                            break;
-                        if (*(int*)(firstPointer + 16) != *(int*)(secondPointer + 16))
-                            break;
+                        if (*(int*)firstPointer != *(int*)secondPointer) break;
+                        if (*(int*)(firstPointer + 4) != *(int*)(secondPointer + 4)) break;
+                        if (*(int*)(firstPointer + 8) != *(int*)(secondPointer + 8)) break;
+                        if (*(int*)(firstPointer + 12) != *(int*)(secondPointer + 12)) break;
+                        if (*(int*)(firstPointer + 16) != *(int*)(secondPointer + 16)) break;
+
                         firstPointer += 20;
                         secondPointer += 20;
                         bytesCount -= 20;
                     }
                     while (bytesCount > 0)
                     {
-                        if (*firstPointer != *secondPointer)
-                            break;
+                        if (*firstPointer != *secondPointer) break;
+
                         ++firstPointer;
                         ++secondPointer;
                         --bytesCount;
