@@ -74,7 +74,7 @@
     <Compile Include="Collections\EnumeratorsBenchmarks.cs" />
     <Compile Include="Collections\LengthForLoopBenchmarks.cs" />
     <Compile Include="Collections\MemCmpHybridsBenchmarks.cs" />
-    <Compile Include="Collections\MemCpy.cs" />
+    <Compile Include="Collections\MemCpyBenchmarks.cs" />
     <Compile Include="Collections\SequentialEqualityBenchmarks.cs" />
     <Compile Include="Common\IsValueTypeBenchmarks.cs" />
     <Compile Include="Math\ModuloOperatorBenchmarks.cs" />

@@ -9,7 +9,7 @@ namespace Benchmarks.Collections
     [BenchmarkTask(platform: BenchmarkPlatform.X86, jitVersion: BenchmarkJitVersion.LegacyJit)]
     [BenchmarkTask(platform: BenchmarkPlatform.X64, jitVersion: BenchmarkJitVersion.LegacyJit)]
     [BenchmarkTask(platform: BenchmarkPlatform.X64, jitVersion: BenchmarkJitVersion.RyuJit)]
-    public class MemCpy
+    public class MemCpyBenchmarks
     {
         [Params(0, 1, 10, 100, 1000, 100000, 1000000)]
         public int ItemsCount = 0;
@@ -82,17 +82,10 @@ namespace Benchmarks.Collections
                     {
                         while (sourcePointer < firstPointerLimit)
                         {
-                            var element = *((void**)sourcePointer + 0);
-                            var nextElement = *((void**)sourcePointer + 1);
-
-                            *((void**)targetPointer + 0) = element;
-                            *((void**)targetPointer + 1) = nextElement;
-
-                            element = *((void**)sourcePointer + 2);
-                            nextElement = *((void**)sourcePointer + 3);
-
-                            *((void**)targetPointer + 2) = element;
-                            *((void**)targetPointer + 3) = nextElement;
+                            *((void**)targetPointer + 0) = *((void**)sourcePointer + 0);
+                            *((void**)targetPointer + 1) = *((void**)sourcePointer + 1);
+                            *((void**)targetPointer + 2) = *((void**)sourcePointer + 2);
+                            *((void**)targetPointer + 3) = *((void**)sourcePointer + 3);
 
                             sourcePointer += step;
                             targetPointer += step;

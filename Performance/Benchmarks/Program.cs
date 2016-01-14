@@ -18,7 +18,8 @@ namespace Benchmarks
                     typeof(SequentialEqualityBenchmarks),
                     typeof(ModuloOperatorBenchmarks),
                     typeof(IsValueTypeBenchmarks),
-                    typeof(MemCpy)
+                    typeof(MemCpyBenchmarks),
+                    typeof(MemCmpHybridsBenchmarks)
                 });
 
             competitionSwitch.Run(args);
