@@ -34,6 +34,28 @@
     <Prefer32Bit>false</Prefer32Bit>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BenchmarkDotNet, Version=0.8.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\BenchmarkDotNet.0.8.1\lib\net40\BenchmarkDotNet.dll</HintPath>
@@ -51,6 +73,7 @@
     <Compile Include="Collections\BoundariesCheckBenchmarks.cs" />
     <Compile Include="Collections\EnumeratorsBenchmarks.cs" />
     <Compile Include="Collections\LengthForLoopBenchmarks.cs" />
+    <Compile Include="Collections\MemCmpHybridsBenchmarks.cs" />
     <Compile Include="Collections\MemCpy.cs" />
     <Compile Include="Collections\SequentialEqualityBenchmarks.cs" />
     <Compile Include="Common\IsValueTypeBenchmarks.cs" />

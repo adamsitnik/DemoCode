@@ -1,0 +1,10 @@
+BenchmarkDotNet=v0.8.1.0
+OS=Microsoft Windows NT 6.2.9200.0
+Processor=Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz, ProcessorCount=2
+HostCLR=MS.NET 4.0.30319.18449, Arch=64-bit 
+Type=MemCmpHybridsBenchmarks  Mode=Throughput  Platform=X86  Jit=LegacyJit  .NET=HostFramework  toolchain=Classic  Runtime=Clr  Warmup=5  Target=10  
+                             Method |     AvrTime |     StdDev |         op/s |
+----------------------------------- |------------ |----------- |------------- |
+ HybridWithLessArithmeticOperations | 246.6116 ns | 29.3267 ns | 4,101,171.88 |
+                      InitialHybrid | 223.8057 ns | 21.4627 ns | 4,502,644.51 |
+
