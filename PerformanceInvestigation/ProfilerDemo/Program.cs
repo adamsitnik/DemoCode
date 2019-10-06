@@ -1,4 +1,4 @@
-﻿using System;
+﻿using HardwareIntrinsics.RayTracer;
 
 namespace ProfilerDemo
 {
@@ -6,7 +6,12 @@ namespace ProfilerDemo
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var sut = new SoA();
+
+            for (int i = 0; i < 500; i++)
+            {
+                sut.Render();
+            }
         }
     }
 }
